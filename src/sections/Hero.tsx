@@ -19,7 +19,6 @@ function Hero() {
       <GrLinkedin size={20} color="white" />
     )
 
-  // Scroll to Projects Section
   const handleScrollToProjects = () => {
     document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
   }
@@ -76,36 +75,32 @@ function Hero() {
         />
       </div>
       <div className="flex flex-col gap-5 items-center md:items-start text-center md:text-left z-10">
-        <h1 className="text-3xl font-bold">Sol Kim</h1>
-        <h2 className="text-xl text-gray-600">Full Stack Developer</h2>
+        <h1 className="font-bold">Sol Kim</h1>
+        <h2>Full Stack Developer</h2>
 
         <span className="flex gap-6">
           <a
             href="https://github.com/devBySol"
-            target="_blank"
-            rel="noopener noreferrer"
             className="hover:scale-110 transition-transform"
           >
             {githubIcon}
           </a>
           <a
             href="https://www.linkedin.com/in/yeseol/"
-            target="_blank"
-            rel="noopener noreferrer"
             className="hover:scale-110 transition-transform"
           >
             {linkedinIcon}
           </a>
         </span>
 
-        <p className="max-w-[24ch] text-gray-700">
-          With a passion for developing modern React web apps for commercial
-          businesses.
+        <p className="max-w-[24ch]">
+          Problem-solving full-stack developer focused on collaboration and
+          building user-friendly web applications."
         </p>
 
         <button
           onClick={handleScrollToProjects}
-          className="bg-indigo-600 text-white font-bold rounded-2xl w-40 h-12 text-lg shadow-md transition-transform transform hover:scale-105 active:translate-y-1"
+          className="bg-indigo-600 text-white font-bold rounded-2xl w-40 h-12 text-lg shadow-md transition-transform transform hover:scale-105 active:translate-y-1 cursor-pointer"
         >
           PROJECTS
         </button>

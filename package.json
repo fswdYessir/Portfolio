@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@tailwindcss/vite": "^4.0.8",
     "devicon-react": "^1.1.1",
     "lucide-react": "^0.475.0",
