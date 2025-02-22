@@ -1,5 +1,5 @@
 import '../styles/Projects.css'
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import { HoveredSkills } from './HoverSkills'
 
 interface ProjectCardProps {
