@@ -33,7 +33,7 @@ function Hero() {
 
         <div className="sm:w-36 sm:h-20 w-24 h-10 bg-gray-700 rounded-t-full relative"></div>
       </div>
-      {/* 삼각형 전등 */}
+
       <div
         className={`absolute sm:top-20 top-10 left-1/2 transform -translate-x-1/2 w-150 h-[300px] opacity-0 transition-all duration-700 pointer-events-none z-30 ${
           theme === 'dark' ? 'opacity-80' : 'opacity-0'
@@ -45,14 +45,6 @@ function Hero() {
           filter: 'blur(30px)',
         }}
       />
-      {/* 둥근 전등 */}
-      {/* <div
-        className={`absolute top-24 w-80 h-80 opacity-60 transition-all duration-700 ${
-          theme === 'dark'
-            ? 'bg-[radial-gradient(circle,_rgba(255,223,0,0.6)_0%,_rgba(255,223,0,0)_70%)]'
-            : 'bg-transparent'
-        }`}
-      /> */}
       <div className="relative flex flex-col items-center md:items-start sm:mt-0 mt-15 z-10">
         <button
           onClick={toggleTheme}
@@ -110,7 +102,7 @@ function Hero() {
             onClick={handleScrollToProjects}
             className={`relative font-bold w-40 h-12 text-lg rounded-2xl ${
               theme === 'light'
-                ? 'justify-center transition-all duration-200 text-gray-900 bg-white/70'
+                ? 'justify-center transition-all duration-200  bg-gray-900 text-white'
                 : 'bg-gray-400 text-white'
             }`}
           >
