@@ -1,5 +1,4 @@
 import './App.css'
-import { HoveredSkillsProvider } from './components/HoverSkills'
 import Contact from './sections/Contact'
 import Footer from './sections/Footer'
 import Hero from './sections/Hero'
@@ -10,10 +9,8 @@ function App() {
   return (
     <>
       <Hero />
-      <HoveredSkillsProvider>
-        <Projects />
-        <Skills />
-      </HoveredSkillsProvider>
+      <Projects />
+      <Skills />
       <Contact />
       <Footer />
     </>
