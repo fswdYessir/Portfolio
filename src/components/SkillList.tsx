@@ -1,20 +1,12 @@
-import React, { useContext } from 'react'
-import { HoveredSkills } from './HoverSkills'
-
 interface SkillListProps {
   skill: string
 }
 
-const SkillList: React.FC<SkillListProps> = ({ skill }) => {
-  const { hoveredSkills } = useContext(HoveredSkills)
-  const isHighlighted = hoveredSkills.includes(skill)
-
+function SkillList({ skill }: SkillListProps) {
   return (
-    <div>
-      <p className={`skill-item ${isHighlighted ? 'underline' : ''}`}>
-        {skill}
-      </p>
-    </div>
+    <span className="flex flex-col items-center text-center text-gray-800 dark:text-white">
+      <p className="text-lg font-medium">{skill}</p>
+    </span>
   )
 }
 
