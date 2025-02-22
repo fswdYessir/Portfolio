@@ -1,7 +1,7 @@
 import BeepLogo from '../assets/BeepLogo.png'
 import StuffnStuffLogo from '../assets/stuffnstuffLogo.png'
 import FourSeasonLogo from '../assets/FourSeasonLogo.png'
-import ProjectCard from '../common/ProjectCard'
+import ProjectCard from '../components/ProjectCard'
 
 function Projects() {
   return (
@@ -16,24 +16,23 @@ function Projects() {
           link="https://www.beep-safety.com/"
           h3="Beep"
           p="Personal safety app"
-          className="w-64"
-          imgClass="w-full h-48 object-contain"
+          description="AI-powered safe route recommendations and real-time safety features."
         />
+
         <ProjectCard
           src={StuffnStuffLogo}
           link="https://idsp-stuffnstuff.onrender.com"
           h3="Stuff N Stuff"
           p="Marketplace web app"
-          className="w-64"
-          imgClass="w-full h-48 object-contain"
+          description="Real-time chat, personalized recommendations, and secure authentication."
         />
+
         <ProjectCard
           src={FourSeasonLogo}
           link="https://4season.vercel.app"
           h3="FourSeason"
           p="Day trip rental web app"
-          className="w-64"
-          imgClass="w-full h-48 object-contain"
+          description="Rent seasonal gear and book trips with real-time reservations."
         />
       </div>
     </section>

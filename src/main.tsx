@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
-import { ThemeProvider } from './common/ThemeContext.tsx'
+import { ThemeProvider } from './components/ThemeContext.tsx'
 
 const rootElement = document.getElementById('root')
 

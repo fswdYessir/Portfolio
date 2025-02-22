@@ -1,6 +1,6 @@
 import heroImg from '../assets/heroImg.png'
 import { GrGithub, GrLinkedin } from 'react-icons/gr'
-import { useTheme } from '../common/ThemeContext'
+import { useTheme } from '../components/ThemeContext'
 
 function Hero() {
   const { theme, toggleTheme } = useTheme()
