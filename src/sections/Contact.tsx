@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import emailjs from '@emailjs/browser'
+import { useTheme } from '../components/ThemeContext'
 
 const Contact: React.FC = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [status, setStatus] = useState<string | null>(null)
+  const { theme } = useTheme()
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -93,8 +95,10 @@ const Contact: React.FC = () => {
 
         <input
           type="submit"
-          value="Submit"
-          className="bg-indigo-600 text-white font-bold rounded-2xl w-40 h-12 text-lg shadow-md transition-transform transform hover:scale-105 active:translate-y-1 cursor-pointer mx-auto"
+          value="SUBMIT"
+          className={`text-white font-bold rounded-2xl w-40 h-12 text-lg shadow-md transition-transform transform hover:scale-105 active:translate-y-1 cursor-pointer mx-auto ${
+            theme === 'light' ? 'bg-gray-700 ' : 'bg-gray-400'
+          }`}
         />
         {status && <p>{status}</p>}
       </form>
