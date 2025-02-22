@@ -98,25 +98,12 @@ function Hero() {
           building user-friendly web applications."
         </p>
 
-        <div className="relative inline-flex group">
-          <div
-            className={`absolute transition-transform transform hover:scale-105 active:translate-y-1 ${
-              theme === 'light'
-                ? 'transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt'
-                : ''
-            }`}
-          ></div>
-          <button
-            onClick={handleScrollToProjects}
-            className={`relative font-bold w-40 h-12 text-lg rounded-2xl ${
-              theme === 'light'
-                ? 'justify-center transition-all duration-200 text-gray-900'
-                : 'bg-gray-400 text-white'
-            }`}
-          >
-            PROJECTS
-          </button>
-        </div>
+        <button
+          onClick={handleScrollToProjects}
+          className="bg-indigo-600 text-white font-bold rounded-2xl w-40 h-12 text-lg shadow-md transition-transform transform hover:scale-105 active:translate-y-1 cursor-pointer"
+        >
+          PROJECTS
+        </button>
       </div>
     </section>
   )
