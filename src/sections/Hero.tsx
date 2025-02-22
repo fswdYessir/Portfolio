@@ -26,16 +26,16 @@ function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex flex-col md:flex-row items-center justify-center min-h-screen gap-15 text-center p-10 overflow-hidden"
+      className="relative flex flex-col md:flex-row items-center justify-center min-h-screen sm:gap-15 gap-5 text-center p-10 overflow-hidden"
     >
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-50">
-        <div className="w-1 h-16 bg-gray-700"></div>
+        <div className="w-1 h-8 sm:h-16 bg-gray-700"></div>
 
-        <div className="w-36 h-20 bg-gray-700 rounded-t-full relative"></div>
+        <div className="sm:w-36 sm:h-20 w-24 h-10 bg-gray-700 rounded-t-full relative"></div>
       </div>
       {/* 삼각형 전등 */}
       <div
-        className={`absolute top-20 left-1/2 transform -translate-x-1/2 w-150 h-[300px] opacity-0 transition-all duration-700 pointer-events-none z-30 ${
+        className={`absolute sm:top-20 top-10 left-1/2 transform -translate-x-1/2 w-150 h-[300px] opacity-0 transition-all duration-700 pointer-events-none z-30 ${
           theme === 'dark' ? 'opacity-80' : 'opacity-0'
         }`}
         style={{
@@ -53,16 +53,16 @@ function Hero() {
             : 'bg-transparent'
         }`}
       /> */}
-      <div className="relative flex flex-col items-center md:items-start z-10">
+      <div className="relative flex flex-col items-center md:items-start sm:mt-0 mt-15 z-10">
         <button
           onClick={toggleTheme}
           aria-label="Toggle Theme"
-          className={`absolute top-0 right-0 flex items-center w-10 h-5 rounded-full transition-colors ${
+          className={`absolute top-0 right-0 flex items-center w-8 h-4 sm:w-10 sm:h-5 rounded-full transition-colors ${
             theme === 'light' ? 'bg-gray-700' : 'bg-gray-400'
           }`}
         >
           <div
-            className={`w-5 h-5 rounded-full bg-white shadow-md transform transition-transform ${
+            className={`sm:w-5 sm:h-5 w-3 h-3 rounded-full bg-white shadow-md transform transition-transform ${
               theme === 'light' ? 'translate-x-5' : 'translate-x-1'
             }`}
           />
