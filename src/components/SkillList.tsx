@@ -10,17 +10,11 @@ const SkillList: React.FC<SkillListProps> = ({ skill }) => {
   const isHighlighted = hoveredSkills.includes(skill)
 
   return (
-    <div>
-      <span className="flex flex-col items-center text-center">
-        <p
-          className={`skill-item ${
-            isHighlighted ? 'bg-yellow-300/50 rounded-lg' : ''
-          }`}
-        >
-          {skill}
-        </p>
-      </span>
-    </div>
+    <span className="flex flex-col items-center text-center">
+      <p className={`skill-item ${isHighlighted ? 'underline' : ''}`}>
+        {skill}
+      </p>
+    </span>
   )
 }
 

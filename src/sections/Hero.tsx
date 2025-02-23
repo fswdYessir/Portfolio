@@ -50,7 +50,7 @@ function Hero() {
           onClick={toggleTheme}
           aria-label="Toggle Theme"
           className={`absolute top-0 right-0 flex items-center w-8 h-4 sm:w-10 sm:h-5 rounded-full transition-colors ${
-            theme === 'light' ? 'bg-gray-700' : 'bg-gray-400'
+            theme === 'light' ? 'bg-gray-700' : 'bg-gray-500'
           }`}
         >
           <div
@@ -103,7 +103,7 @@ function Hero() {
             className={`relative font-bold w-40 h-12 text-lg rounded-2xl ${
               theme === 'light'
                 ? 'justify-center transition-all duration-200  bg-gray-800 text-white'
-                : 'bg-gray-400 text-white'
+                : 'bg-gray-400/50 text-white'
             }`}
           >
             PROJECTS
