@@ -11,9 +11,15 @@ const SkillList: React.FC<SkillListProps> = ({ skill }) => {
 
   return (
     <div>
-      <p className={`skill-item ${isHighlighted ? 'underline' : ''}`}>
-        {skill}
-      </p>
+      <span className="flex flex-col items-center text-center">
+        <p
+          className={`skill-item ${
+            isHighlighted ? 'bg-yellow-300/50 rounded-lg' : ''
+          }`}
+        >
+          {skill}
+        </p>
+      </span>
     </div>
   )
 }

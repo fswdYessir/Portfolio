@@ -1,6 +1,7 @@
 import BeepLogo from '../assets/BeepLogo.png'
 import StuffnStuffLogo from '../assets/stuffnstuffLogo.png'
 import FourSeasonLogo from '../assets/FourSeasonLogo.png'
+import HiltonLogo from '../assets/HiltonLogo.png'
 import ProjectCard from '../components/ProjectCard'
 
 function Projects() {
@@ -17,7 +18,7 @@ function Projects() {
           h3="Beep"
           p="Personal safety app"
           description="AI-powered safe route recommendations and real-time safety features."
-          skills={['TypeScript', 'React Native', 'Expo', 'Firebase']}
+          skills={['TypeScript', 'React Native', 'Expo', 'Firebase', 'Figma']}
         />
 
         <ProjectCard
@@ -26,7 +27,14 @@ function Projects() {
           h3="Stuff N Stuff"
           p="Marketplace web app"
           description="Real-time chat, personalized recommendations, and secure authentication."
-          skills={['TypeScript', 'Express', 'PostgreSQL']}
+          skills={[
+            'TypeScript',
+            'Express',
+            'PostgreSQL',
+            'vercel',
+            'HTML',
+            'CSS',
+          ]}
         />
 
         <ProjectCard
@@ -35,7 +43,23 @@ function Projects() {
           h3="FourSeason"
           p="Day trip rental web app"
           description="Rent seasonal gear and book trips with real-time reservations."
-          skills={['TypeScript', 'React', 'Strap', 'PostrgreSQL', 'Neon']}
+          skills={[
+            'TypeScript',
+            'React',
+            'Strapi',
+            'PostgreSQL',
+            'Neon',
+            'vercel',
+            'Tailwind CSS',
+          ]}
+        />
+        <ProjectCard
+          src={HiltonLogo}
+          link="https://mdia-2025-project3.vercel.app/"
+          h3="Hilton"
+          p="Hilton app redesign"
+          description="With a modern, simple design, it enhances the customer experience by simplifying room info checks and bookings."
+          skills={['TypeScript', 'React', 'Vite', 'vercel', 'Tailwind CSS']}
         />
       </div>
     </section>
