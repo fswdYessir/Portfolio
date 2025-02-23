@@ -45,7 +45,7 @@ function Hero() {
           filter: 'blur(30px)',
         }}
       />
-      <div className="relative flex flex-col items-center md:items-start sm:mt-0 mt-15 z-10">
+      <div className="relative flex flex-col items-center md:items-start z-10">
         <button
           onClick={toggleTheme}
           aria-label="Toggle Theme"
