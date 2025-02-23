@@ -102,7 +102,7 @@ function Hero() {
             onClick={handleScrollToProjects}
             className={`relative font-bold w-40 h-12 text-lg rounded-2xl ${
               theme === 'light'
-                ? 'justify-center transition-all duration-200  bg-gray-900 text-white'
+                ? 'justify-center transition-all duration-200  bg-gray-800 text-white'
                 : 'bg-gray-400 text-white'
             }`}
           >
