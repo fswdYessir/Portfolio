@@ -33,7 +33,7 @@ function Hero() {
 
         <div className="sm:w-36 sm:h-20 w-24 h-10 bg-gray-700 rounded-t-full relative"></div>
       </div>
-      {/* 삼각형 전등 */}
+
       <div
         className={`absolute sm:top-20 top-10 left-1/2 transform -translate-x-1/2 w-150 h-[300px] opacity-0 transition-all duration-700 pointer-events-none z-30 ${
           theme === 'dark' ? 'opacity-80' : 'opacity-0'
@@ -45,20 +45,12 @@ function Hero() {
           filter: 'blur(30px)',
         }}
       />
-      {/* 둥근 전등 */}
-      {/* <div
-        className={`absolute top-24 w-80 h-80 opacity-60 transition-all duration-700 ${
-          theme === 'dark'
-            ? 'bg-[radial-gradient(circle,_rgba(255,223,0,0.6)_0%,_rgba(255,223,0,0)_70%)]'
-            : 'bg-transparent'
-        }`}
-      /> */}
-      <div className="relative flex flex-col items-center md:items-start sm:mt-0 mt-15 z-10">
+      <div className="relative flex flex-col items-center md:items-start z-10">
         <button
           onClick={toggleTheme}
           aria-label="Toggle Theme"
           className={`absolute top-0 right-0 flex items-center w-8 h-4 sm:w-10 sm:h-5 rounded-full transition-colors ${
-            theme === 'light' ? 'bg-gray-700' : 'bg-gray-400'
+            theme === 'light' ? 'bg-gray-700' : 'bg-gray-500'
           }`}
         >
           <div
@@ -97,13 +89,25 @@ function Hero() {
           Problem-solving full-stack developer focused on collaboration and
           building user-friendly web applications."
         </p>
-
-        <button
-          onClick={handleScrollToProjects}
-          className="bg-indigo-600 text-white font-bold rounded-2xl w-40 h-12 text-lg shadow-md transition-transform transform hover:scale-105 active:translate-y-1 cursor-pointer"
-        >
-          PROJECTS
-        </button>
+        <div className="relative inline-flex group">
+          <div
+            className={`absolute transition-transform transform hover:scale-105 active:translate-y-1 ${
+              theme === 'light'
+                ? 'transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt'
+                : ''
+            }`}
+          ></div>
+          <button
+            onClick={handleScrollToProjects}
+            className={`relative font-bold w-40 h-12 text-lg rounded-2xl ${
+              theme === 'light'
+                ? 'justify-center transition-all duration-200  bg-gray-800 text-white'
+                : 'bg-gray-400/50 text-white'
+            }`}
+          >
+            PROJECTS
+          </button>
+        </div>
       </div>
     </section>
   )

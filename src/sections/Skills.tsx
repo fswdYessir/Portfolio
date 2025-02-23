@@ -27,16 +27,16 @@ function Skills() {
 
           <SkillList skill="Node.js" />
           <SkillList skill="Express" />
+          <SkillList skill="EJS" />
           <SkillList skill="Strapi" />
           <SkillList skill="Firebase" />
 
           <SkillList skill="MySQL" />
           <SkillList skill="SQLite" />
-          <SkillList skill="MongoDB" />
+
           <SkillList skill="PostgreSQL" />
-          <SkillList skill="Prisma" />
+
           <SkillList skill="Neon" />
-          <SkillList skill="Drizzle" />
 
           <SkillList skill="Vercel" />
           <SkillList skill="Render" />
