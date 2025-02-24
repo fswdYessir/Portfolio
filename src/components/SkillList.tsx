@@ -11,7 +11,11 @@ const SkillList: React.FC<SkillListProps> = ({ skill }) => {
 
   return (
     <span className="flex flex-col items-center text-center">
-      <p className={`skill-item ${isHighlighted ? 'underline' : ''}`}>
+      <p
+        className={`skill-item ${isHighlighted ? '!font-bold' : ''} ${
+          hoveredSkills.length > 0 && !isHighlighted ? 'blur-xs' : ''
+        }`}
+      >
         {skill}
       </p>
     </span>
