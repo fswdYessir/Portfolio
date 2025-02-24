@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 @custom-variant dark (&:where(.dark, .dark *));
-
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 :root {
   --background-color: #fff;
   --btn-color: #0987f2;
@@ -66,4 +66,29 @@ h1 {
 p {
   font-size: 16px;
   font-weight: 300;
+}
+:hover {
+  cursor: pointer;
+}
+
+.clip-trapezoid {
+  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+}
+.scroll-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scroll-hidden::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.glassGradient {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(254, 254, 254, 0) 0%,
+    rgba(254, 254, 254, 1) 51%,
+    rgba(254, 254, 254, 0) 100%
+  );
 }

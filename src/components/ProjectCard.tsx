@@ -1,41 +1,42 @@
+import { useContext, useState } from 'react'
 import '../styles/Projects.css'
-import { useContext } from 'react'
 import { HoveredSkills } from './HoverSkills'
+import ProjectModal from './ProjectModal'
+import { AnimatePresence } from 'framer-motion'
 
 interface ProjectCardProps {
   src: string
-  link: string
   h3: string
   p: string
   description: string
+  modalDescription: string
   skills: string[]
+  link?: string
 }
 
 function ProjectCard({
   src,
-  link,
   h3,
   p,
   description,
+  modalDescription,
   skills,
+  link,
 }: ProjectCardProps) {
   const { setHoveredSkills } = useContext(HoveredSkills)
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
-  const handleMouseEnter = () => {
-    setHoveredSkills(skills)
-  }
-
-  const handleMouseLeave = () => {
-    setHoveredSkills([])
-  }
+  const handleMouseEnter = () => setHoveredSkills(skills)
+  const handleMouseLeave = () => setHoveredSkills([])
 
   return (
-    <div
-      className="flip-box m-5"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      <a href={link} target="_blank" rel="noopener noreferrer">
+    <>
+      <div
+        className="flip-box m-5 cursor-pointer"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        onClick={() => setIsModalOpen(true)}
+      >
         <div className="flip-box-inner">
           <div className="flip-box-front">
             <img className="w-full h-48 object-contain" src={src} alt={h3} />
@@ -49,8 +50,18 @@ function ProjectCard({
             </p>
           </div>
         </div>
-      </a>
-    </div>
+      </div>
+      <AnimatePresence>
+        {isModalOpen && (
+          <ProjectModal
+            title={h3}
+            description={modalDescription}
+            link={link}
+            onClose={() => setIsModalOpen(false)}
+          />
+        )}
+      </AnimatePresence>
+    </>
   )
 }
 

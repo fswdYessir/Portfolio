@@ -99,7 +99,7 @@ function Hero() {
           ></div>
           <button
             onClick={handleScrollToProjects}
-            className={`relative font-bold w-40 h-12 text-lg rounded-2xl ${
+            className={`relative font-bold w-40 h-12 text-lg rounded-2xl hover:scale-105 active:translate-y-1 ${
               theme === 'light'
                 ? 'justify-center transition-all duration-200  bg-gray-800 text-white'
                 : 'bg-gray-400/50 text-white'
