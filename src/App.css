@@ -83,12 +83,6 @@ p {
   background: transparent;
 }
 
-.glassGradient {
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(254, 254, 254, 0) 0%,
-    rgba(254, 254, 254, 1) 51%,
-    rgba(254, 254, 254, 0) 100%
-  );
-}
+/* .glass {
+  clip-path: polygon(85% 0%, 100% 0%, 100% 100%, 15% 100%)'
+} */

@@ -44,7 +44,7 @@ const ProjectModal = ({
           onClick={e => e.stopPropagation()}
         >
           <button
-            className="absolute m-3 top-2 right-4 text-white font-extrabold transition-transform transform hover:scale-110 active:translate-y-1 z-50 cursor-pointer"
+            className="absolute m-3 top-2 right-4 text-white font-extrabold transition-transform transform hover:scale-110 active:translate-y-1 z-50"
             onClick={onClose}
           >
             ✕
@@ -61,7 +61,7 @@ const ProjectModal = ({
             <h3 className="mt-5 text-xl font-extrabold !text-white">{title}</h3>
 
             <div
-              className="mt-2 text-left text-white leading-relaxed w-full sm:w-5/6 max-h-[60vh] overflow-auto justify-center"
+              className="mt-2 text-left text-white leading-relaxed w-full sm:w-5/6 max-h-[60vh] overflow-auto scroll-hidden justify-center"
               dangerouslySetInnerHTML={{ __html: description }}
             />
           </div>
