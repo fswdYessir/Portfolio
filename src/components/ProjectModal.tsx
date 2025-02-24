@@ -61,7 +61,7 @@ const ProjectModal = ({
             <h3 className="mt-5 text-xl font-extrabold !text-white">{title}</h3>
 
             <div
-              className="mt-2 text-left text-white leading-relaxed w-full sm:w-5/6 max-h-[60vh] overflow-auto scroll-hidden justify-center"
+              className="mt-2 text-left text-white leading-relaxed w-full sm:w-5/6 max-h-[60vh] overflow-auto justify-center"
               dangerouslySetInnerHTML={{ __html: description }}
             />
           </div>
