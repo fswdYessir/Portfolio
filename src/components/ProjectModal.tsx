@@ -34,12 +34,12 @@ const ProjectModal = ({
   return (
     <div
       className="fixed inset-0 flex items-center justify-center backdrop-blur-md z-50"
-      onClick={onClose}
+      onClick={e => e.stopPropagation()}
     >
       <div className="relative flex flex-col items-center w-full">
         <motion.div
           {...animationProps}
-          className="relative w-[350px] sm:w-[500px] md:w-[600px] lg:w-[700px] aspect-[16/10] bg-black/80 border-b-50 border-gray-400 rounded-4xl flex flex-col items-center justify-center"
+          className="relative w-[350px] h-[300px] sm:w-[500px] sm:h-[350px] md:w-[600px] md:h-[400px] lg:w-[700px] lg:h-[450px] aspect-[16/10] bg-black border-b-50 border-gray-400 rounded-4xl flex flex-col items-center justify-center"
           onClick={e => e.stopPropagation()}
         >
           <button
@@ -49,11 +49,11 @@ const ProjectModal = ({
             ✕
           </button>
 
-          <div className="absolute inset-4 rounded-t-2xl bg-blue-500/50 flex flex-col items-center justify-center p-4">
+          <div className="absolute inset-4 rounded-t-2xl bg-blue-400/35 flex flex-col items-center justify-center p-4">
             <div
-              className="absolute inset-0 rounded-t-2xl bg-gradient-to-r from-white/40 to-transparent opacity-30 flex flex-col items-center justify-center p-4"
+              className="absolute inset-0 rounded-t-2xl bg-black opacity-25 flex flex-col items-center justify-center p-4"
               style={{
-                clipPath: 'polygon(85% 0%, 100% 0%, 100% 100%, 15% 100%)',
+                clipPath: 'polygon(90% 0%, 100% 0%, 100% 100%, 15% 100%)',
               }}
             ></div>
 
