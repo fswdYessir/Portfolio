@@ -1,23 +1,10 @@
 import heroImg from '../assets/heroImg.png'
 import { GrGithub, GrLinkedin } from 'react-icons/gr'
 import { useTheme } from '../components/ThemeContext'
+import '../App.css'
 
 function Hero() {
   const { theme, toggleTheme } = useTheme()
-
-  const githubIcon =
-    theme === 'light' ? (
-      <GrGithub size={20} color="black" />
-    ) : (
-      <GrGithub size={20} color="white" />
-    )
-
-  const linkedinIcon =
-    theme === 'light' ? (
-      <GrLinkedin size={20} color="black" />
-    ) : (
-      <GrLinkedin size={20} color="white" />
-    )
 
   const handleScrollToProjects = () => {
     document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
@@ -75,13 +62,13 @@ function Hero() {
             href="https://github.com/devBySol"
             className="hover:scale-110 transition-transform"
           >
-            {githubIcon}
+            <GrGithub size={24} className="gitIcon" />
           </a>
           <a
             href="https://www.linkedin.com/in/yeseol/"
             className="hover:scale-110 transition-transform"
           >
-            {linkedinIcon}
+            <GrLinkedin size={24} className="linkedinIcon" />
           </a>
         </span>
 
@@ -99,10 +86,8 @@ function Hero() {
           ></div>
           <button
             onClick={handleScrollToProjects}
-            className={`relative font-bold w-40 h-12 text-lg rounded-2xl hover:scale-105 active:translate-y-1 ${
-              theme === 'light'
-                ? 'justify-center transition-all duration-200  bg-gray-800 text-white'
-                : 'bg-gray-400/50 text-white'
+            className={`Btn text-white ${
+              theme === 'light' ? 'bg-gray-800 ' : 'bg-gray-400/50'
             }`}
           >
             PROJECTS

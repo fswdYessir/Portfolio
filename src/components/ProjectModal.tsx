@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faApple } from '@fortawesome/free-brands-svg-icons'
+import { GrApple } from 'react-icons/gr'
 
 interface ProjectModalProps {
   title: string
@@ -61,7 +60,7 @@ const ProjectModal = ({
             <h3 className="mt-5 text-xl font-extrabold !text-white">{title}</h3>
 
             <div
-              className="mt-2 text-left text-white leading-relaxed w-full sm:w-5/6 max-h-[60vh] overflow-auto justify-center"
+              className="mt-2 text-left text-white leading-relaxed w-full sm:w-5/6 max-h-[60vh] overflow-auto justify-center z-50"
               dangerouslySetInnerHTML={{ __html: description }}
             />
           </div>
@@ -72,10 +71,7 @@ const ProjectModal = ({
               rel="project link"
               className="absolute -bottom-[44px] left-1/2 transform -translate-x-1/2"
             >
-              <FontAwesomeIcon
-                icon={faApple}
-                className="text-white text-4xl transition-transform transform hover:scale-110 active:translate-y-1"
-              />
+              <GrApple className="text-white text-4xl transition-transform transform hover:scale-110 active:translate-y-1" />
             </a>
           )}
         </motion.div>

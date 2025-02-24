@@ -96,7 +96,7 @@ const Contact: React.FC = () => {
         <input
           type="submit"
           value="SUBMIT"
-          className={`text-white font-bold rounded-2xl w-40 h-12 text-lg shadow-md transition-transform transform hover:scale-105 active:translate-y-1 cursor-pointer mx-auto ${
+          className={`Btn text-white ${
             theme === 'light' ? 'bg-gray-800 ' : 'bg-gray-400/50'
           }`}
         />
