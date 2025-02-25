@@ -28,6 +28,10 @@
   @apply font-bold rounded-2xl w-40 h-12 text-lg shadow-md transition-transform transform hover:scale-105 active:translate-y-1 mx-auto;
 }
 
+[data-theme='dark'] .flip-box-back {
+  @apply bg-yellow-400/80 before:bg-yellow-100;
+}
+
 body {
   background-color: var(--background-color);
   display: flex;
@@ -90,7 +94,3 @@ p {
   width: 0px;
   background: transparent;
 }
-
-/* .glass {
-  clip-path: polygon(85% 0%, 100% 0%, 100% 100%, 15% 100%)'
-} */

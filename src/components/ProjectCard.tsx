@@ -3,6 +3,7 @@ import '../styles/Projects.css'
 import { HoveredSkills } from './HoverSkills'
 import ProjectModal from './ProjectModal'
 import { AnimatePresence } from 'framer-motion'
+import '../App.css'
 
 interface ProjectCardProps {
   src: string
@@ -40,14 +41,19 @@ function ProjectCard({
         <div className="flip-box-inner">
           <div className="flip-box-front">
             <img className="w-full h-48 object-contain" src={src} alt={h3} />
-            <h3 className="text-xl font-bold mt-4">{h3}</h3>
-            <p className="max-w-[40ch] text-gray-600 mt-2">{p}</p>
+            <h3 className="text-xl font-bold">{h3}</h3>
+            <p className="max-w-[40ch]">{p}</p>
           </div>
-          <div className="flip-box-back absolute inset-0 w-full h-full flex flex-col items-center justify-center bg-gray-700 rounded-2xl p-4 rotate-y-180 backface-hidden mt-5">
-            <h3 className="text-xl font-semibold !text-white">{h3}</h3>
-            <p className="text-sm text-center px-4 !text-white">
-              {description}
-            </p>
+          <div
+            className="flip-box-back inset-0 absolute w-full h-full flex flex-col items-center justify-center rotate-y-180 backface-hidden mt-5 bg-yellow-300/70 shadow-2xl transform rotate-2 before:absolute before:bottom-0 before:right-0 before:w-18 before:h-7.5  before:bg-yellow-500/80 before:opacity-80"
+            style={{
+              clipPath: 'polygon(100% 0, 100% 85%, 76% 100%, 0 100%, 0 0)',
+            }}
+          >
+            <div className="flip-box-back-content p-3">
+              <h3 className="text-xl font-semibold">{h3}</h3>
+              <p>{description}</p>
+            </div>
           </div>
         </div>
       </div>
