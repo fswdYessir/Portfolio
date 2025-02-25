@@ -42,7 +42,9 @@ function Hero() {
         >
           <div
             className={`sm:w-4 sm:h-4 w-3 h-3 rounded-full bg-white shadow-md transform transition-transform ${
-              theme === 'light' ? 'translate-x-5' : 'translate-x-1'
+              theme === 'light'
+                ? 'sm:translate-x-5 translate-x-4'
+                : 'translate-x-1'
             }`}
           />
         </button>
