@@ -25,7 +25,7 @@
 }
 
 .Btn {
-  @apply font-bold rounded-2xl w-40 h-12 text-lg shadow-md transition-transform transform hover:scale-105 active:translate-y-1 mx-auto;
+  @apply font-bold rounded-2xl w-40 h-12 text-lg shadow-md transition-transform transform hover:scale-105 cursor-pointer active:translate-y-1 mx-auto;
 }
 
 [data-theme='dark'] .flip-box-back {
@@ -79,9 +79,10 @@ p {
   font-size: 16px;
   font-weight: 300;
 }
-:hover {
+
+/* :hover {
   cursor: pointer;
-}
+} */
 
 .clip-trapezoid {
   clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);

@@ -36,12 +36,12 @@ function Hero() {
         <button
           onClick={toggleTheme}
           aria-label="Toggle Theme"
-          className={`absolute top-0 right-0 flex items-center w-8 h-4 sm:w-10 sm:h-5 rounded-full transition-colors ${
+          className={`absolute top-0 right-0 flex items-center w-8 h-4 sm:w-10 sm:h-5 rounded-full transition-colors   hover:cursor-pointer ${
             theme === 'light' ? 'bg-gray-700' : 'bg-gray-500'
           }`}
         >
           <div
-            className={`sm:w-5 sm:h-5 w-3 h-3 rounded-full bg-white shadow-md transform transition-transform ${
+            className={`sm:w-4 sm:h-4 w-3 h-3 rounded-full bg-white shadow-md transform transition-transform ${
               theme === 'light' ? 'translate-x-5' : 'translate-x-1'
             }`}
           />
