@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { GrApple } from 'react-icons/gr'
+import { GrApple, GrFormClose } from 'react-icons/gr'
 
 interface ProjectModalProps {
   title: string
@@ -43,12 +43,11 @@ const ProjectModal = ({
           className="relative w-[350px] sm:w-[500px] md:w-[600px] lg:w-[700px] aspect-[16/11] sm:aspect-[16/10] bg-black border-b-35 sm:border-b-50 border-gray-400 rounded-4xl flex flex-col items-center justify-center"
           onClick={e => e.stopPropagation()}
         >
-          <button
+          <GrFormClose
+            size={26}
             className="absolute m-3 top-2 right-4 text-white font-extrabold transition-transform transform hover:scale-110 active:translate-y-1 z-50"
             onClick={onClose}
-          >
-            ✕
-          </button>
+          />
 
           <div className="absolute inset-2 sm:inset-4 rounded-t-3xl sm:rounded-t-2xl bg-blue-400/50 flex flex-col items-center justify-center p-4">
             <div
