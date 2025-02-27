@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { GrApple } from 'react-icons/gr'
 
@@ -31,6 +31,7 @@ const ProjectModal = ({
     transition: { type: 'spring', stiffness: 200, damping: 20 },
   }
 
+  const [isHovered, setIsHovered] = useState(false)
   return (
     <div
       className="fixed inset-0 flex items-center justify-center backdrop-blur-md z-50"
@@ -68,9 +69,21 @@ const ProjectModal = ({
           <a
             href={link}
             rel="project link"
-            className="absolute -bottom-[30px] sm:-bottom-[44px] left-1/2 transform -translate-x-1/2"
+            className="absolute -bottom-[30px] sm:-bottom-[47px] left-1/2 transform -translate-x-1/2"
           >
-            <GrApple className="text-white text-2xl sm:text-4xl transition-transform transform hover:scale-110 active:translate-y-1" />
+            <motion.button
+              initial={{ opacity: 1 }}
+              animate={isHovered ? { opacity: 1 } : { opacity: [1, 0.3, 1] }}
+              transition={{
+                repeat: isHovered ? 0 : Infinity,
+                duration: 0.5,
+                ease: 'easeInOut',
+              }}
+              onHoverStart={() => setIsHovered(true)}
+              onHoverEnd={() => setIsHovered(false)}
+            >
+              <GrApple className="text-white text-2xl sm:text-4xl transition-transform transform hover:scale-120 hover:text-red-500/80 active:translate-y-1 cursor-pointer" />
+            </motion.button>
           </a>
         </motion.div>
 
