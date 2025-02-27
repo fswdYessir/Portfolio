@@ -69,7 +69,7 @@ const ProjectModal = ({
           <a
             href={link}
             rel="project link"
-            className="absolute -bottom-[30px] sm:-bottom-[47px] left-1/2 transform -translate-x-1/2"
+            className="absolute -bottom-[33px] sm:-bottom-[47px] left-1/2 transform -translate-x-1/2"
           >
             <motion.button
               initial={{ opacity: 1 }}
