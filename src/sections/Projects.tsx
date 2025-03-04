@@ -1,5 +1,5 @@
 import BeepLogo from '../../public/logo/BeepLogo.png'
-import StuffNStuffLogo from '../../public/logo/StuffNStuffLogo.png'
+// import StuffNStuffLogo from '../../public/logo/StuffNStuffLogo.png'
 import FourSeasonLogo from '../../public/logo/FourSeasonLogo.png'
 import HiltonLogo from '../../public/logo/HiltonLogo.png'
 import IMDBLogo from '../../public/logo/IMDBLogo.png'
