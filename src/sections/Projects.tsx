@@ -1,5 +1,5 @@
 import BeepLogo from '../assets/BeepLogo.png'
-import StuffnStuffLogo from '../assets/stuffnstuffLogo.png'
+import StuffnStuffLogo from '../assets/StuffNStuffLogo.png'
 import FourSeasonLogo from '../assets/FourSeasonLogo.png'
 import HiltonLogo from '../assets/HiltonLogo.png'
 import ProjectCard from '../components/ProjectCard'
@@ -24,10 +24,18 @@ function Projects() {
           h3="Stuff N Stuff"
           p="Marketplace web app"
           description="Real-time chat, personalized recommendations, and secure authentication."
-          modalDescription={`
-            Stuff N Stuff is a second-hand marketplace web app designed for seamless buying and selling, inspired by Facebook Marketplace. It provides real-time item postings, chat functionality, personalized recommendations, and secure authentication to enhance the user experience.<br /><br />
-            <strong>Tech Stack : </strong>EJS | Express.js | TypeScript | PostgreSQL | Azure Blob Storage | JWT (Email Verification)
-          `}
+          modalDescription="
+    Stuff N Stuff is a second-hand marketplace app inspired by Facebook Marketplace. It offers real-time listings, chat, and secure authentication for a seamless user experience.<br /><br />
+  "
+          techStack={[
+            'EJS',
+            'Express.js',
+            'TypeScript',
+            'PostgreSQL',
+            'HTML',
+            'CSS',
+          ]}
+          image="/src/assets/StuffNStuff.png"
           skills={[
             'JavaScript',
             'TypeScript',
@@ -39,15 +47,22 @@ function Projects() {
             'EJS',
           ]}
         />
+
         <ProjectCard
           src={BeepLogo}
           link="https://www.beep-safety.com/"
           h3="Beep"
           p="Personal safety app"
           description="AI-powered safe route recommendations and real-time safety features."
-          modalDescription="Beep is a personal safety app designed to help users navigate home safely. By utilizing crime data from the Vancouver Police Department and analyzing it with AI, Beep recommends the safest routes and provides essential security features. Whether you're walking home late at night or traveling in unfamiliar areas, Beep ensures you stay safe and informed.<br /><br />
-          <strong>Tech Stack : </strong>Expo | React Native | TypeScript | Firebase | Supabase | Google Maps API | Custom AWS AI
-"
+          modalDescription="Beep is a personal safety app that uses AI and crime data to recommend safe routes and security features, helping users navigate home safely.<br /><br />"
+          techStack={[
+            'Expo',
+            'React Native',
+            'TypeScript',
+            'Firebase',
+            'Supabase',
+          ]}
+          image="/src/assets/Beep.png"
           skills={['TypeScript', 'React Native', 'Expo', 'Firebase', 'Figma']}
         />
 
@@ -57,9 +72,9 @@ function Projects() {
           h3="FourSeason"
           p="Day trip rental web app"
           description="Rent seasonal gear and book trips with real-time reservations."
-          modalDescription="Four Season is a responsive web and mobile application designed to make seasonal gear rentals and one-day trip planning effortless for users in Vancouver. Whether you're looking for ski gear in winter or hiking equipment in summer, Four Season provides a seamless experience from browsing travel packages to booking trips.<br /><br />
-          <strong>Tech Stack : </strong>Next.js | React | TypeScript | React-email (Resend) | Strapi (Cloud) | PostgreSQL | Neon
-"
+          modalDescription="Four Season is a responsive app for renting seasonal gear and planning day trips in Vancouver, offering a seamless experience from browsing to booking.<br /><br />"
+          techStack={['Next.js', 'React', 'TypeScript', 'Strapi', 'PostgreSQL']}
+          image="/src/assets/FourSeason.png"
           skills={[
             'TypeScript',
             'CSS',
@@ -72,15 +87,16 @@ function Projects() {
             'Tailwind CSS',
           ]}
         />
+
         <ProjectCard
           src={HiltonLogo}
           link="https://mdia-2025-project3.vercel.app/"
           h3="Hilton"
           p="Hilton app redesign"
           description="With a modern, simple design, it enhances the customer experience by simplifying room info checks and bookings."
-          modalDescription="Hilton Honor app redesign project focuses on improving the user experience by restructuring the interface for better accessibility and ease of use.<br />A digital key feature has been added, allowing users to check in and out 24/7 without needing a physical key. This enhances convenience and eliminates concerns about key loss.<br /><br />
-          <strong>Tech Stack : </strong>TypeScript | React | Vite | Vercel | Tailwind CSS
-"
+          modalDescription="The Hilton Honor app redesign enhances user experience with a simplified interface and a digital key feature for 24/7 check-in and checkout without a physical key.<br /><br />"
+          techStack={['TypeScript', 'React', 'Vite', 'Vercel', 'Tailwind CSS']}
+          image="/src/assets/Hilton.png"
           skills={['TypeScript', 'React', 'Vite', 'vercel', 'Tailwind CSS']}
         />
       </div>

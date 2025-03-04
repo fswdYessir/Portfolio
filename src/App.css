@@ -20,7 +20,8 @@
 }
 
 [data-theme='dark'] .gitIcon,
-.linkedinIcon {
+.linkedinIcon,
+.techIcons {
   color: var(--gitIcon-text-color);
 }
 
