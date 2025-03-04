@@ -6,8 +6,8 @@ import '../App.css'
 function Hero() {
   const { theme, toggleTheme } = useTheme()
 
-  const handleScrollToProjects = () => {
-    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
+  const handleScrollToContact = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
@@ -74,7 +74,7 @@ function Hero() {
           </a>
         </span>
 
-        <p className="max-w-[24ch]">
+        <p className="max-w-[40ch]">
           Problem-solving full-stack developer focused on collaboration and
           building user-friendly web applications."
         </p>
@@ -87,12 +87,12 @@ function Hero() {
             }`}
           ></div>
           <button
-            onClick={handleScrollToProjects}
+            onClick={handleScrollToContact}
             className={`Btn text-white ${
               theme === 'light' ? 'bg-gray-800 ' : 'bg-gray-400/50'
             }`}
           >
-            PROJECTS
+            CONTACT
           </button>
         </div>
       </div>

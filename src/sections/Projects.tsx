@@ -8,9 +8,15 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="flex flex-col items-center justify-center text-center py-5 min-h-[50vh]"
+      className="flex flex-col items-center justify-center text-center py-5 min-h-[40vh]"
     >
-      <h1 className="text-3xl font-bold uppercase mb-8">Projects</h1>
+      <div className="p-5">
+        <h1 className="text-3xl font-bold uppercase">Projects</h1>
+        <p>
+          Welcome! Check out my projects below and see what I’ve been working
+          on.
+        </p>
+      </div>
       <div className="flex flex-wrap justify-center gap-8 px-8">
         <ProjectCard
           src={StuffnStuffLogo}

@@ -4,7 +4,7 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="flex flex-col items-center justify-center text-center py-10 min-h-[50vh]"
+      className="flex flex-col items-center justify-center text-center py-10 min-h-[40vh]"
     >
       <div>
         <div className="mb-10">

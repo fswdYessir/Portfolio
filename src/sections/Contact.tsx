@@ -46,7 +46,13 @@ const Contact: React.FC = () => {
       id="contact"
       className="flex flex-col items-center text-center py-10"
     >
-      <h1 className="text-3xl font-bold">Contact</h1>
+      <div className="pb-5">
+        <h1 className="text-3xl font-bold">Contact</h1>
+        <p>
+          Feel free to reach out if you have any questions, want to collaborate,
+          or need further information!
+        </p>
+      </div>
       <form
         onSubmit={handleSubmit}
         className="flex flex-col mt-10 gap-6 w-full max-w-[250px] md:max-w-[500px] lg:max-w-[600px]"

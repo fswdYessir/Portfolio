@@ -35,7 +35,7 @@ const ProjectModal = ({
   return (
     <div
       className="fixed inset-0 flex items-center justify-center backdrop-blur-md z-50"
-      onClick={e => e.stopPropagation()}
+      onClick={onClose}
     >
       <div className="relative flex flex-col items-center w-full">
         <motion.div
