@@ -8,7 +8,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="flex flex-col items-center justify-center text-center py-5 min-h-[40vh]"
+      className="flex flex-col items-center justify-center text-center py-5 min-h-[20vh]"
     >
       <div className="p-5">
         <h1 className="text-3xl font-bold uppercase">Projects</h1>
@@ -35,7 +35,7 @@ function Projects() {
             'HTML',
             'CSS',
           ]}
-          image="/src/assets/StuffNStuff.png"
+          image="StuffNStuff.png"
           skills={[
             'JavaScript',
             'TypeScript',
@@ -62,7 +62,7 @@ function Projects() {
             'Firebase',
             'Supabase',
           ]}
-          image="/src/assets/Beep.png"
+          image="Beep.png"
           skills={['TypeScript', 'React Native', 'Expo', 'Firebase', 'Figma']}
         />
 
@@ -74,7 +74,7 @@ function Projects() {
           description="Rent seasonal gear and book trips with real-time reservations."
           modalDescription="Four Season is a responsive app for renting seasonal gear and planning day trips in Vancouver, offering a seamless experience from browsing to booking.<br /><br />"
           techStack={['Next.js', 'React', 'TypeScript', 'Strapi', 'PostgreSQL']}
-          image="/src/assets/FourSeason.png"
+          image="FourSeason.png"
           skills={[
             'TypeScript',
             'CSS',
@@ -96,7 +96,7 @@ function Projects() {
           description="With a modern, simple design, it enhances the customer experience by simplifying room info checks and bookings."
           modalDescription="The Hilton Honor app redesign enhances user experience with a simplified interface and a digital key feature for 24/7 check-in and checkout without a physical key.<br /><br />"
           techStack={['TypeScript', 'React', 'Vite', 'Vercel', 'Tailwind CSS']}
-          image="/src/assets/Hilton.png"
+          image="Hilton.png"
           skills={['TypeScript', 'React', 'Vite', 'vercel', 'Tailwind CSS']}
         />
       </div>

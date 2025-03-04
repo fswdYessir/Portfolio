@@ -13,10 +13,10 @@ function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex flex-col md:flex-row items-center justify-center min-h-screen sm:gap-15 gap-5 text-center p-10 overflow-hidden"
+      className="relative flex flex-col md:flex-row items-center justify-center min-h-[65vh] sm:gap-15 gap-5 text-center p-10 overflow-hidden"
     >
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-50">
-        <div className="w-1 h-8 sm:h-16 bg-gray-700"></div>
+        <div className="w-1 h-8 sm:h-16 bg-gray-700 "></div>
 
         <div className="sm:w-36 sm:h-20 w-24 h-10 bg-gray-700 rounded-t-full relative"></div>
       </div>
@@ -32,11 +32,11 @@ function Hero() {
           filter: 'blur(30px)',
         }}
       />
-      <div className="relative flex flex-col items-center md:items-start z-10">
+      <div className="relative flex flex-col items-center md:items-start pt-30 z-10">
         <button
           onClick={toggleTheme}
           aria-label="Toggle Theme"
-          className={`absolute top-0 right-0 flex items-center w-8 h-4 sm:w-10 sm:h-5 rounded-full transition-colors   hover:cursor-pointer ${
+          className={`absolute top-30 right-0 flex items-center w-8 h-4 sm:w-10 sm:h-5 rounded-full transition-colors   hover:cursor-pointer ${
             theme === 'light' ? 'bg-gray-700' : 'bg-gray-500'
           }`}
         >
@@ -48,14 +48,13 @@ function Hero() {
             }`}
           />
         </button>
-
         <img
           className="w-48 md:w-72 lg:w-96"
           src={heroImg}
           alt="Profile picture"
         />
       </div>
-      <div className="flex flex-col gap-5 items-center md:items-start text-center md:text-left z-10">
+      <div className="flex flex-col gap-6 items-center md:items-start text-center md:text-left z-10 pt-30">
         <h1 className="font-bold">Sol Kim</h1>
         <h2>Full Stack Developer</h2>
 
