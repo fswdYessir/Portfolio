@@ -14,6 +14,9 @@ function Skills() {
         <div className="grid grid-cols-2 m-10 md:grid-cols-6 gap-7">
           <SkillList skill="JavaScript" />
           <SkillList skill="TypeScript" />
+          <SkillList skill="C#" />
+          <SkillList skill="ASP.NET" />
+          <SkillList skill="Bootstrap" />
           <SkillList skill="HTML" />
           <SkillList skill="CSS" />
           <SkillList skill="React" />
@@ -24,20 +27,15 @@ function Skills() {
           <SkillList skill="Figma" />
           <SkillList skill="Vite" />
           <SkillList skill="WordPress" />
-
           <SkillList skill="Node.js" />
           <SkillList skill="Express" />
           <SkillList skill="EJS" />
           <SkillList skill="Strapi" />
           <SkillList skill="Firebase" />
-
           <SkillList skill="MySQL" />
           <SkillList skill="SQLite" />
-
           <SkillList skill="PostgreSQL" />
-
           <SkillList skill="Neon" />
-
           <SkillList skill="Vercel" />
           <SkillList skill="Render" />
           <SkillList skill="Atom" />

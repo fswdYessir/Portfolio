@@ -2,6 +2,7 @@ import BeepLogo from '../../public/logo/BeepLogo.png'
 import StuffNStuffLogo from '../../public/logo/StuffNStuffLogo.png'
 import FourSeasonLogo from '../../public/logo/FourSeasonLogo.png'
 import HiltonLogo from '../../public/logo/HiltonLogo.png'
+import IMDBLogo from '../../public/logo/IMDBLogo.png'
 import ProjectCard from '../components/ProjectCard'
 
 function Projects() {
@@ -18,7 +19,7 @@ function Projects() {
         </p>
       </div>
       <div className="flex flex-wrap justify-center gap-8 px-8">
-        <ProjectCard
+        {/* <ProjectCard
           src={StuffNStuffLogo}
           link="https://idsp-stuffnstuff.onrender.com"
           h3="Stuff N Stuff"
@@ -46,7 +47,7 @@ function Projects() {
             'CSS',
             'EJS',
           ]}
-        />
+        /> */}
 
         <ProjectCard
           src={BeepLogo}
@@ -98,6 +99,17 @@ function Projects() {
           techStack={['TypeScript', 'React', 'Vite', 'Vercel', 'Tailwind CSS']}
           image="Hilton.png"
           skills={['TypeScript', 'React', 'Vite', 'vercel', 'Tailwind CSS']}
+        />
+        <ProjectCard
+          src={IMDBLogo}
+          link=""
+          h3="IMDb"
+          p="Fake IMDb"
+          description="A clean and modern design with movie genre filtering, search, and a community for events and news."
+          modalDescription="Built with ASP.NET MVC, the Fake IMDb project integrates OMDb, TMDb, and News APIs for real-time movie info. It features a simple interface with genre filtering, search, and a commenting system. Uses HttpClient for APIs and LINQ for data handling.<br /><br />"
+          techStack={['C#', 'Bootstrap', 'ASP.NET', 'CSS']}
+          image="IMDB.png"
+          skills={['C#', 'Bootstrap', 'ASP.NET', 'CSS']}
         />
       </div>
     </section>

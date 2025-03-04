@@ -49,7 +49,7 @@ function Hero() {
           />
         </button>
         <img
-          className="w-48 md:w-72 lg:w-96"
+          className="w-48 md:w-72 lg:w-86"
           src={heroImg}
           alt="Profile picture"
         />

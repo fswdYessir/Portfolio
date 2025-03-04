@@ -2,7 +2,8 @@ import '../App.css'
 import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useTheme } from './ThemeContext'
-import { FaAws, FaHtml5, FaCss3Alt } from 'react-icons/fa'
+import { FaAws, FaHtml5, FaCss3Alt, FaBootstrap } from 'react-icons/fa'
+import { TbBrandCSharp } from 'react-icons/tb'
 import {
   SiTypescript,
   SiPostgresql,
@@ -17,6 +18,7 @@ import {
   SiVercel,
   SiTailwindcss,
   SiVite,
+  SiDotnet,
 } from 'react-icons/si'
 
 interface ProjectModalProps {
@@ -25,7 +27,6 @@ interface ProjectModalProps {
   image: string
   link?: string
   techStack: string[]
-
   onClose: () => void
 }
 
@@ -47,7 +48,6 @@ const ProjectModal = ({
   const animationProps = {
     initial: { scale: 0, opacity: 0 },
     animate: { scale: 1, opacity: 1 },
-    // exit: { scale: 0, opacity: 0 },
     transition: { type: 'spring', stiffness: 200, damping: 20 },
   }
 
@@ -71,6 +71,9 @@ const ProjectModal = ({
     'Tailwind CSS': <SiTailwindcss size={30} />,
     React: <SiReact size={30} />,
     Vite: <SiVite size={30} />,
+    'C#': <TbBrandCSharp size={30} />,
+    'ASP.NET': <SiDotnet size={30} />,
+    Bootstrap: <FaBootstrap size={30} />,
   }
 
   const renderTechIcons = (techStack: string[]) => {
@@ -126,16 +129,9 @@ const ProjectModal = ({
               <div>{renderTechIcons(techStack)}</div>
             </div>
           </div>
-          <a href={link} target="_blank" rel="noopener noreferrer">
-            <div className="relative inline-flex group">
-              <div
-                className={`absolute transition-transform transform hover:scale-105 active:translate-y-1 ${
-                  theme === 'light'
-                    ? 'transition-all duration-500 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt'
-                    : ''
-                }`}
-              ></div>
 
+          {link && (
+            <a href={link} target="_blank" rel="noopener noreferrer">
               <button
                 className={`relative px-6 py-2 rounded-lg font-semibold shadow-md transition-transform transform hover:scale-105 active:translate-y-1 ${
                   theme === 'light'
@@ -145,8 +141,8 @@ const ProjectModal = ({
               >
                 View Project
               </button>
-            </div>
-          </a>
+            </a>
+          )}
         </div>
       </motion.div>
     </div>
