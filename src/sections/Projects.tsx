@@ -1,7 +1,7 @@
-import BeepLogo from '../assets/BeepLogo.png'
-import StuffNStuffLogo from '../assets/StuffNStuffLogo.png'
-import FourSeasonLogo from '../assets/FourSeasonLogo.png'
-import HiltonLogo from '../assets/HiltonLogo.png'
+import BeepLogo from '../../public/logo/BeepLogo.png'
+import StuffNStuffLogo from '../../public/logo/StuffNStuffLogo.png'
+import FourSeasonLogo from '../../public/logo/FourSeasonLogo.png'
+import HiltonLogo from '../../public/logo/HiltonLogo.png'
 import ProjectCard from '../components/ProjectCard'
 
 function Projects() {
