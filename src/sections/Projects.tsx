@@ -1,5 +1,5 @@
 import BeepLogo from '../assets/BeepLogo.png'
-import StuffnStuffLogo from '../assets/StuffNStuffLogo.png'
+import StuffNStuffLogo from '../assets/StuffNStuffLogo.png'
 import FourSeasonLogo from '../assets/FourSeasonLogo.png'
 import HiltonLogo from '../assets/HiltonLogo.png'
 import ProjectCard from '../components/ProjectCard'
@@ -19,7 +19,7 @@ function Projects() {
       </div>
       <div className="flex flex-wrap justify-center gap-8 px-8">
         <ProjectCard
-          src={StuffnStuffLogo}
+          src={StuffNStuffLogo}
           link="https://idsp-stuffnstuff.onrender.com"
           h3="Stuff N Stuff"
           p="Marketplace web app"
