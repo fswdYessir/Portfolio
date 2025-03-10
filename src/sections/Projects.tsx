@@ -102,7 +102,7 @@ function Projects() {
         />
         <ProjectCard
           src={IMDBLogo}
-          link=""
+          link="https://imdb-fkdvcbateeb8brcw.canadacentral-01.azurewebsites.net/"
           h3="IMDb"
           p="Fake IMDb"
           description="A clean and modern design with movie genre filtering, search, and a community for events and news."
