@@ -82,13 +82,13 @@ function Hero() {
             className={`absolute transition-transform transform hover:scale-105 active:translate-y-1 ${
               theme === 'light'
                 ? 'transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt'
-                : ''
+                : 'transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#fea101] via-[#f4e410] to-[#f9aa0b] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt'
             }`}
           ></div>
           <button
             onClick={handleScrollToContact}
             className={`Btn text-white ${
-              theme === 'light' ? 'bg-gray-800 ' : 'bg-gray-400/50'
+              theme === 'light' ? 'bg-gray-800 ' : 'bg-yellow-400/50'
             }`}
           >
             CONTACT

@@ -103,7 +103,7 @@ const Contact: React.FC = () => {
           type="submit"
           value="SUBMIT"
           className={`Btn text-white ${
-            theme === 'light' ? 'bg-gray-800 ' : 'bg-gray-400/50'
+            theme === 'light' ? 'bg-gray-800 ' : 'bg-yellow-400/50'
           }`}
         />
         {status && <p>{status}</p>}

@@ -107,7 +107,7 @@ const ProjectModal = ({
           <img
             src={image}
             alt="project-image"
-            className="w-full max-w-[90%] mb-10 rounded-xl object-cover hover:scale-105 active:translate-y-1"
+            className="w-full max-w-[90%] mb-10 rounded-xl object-cover"
           />
           <div className="project-info flex flex-col items-center p-5 mb-5">
             <h3
@@ -132,15 +132,22 @@ const ProjectModal = ({
 
           {link && (
             <a href={link} target="_blank" rel="noopener noreferrer">
-              <button
-                className={`relative px-6 py-2 rounded-lg font-semibold shadow-md transition-transform transform hover:scale-105 active:translate-y-1 ${
-                  theme === 'light'
-                    ? 'bg-gray-800 text-white'
-                    : 'bg-gray-600 text-white'
-                }`}
-              >
-                View Project
-              </button>
+              <div className="relative inline-flex group">
+                <div
+                  className={`absolute transition-transform transform hover:scale-105 active:translate-y-1 ${
+                    theme === 'light'
+                      ? 'transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt'
+                      : 'transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#fea101] via-[#f4e410] to-[#f9aa0b] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt'
+                  }`}
+                ></div>
+                <button
+                  className={`Btn text-white ${
+                    theme === 'light' ? 'bg-gray-800 ' : 'bg-yellow-400/50'
+                  }`}
+                >
+                  View Project
+                </button>
+              </div>
             </a>
           )}
         </div>

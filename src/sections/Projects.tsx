@@ -1,15 +1,15 @@
-import BeepLogo from '../../public/logo/BeepLogo.png'
-// import StuffNStuffLogo from '../../public/logo/StuffNStuffLogo.png'
-import FourSeasonLogo from '../../public/logo/FourSeasonLogo.png'
-import HiltonLogo from '../../public/logo/HiltonLogo.png'
-import IMDBLogo from '../../public/logo/IMDBLogo.png'
+import Beep from '../../public/thumbnail/Beep.png'
+import StuffNStuff from '../../public/thumbnail/StuffNStuff.png'
+import FourSeason from '../../public/thumbnail/FourSeason.png'
+import Hilton from '../../public/thumbnail/Hilton.png'
+import IMDB from '../../public/thumbnail/IMDB.png'
 import ProjectCard from '../components/ProjectCard'
 
 function Projects() {
   return (
     <section
       id="projects"
-      className="flex flex-col items-center justify-center text-center py-5 min-h-[20vh]"
+      className="flex flex-col items-center justify-center text-center py-5 min-h-[10vh]"
     >
       <div className="p-5">
         <h1 className="text-3xl font-bold uppercase">Projects</h1>
@@ -18,9 +18,9 @@ function Projects() {
           on.
         </p>
       </div>
-      <div className="flex flex-wrap justify-center gap-8 px-8">
-        {/* <ProjectCard
-          src={StuffNStuffLogo}
+      <div className="flex flex-wrap justify-center gap-5 px-36">
+        <ProjectCard
+          src={StuffNStuff}
           link="https://idsp-stuffnstuff.onrender.com"
           h3="Stuff N Stuff"
           p="Marketplace web app"
@@ -46,11 +46,12 @@ function Projects() {
             'HTML',
             'CSS',
             'EJS',
+            'Render',
           ]}
-        /> */}
+        />
 
         <ProjectCard
-          src={BeepLogo}
+          src={Beep}
           link="https://www.beep-safety.com/"
           h3="Beep"
           p="Personal safety app"
@@ -68,7 +69,7 @@ function Projects() {
         />
 
         <ProjectCard
-          src={FourSeasonLogo}
+          src={FourSeason}
           link="https://4season.vercel.app"
           h3="FourSeason"
           p="Day trip rental web app"
@@ -90,7 +91,7 @@ function Projects() {
         />
 
         <ProjectCard
-          src={HiltonLogo}
+          src={Hilton}
           link="https://mdia-2025-project3.vercel.app/"
           h3="Hilton"
           p="Hilton app redesign"
@@ -101,10 +102,10 @@ function Projects() {
           skills={['TypeScript', 'React', 'Vite', 'vercel', 'Tailwind CSS']}
         />
         <ProjectCard
-          src={IMDBLogo}
+          src={IMDB}
           link="https://imdb-fkdvcbateeb8brcw.canadacentral-01.azurewebsites.net/"
           h3="IMDb"
-          p="Fake IMDb"
+          p="Mock IMDb"
           description="A clean and modern design with movie genre filtering, search, and a community for events and news."
           modalDescription="Built with ASP.NET MVC, the Fake IMDb project integrates OMDb, TMDb, and News APIs for real-time movie info. It features a simple interface with genre filtering, search, and a commenting system. Uses HttpClient for APIs and LINQ for data handling.<br /><br />"
           techStack={['C#', 'Bootstrap', 'ASP.NET', 'CSS']}
