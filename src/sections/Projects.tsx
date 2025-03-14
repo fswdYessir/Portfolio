@@ -9,7 +9,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="flex flex-col items-center justify-center text-center py-5 min-h-[10vh]"
+      className="flex flex-col items-center justify-center text-center pb-5 min-h-[10vh]"
     >
       <div className="p-5">
         <h1 className="text-3xl font-bold uppercase">Projects</h1>
