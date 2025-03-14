@@ -9,7 +9,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="flex flex-col items-center justify-center text-center pb-5 min-h-[10vh]"
+      className="flex flex-col items-center justify-center text-center pb-5 min-h-[50vh]"
     >
       <div className="p-5">
         <h1 className="text-3xl font-bold uppercase">Projects</h1>
@@ -18,7 +18,7 @@ function Projects() {
           on.
         </p>
       </div>
-      <div className="flex flex-wrap justify-center gap-5 px-36">
+      <div className="flex flex-wrap justify-center px-10">
         <ProjectCard
           src={StuffNStuff}
           link="https://idsp-stuffnstuff.onrender.com"

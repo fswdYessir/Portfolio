@@ -18,9 +18,7 @@ export const useTheme = () => {
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [theme, setTheme] = useState<string>(
-    () => localStorage.getItem('theme') || 'light'
-  )
+  const [theme, setTheme] = useState<string>('dark')
 
   useEffect(() => {
     document.body.setAttribute('data-theme', theme)
