@@ -3,13 +3,14 @@ import StuffNStuff from '../../public/thumbnail/StuffNStuff.png'
 import FourSeason from '../../public/thumbnail/FourSeason.png'
 import Hilton from '../../public/thumbnail/Hilton.png'
 import IMDB from '../../public/thumbnail/IMDB.png'
+// import ChezMari from '../../public/thumbnail/ChezMari.png'
 import ProjectCard from '../components/ProjectCard'
 
 function Projects() {
   return (
     <section
       id="projects"
-      className="flex flex-col items-center justify-center text-center pb-5 min-h-[50vh]"
+      className="flex flex-col items-center justify-center text-center pb-5 min-h-[20vh]"
     >
       <div className="p-5">
         <h1 className="text-3xl font-bold uppercase">Projects</h1>
@@ -18,7 +19,7 @@ function Projects() {
           on.
         </p>
       </div>
-      <div className="flex flex-wrap justify-center px-10">
+      <div className="flex flex-wrap justify-center gap-5 px-35">
         <ProjectCard
           src={StuffNStuff}
           link="https://idsp-stuffnstuff.onrender.com"
@@ -112,6 +113,17 @@ function Projects() {
           image="IMDB.png"
           skills={['C#', 'Bootstrap', 'ASP.NET', 'CSS']}
         />
+        {/* <ProjectCard
+          src={ChezMari}
+          link=""
+          h3="Chez Mari Salon"
+          p="Client project"
+          description="Website redesign for Chez Mari Salon"
+          modalDescription="Real client project : Redesigned the website and booking system using CMS Wordpress and plugins.<br /><br />"
+          techStack={['WordPress', 'Tailwind CSS', 'CSS']}
+          image="ChezMari.png"
+          skills={['WordPress', 'Tailwind CSS', 'CSS']}
+        /> */}
       </div>
     </section>
   )
