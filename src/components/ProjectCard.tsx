@@ -2,10 +2,10 @@ import { useContext, useState } from 'react'
 import '../styles/Projects.css'
 import { HoveredSkills } from './HoverSkills'
 import ProjectModal from './ProjectModal'
-import { AnimatePresence } from 'framer-motion'
 import '../App.css'
 
 interface ProjectCardProps {
+  label: string
   src: string
   h3: string
   p: string
@@ -18,6 +18,7 @@ interface ProjectCardProps {
 }
 
 function ProjectCard({
+  label,
   src,
   h3,
   p,
@@ -33,6 +34,12 @@ function ProjectCard({
 
   const handleMouseEnter = () => setHoveredSkills(skills)
   const handleMouseLeave = () => setHoveredSkills([])
+
+  const labelColor: { [key: string]: string } = {
+    Personal: 'bg-purple-800',
+    Group: 'bg-blue-800',
+    Client: 'bg-green-800',
+  }
 
   return (
     <>
@@ -55,6 +62,14 @@ function ProjectCard({
             }}
           >
             <div className="flip-box-back-content p-3">
+              <span className="absolute top-3 left-3 px-3 py-1 rounded-full text-sm font-bold"></span>
+              <span
+                className={`absolute top-3 left-3 px-3 py-1 rounded-full text-sm font-bold text-white ${
+                  labelColor[label] || 'bg-gray-500'
+                }`}
+              >
+                {label}
+              </span>
               <h3 className="text-xl font-semibold">{h3}</h3>
               <p>{description}</p>
               <div className="flex items-center mt-2"></div>
@@ -63,18 +78,16 @@ function ProjectCard({
         </div>
       </div>
 
-      <AnimatePresence>
-        {isModalOpen && (
-          <ProjectModal
-            title={h3}
-            description={modalDescription}
-            techStack={techStack}
-            image={image}
-            link={link}
-            onClose={() => setIsModalOpen(false)}
-          />
-        )}
-      </AnimatePresence>
+      {isModalOpen && (
+        <ProjectModal
+          title={h3}
+          description={modalDescription}
+          techStack={techStack}
+          image={image}
+          link={link}
+          onClose={() => setIsModalOpen(false)}
+        />
+      )}
     </>
   )
 }

@@ -1,6 +1,6 @@
 import '../App.css'
-import { useEffect } from 'react'
-import { motion } from 'framer-motion'
+import 'animate.css'
+import { useEffect, useState } from 'react'
 import { useTheme } from './ThemeContext'
 import { FaAws, FaHtml5, FaCss3Alt, FaBootstrap } from 'react-icons/fa'
 import { TbBrandCSharp } from 'react-icons/tb'
@@ -19,6 +19,8 @@ import {
   SiTailwindcss,
   SiVite,
   SiDotnet,
+  SiWordpress,
+  SiMysql,
 } from 'react-icons/si'
 
 interface ProjectModalProps {
@@ -38,6 +40,8 @@ const ProjectModal = ({
   link,
   onClose,
 }: ProjectModalProps) => {
+  const { theme } = useTheme()
+  const [closing, setClosing] = useState(false)
   useEffect(() => {
     document.body.style.overflow = 'hidden'
     return () => {
@@ -45,19 +49,17 @@ const ProjectModal = ({
     }
   }, [])
 
-  const animationProps = {
-    initial: { scale: 0, opacity: 0 },
-    animate: { scale: 1, opacity: 1 },
-    transition: { type: 'spring', stiffness: 200, damping: 20 },
+  const handleClose = () => {
+    setClosing(true)
+    setTimeout(() => onClose(), 500)
   }
-
-  const { theme } = useTheme()
 
   const techIcons = {
     EJS: <SiEjs size={30} />,
     'Express.js': <SiExpress size={30} />,
     TypeScript: <SiTypescript size={30} />,
     PostgreSQL: <SiPostgresql size={30} />,
+    MySQL: <SiMysql size={30} />,
     HTML: <FaHtml5 size={30} />,
     CSS: <FaCss3Alt size={30} />,
     AWS: <FaAws size={30} />,
@@ -74,6 +76,7 @@ const ProjectModal = ({
     'C#': <TbBrandCSharp size={30} />,
     'ASP.NET': <SiDotnet size={30} />,
     Bootstrap: <FaBootstrap size={30} />,
+    WordPress: <SiWordpress size={30} />,
   }
 
   const renderTechIcons = (techStack: string[]) => {
@@ -94,13 +97,15 @@ const ProjectModal = ({
   return (
     <div
       className="fixed inset-0 flex justify-center items-center backdrop-blur-md z-50"
-      onClick={onClose}
+      onClick={handleClose}
     >
-      <motion.div
-        {...animationProps}
+      <div
         className={`w-[85%] sm:w-[60%] rounded-2xl shadow-lg overflow-hidden ${
-          theme === 'light' ? 'bg-gray-200/80' : 'bg-black/70'
-        }`}
+          closing
+            ? 'animate__animated animate__zoomOut'
+            : 'animate__animated animate__zoomIn'
+        }
+         ${theme === 'light' ? 'bg-gray-200/80' : 'bg-black/70'}`}
         onClick={e => e.stopPropagation()}
       >
         <div className="flex flex-col items-center p-5">
@@ -151,7 +156,7 @@ const ProjectModal = ({
             </a>
           )}
         </div>
-      </motion.div>
+      </div>
     </div>
   )
 }

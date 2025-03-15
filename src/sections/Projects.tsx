@@ -14,13 +14,11 @@ function Projects() {
     >
       <div className="p-5">
         <h1 className="text-3xl font-bold uppercase">Projects</h1>
-        <p>
-          Welcome! Check out my projects below and see what I’ve been working
-          on.
-        </p>
+        <p>Welcome! Check out my projects below.</p>
       </div>
       <div className="flex flex-wrap justify-center gap-5 px-35">
         <ProjectCard
+          label="Group"
           src={StuffNStuff}
           link="https://idsp-stuffnstuff.onrender.com"
           h3="Stuff N Stuff"
@@ -52,6 +50,7 @@ function Projects() {
         />
 
         <ProjectCard
+          label="Group"
           src={Beep}
           link="https://www.beep-safety.com/"
           h3="Beep"
@@ -70,6 +69,7 @@ function Projects() {
         />
 
         <ProjectCard
+          label="Client"
           src={FourSeason}
           link="https://4season.vercel.app"
           h3="FourSeason"
@@ -92,6 +92,7 @@ function Projects() {
         />
 
         <ProjectCard
+          label="Personal"
           src={Hilton}
           link="https://mdia-2025-project3.vercel.app/"
           h3="Hilton"
@@ -103,17 +104,19 @@ function Projects() {
           skills={['TypeScript', 'React', 'Vite', 'vercel', 'Tailwind CSS']}
         />
         <ProjectCard
+          label="Personal"
           src={IMDB}
           link="https://imdb-fkdvcbateeb8brcw.canadacentral-01.azurewebsites.net/"
           h3="IMDb"
           p="Mock IMDb"
           description="A clean and modern design with movie genre filtering, search, and a community for events and news."
           modalDescription="Built with ASP.NET MVC, the Fake IMDb project integrates OMDb, TMDb, and News APIs for real-time movie info. It features a simple interface with genre filtering, search, and a commenting system. Uses HttpClient for APIs and LINQ for data handling.<br /><br />"
-          techStack={['C#', 'Bootstrap', 'ASP.NET', 'CSS']}
+          techStack={['C#', 'Bootstrap', 'ASP.NET', 'CSS', 'MySQL']}
           image="IMDB.png"
-          skills={['C#', 'Bootstrap', 'ASP.NET', 'CSS']}
+          skills={['C#', 'Bootstrap', 'ASP.NET', 'CSS', 'MySQL']}
         />
         {/* <ProjectCard
+          label="Client"
           src={ChezMari}
           link=""
           h3="Chez Mari Salon"
