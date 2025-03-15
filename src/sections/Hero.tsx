@@ -13,7 +13,7 @@ function Hero() {
       <Header />
       <section
         id="hero"
-        className="relative flex flex-col md:flex-row items-center justify-center min-h-screen sm:gap-15 gap-5 text-center p-10 overflow-hidden animate__animated animate__fadeIn"
+        className="relative flex flex-col md:flex-row items-center justify-center min-h-screen sm:gap-15 gap-5 text-center p-10 overflow-hidden"
       >
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-50">
           <div className="w-1 h-12 sm:h-18 bg-gray-700 "></div>
@@ -34,7 +34,7 @@ function Hero() {
             filter: 'blur(30px)',
           }}
         />
-        <div className="relative flex flex-col items-center md:items-start pt-30 z-10">
+        <div className="hero-info relative flex flex-col items-center md:items-start pt-30 z-10 animate__animated animate__fadeIn animate__delay-1s">
           <button
             onClick={toggleTheme}
             aria-label="Toggle Theme"
@@ -56,7 +56,7 @@ function Hero() {
             alt="Profile picture"
           />
         </div>
-        <div className="flex flex-col gap-6 items-center md:items-start text-center md:text-left z-10 pt-30">
+        <div className="flex flex-col gap-6 items-center md:items-start text-center md:text-left z-10 pt-30 animate__animated animate__fadeIn animate__delay-1s">
           <h1 className="font-bold">Sol Kim</h1>
           <h2>Full Stack Developer</h2>
 
