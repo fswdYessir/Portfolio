@@ -12,7 +12,6 @@ interface ProjectCardProps {
   description: string
   skills: string[]
   modalDescription: string
-  techStack: string[]
   link?: string
   image: string
 }
@@ -24,7 +23,6 @@ function ProjectCard({
   p,
   description,
   modalDescription,
-  techStack,
   skills,
   link,
   image,
@@ -65,7 +63,7 @@ function ProjectCard({
               <span className="absolute top-3 left-3 px-3 py-1 rounded-full text-sm font-bold"></span>
               <span
                 className={`absolute top-3 left-3 px-3 py-1 rounded-full text-sm font-bold text-white ${
-                  labelColor[label] || 'bg-gray-500'
+                  labelColor[label] || 'bg-gray-800'
                 }`}
               >
                 {label}
@@ -82,7 +80,7 @@ function ProjectCard({
         <ProjectModal
           title={h3}
           description={modalDescription}
-          techStack={techStack}
+          techStack={skills}
           image={image}
           link={link}
           onClose={() => setIsModalOpen(false)}

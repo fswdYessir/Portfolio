@@ -35,6 +35,7 @@ function Skills() {
           <SkillList skill="PostgreSQL" />
           <SkillList skill="Vercel" />
           <SkillList skill="Render" />
+          <SkillList skill="Azure" />
         </div>
       </div>
     </section>

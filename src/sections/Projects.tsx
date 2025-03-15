@@ -16,7 +16,7 @@ function Projects() {
         <h1 className="text-3xl font-bold uppercase">Projects</h1>
         <p>Welcome! Check out my projects below.</p>
       </div>
-      <div className="flex flex-wrap justify-center gap-5 px-35">
+      <div className="flex flex-wrap justify-center gap-5 px-36">
         <ProjectCard
           label="Group"
           src={StuffNStuff}
@@ -27,25 +27,16 @@ function Projects() {
           modalDescription="
     Stuff N Stuff is a second-hand marketplace app inspired by Facebook Marketplace. It offers real-time listings, chat, and secure authentication for a seamless user experience.<br /><br />
   "
-          techStack={[
-            'EJS',
-            'Express.js',
-            'TypeScript',
-            'PostgreSQL',
-            'HTML',
-            'CSS',
-          ]}
           image="StuffNStuff.png"
           skills={[
-            'JavaScript',
             'TypeScript',
             'Express',
             'PostgreSQL',
-            'vercel',
             'HTML',
             'CSS',
             'EJS',
             'Render',
+            'Azure',
           ]}
         />
 
@@ -57,13 +48,6 @@ function Projects() {
           p="Personal safety app"
           description="AI-powered safe route recommendations and real-time safety features."
           modalDescription="Beep is a personal safety app that uses AI and crime data to recommend safe routes and security features, helping users navigate home safely.<br /><br />"
-          techStack={[
-            'Expo',
-            'React Native',
-            'TypeScript',
-            'Firebase',
-            'Supabase',
-          ]}
           image="Beep.png"
           skills={['TypeScript', 'React Native', 'Expo', 'Firebase', 'Figma']}
         />
@@ -76,7 +60,6 @@ function Projects() {
           p="Day trip rental web app"
           description="Rent seasonal gear and book trips with real-time reservations."
           modalDescription="Four Season is a responsive app for renting seasonal gear and planning day trips in Vancouver, offering a seamless experience from browsing to booking.<br /><br />"
-          techStack={['Next.js', 'React', 'TypeScript', 'Strapi', 'PostgreSQL']}
           image="FourSeason.png"
           skills={[
             'TypeScript',
@@ -85,8 +68,7 @@ function Projects() {
             'React',
             'Strapi',
             'PostgreSQL',
-            'Neon',
-            'vercel',
+            'Vercel',
             'Tailwind CSS',
           ]}
         />
@@ -99,9 +81,8 @@ function Projects() {
           p="Hilton app redesign"
           description="With a modern, simple design, it enhances the customer experience by simplifying room info checks and bookings."
           modalDescription="The Hilton Honor app redesign enhances user experience with a simplified interface and a digital key feature for 24/7 check-in and checkout without a physical key.<br /><br />"
-          techStack={['TypeScript', 'React', 'Vite', 'Vercel', 'Tailwind CSS']}
           image="Hilton.png"
-          skills={['TypeScript', 'React', 'Vite', 'vercel', 'Tailwind CSS']}
+          skills={['TypeScript', 'React', 'Vite', 'Vercel', 'Tailwind CSS']}
         />
         <ProjectCard
           label="Personal"
@@ -111,9 +92,8 @@ function Projects() {
           p="Mock IMDb"
           description="A clean and modern design with movie genre filtering, search, and a community for events and news."
           modalDescription="Built with ASP.NET MVC, the Fake IMDb project integrates OMDb, TMDb, and News APIs for real-time movie info. It features a simple interface with genre filtering, search, and a commenting system. Uses HttpClient for APIs and LINQ for data handling.<br /><br />"
-          techStack={['C#', 'Bootstrap', 'ASP.NET', 'CSS', 'MySQL']}
           image="IMDB.png"
-          skills={['C#', 'Bootstrap', 'ASP.NET', 'CSS', 'MySQL']}
+          skills={['C#', 'Bootstrap', 'ASP.NET', 'CSS', 'MySQL', 'Azure']}
         />
         {/* <ProjectCard
           label="Client"
@@ -123,9 +103,8 @@ function Projects() {
           p="Client project"
           description="Website redesign for Chez Mari Salon"
           modalDescription="Real client project : Redesigned the website and booking system using CMS Wordpress and plugins.<br /><br />"
-          techStack={['WordPress', 'Tailwind CSS', 'CSS']}
           image="ChezMari.png"
-          skills={['WordPress', 'Tailwind CSS', 'CSS']}
+          skills={['WordPress', 'Tailwind CSS', 'CSS',]}
         /> */}
       </div>
     </section>

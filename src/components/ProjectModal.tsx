@@ -3,9 +3,11 @@ import 'animate.css'
 import { useEffect, useState } from 'react'
 import { useTheme } from './ThemeContext'
 import { FaAws, FaHtml5, FaCss3Alt, FaBootstrap } from 'react-icons/fa'
+import { VscAzure } from 'react-icons/vsc'
 import { TbBrandCSharp } from 'react-icons/tb'
 import {
   SiTypescript,
+  SiJavascript,
   SiPostgresql,
   SiExpress,
   SiEjs,
@@ -21,6 +23,8 @@ import {
   SiDotnet,
   SiWordpress,
   SiMysql,
+  SiRender,
+  SiFigma,
 } from 'react-icons/si'
 
 interface ProjectModalProps {
@@ -56,8 +60,9 @@ const ProjectModal = ({
 
   const techIcons = {
     EJS: <SiEjs size={30} />,
-    'Express.js': <SiExpress size={30} />,
+    Express: <SiExpress size={30} />,
     TypeScript: <SiTypescript size={30} />,
+    JavaScript: <SiJavascript size={30} />,
     PostgreSQL: <SiPostgresql size={30} />,
     MySQL: <SiMysql size={30} />,
     HTML: <FaHtml5 size={30} />,
@@ -77,6 +82,9 @@ const ProjectModal = ({
     'ASP.NET': <SiDotnet size={30} />,
     Bootstrap: <FaBootstrap size={30} />,
     WordPress: <SiWordpress size={30} />,
+    Azure: <VscAzure size={30} />,
+    Render: <SiRender size={30} />,
+    Figma: <SiFigma size={30} />,
   }
 
   const renderTechIcons = (techStack: string[]) => {
@@ -130,7 +138,7 @@ const ProjectModal = ({
               dangerouslySetInnerHTML={{ __html: description }}
             />
             <div className="flex flex-wrap items-center justify-start w-[80%]">
-              <p className="!font-extrabold">Tech Stack : </p>
+              {/* <p className="!font-extrabold">Tech Stack : </p> */}
               <div>{renderTechIcons(techStack)}</div>
             </div>
           </div>
