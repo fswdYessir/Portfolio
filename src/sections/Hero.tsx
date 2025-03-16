@@ -1,4 +1,5 @@
-import heroImg from '../assets/heroImg.png'
+import ProfileLight from '../assets/1.png'
+import ProfileDark from '../assets/2.png'
 import { GrGithub, GrLinkedin } from 'react-icons/gr'
 import { useTheme } from '../components/ThemeContext'
 import '../App.css'
@@ -52,7 +53,7 @@ function Hero() {
           </button>
           <img
             className="w-48 md:w-72 lg:w-86"
-            src={heroImg}
+            src={theme === 'light' ? ProfileLight : ProfileDark}
             alt="Profile picture"
           />
         </div>
