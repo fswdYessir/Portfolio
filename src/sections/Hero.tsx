@@ -40,7 +40,7 @@ function Hero() {
             onClick={toggleTheme}
             aria-label="Toggle Theme"
             className={`absolute top-30 right-0 flex items-center w-8 h-4 sm:w-10 sm:h-5 rounded-full transition-colors   hover:cursor-pointer ${
-              theme === 'light' ? 'bg-gray-700' : 'bg-gray-500'
+              theme === 'light' ? 'bg-yellow-500' : 'bg-gray-500'
             }`}
           >
             <div
@@ -82,10 +82,10 @@ function Hero() {
           </p>
           <div className="relative inline-flex group">
             <div
-              className={`absolute transition-transform transform hover:scale-105 active:translate-y-1 ${
+              className={`absolute transform hover:scale-105 active:translate-y-1 rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r ${
                 theme === 'light'
-                  ? 'transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt'
-                  : 'transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#fea101] via-[#f4e410] to-[#f9aa0b] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt'
+                  ? ' from-[#44BCFF] via-[#FF44EC] to-[#FF675E]'
+                  : ' from-[#f9d10b] via-[#f4b310] to-[#f9d10b]'
               }`}
             ></div>
             <button

@@ -48,10 +48,7 @@ const Contact: React.FC = () => {
     >
       <div className="p-4">
         <h1 className="text-3xl font-bold ">Contact</h1>
-        <p>
-          Feel free to reach out if you have any questions, want to collaborate,
-          or need further information!
-        </p>
+        <p>Feel free to reach out.</p>
       </div>
       <form
         onSubmit={handleSubmit}
