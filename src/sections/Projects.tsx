@@ -20,7 +20,7 @@ function Projects() {
         <ProjectCard
           label="Group"
           src={StuffNStuff}
-          // link="https://idsp-stuffnstuff.onrender.com"
+          link="https://idspstuffnstuff-production.up.railway.app/"
           h3="Stuff N Stuff"
           p="Marketplace web app"
           description="Real-time chat, personalized recommendations, and secure authentication."
