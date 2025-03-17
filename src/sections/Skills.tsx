@@ -36,6 +36,7 @@ function Skills() {
           <SkillList skill="Vercel" />
           <SkillList skill="Render" />
           <SkillList skill="Azure" />
+          <SkillList skill="Railway" />
         </div>
       </div>
     </section>

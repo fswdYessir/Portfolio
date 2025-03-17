@@ -25,6 +25,7 @@ import {
   SiMysql,
   SiRender,
   SiFigma,
+  SiRailway,
 } from 'react-icons/si'
 
 interface ProjectModalProps {
@@ -85,6 +86,7 @@ const ProjectModal = ({
     Azure: <VscAzure size={30} />,
     Render: <SiRender size={30} />,
     Figma: <SiFigma size={30} />,
+    Railway: <SiRailway size={30} />,
   }
 
   const renderTechIcons = (techStack: string[]) => {

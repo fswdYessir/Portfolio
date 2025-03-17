@@ -35,7 +35,7 @@ function Projects() {
             'HTML',
             'CSS',
             'EJS',
-            'Render',
+            'Railway',
             'Azure',
           ]}
         />
