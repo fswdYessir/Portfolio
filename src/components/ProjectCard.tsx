@@ -35,7 +35,7 @@ function ProjectCard({
 
   const labelColor: { [key: string]: string } = {
     Personal: 'bg-purple-800',
-    Group: 'bg-blue-800',
+    Group: 'bg-pink-800',
     Client: 'bg-green-800',
   }
 

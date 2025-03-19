@@ -10,10 +10,10 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="flex flex-col items-center justify-center text-center pb-5 min-h-[20vh]"
+      className="flex flex-col items-center justify-center text-center pb-5 min-h-[25vh]"
     >
-      <div className="p-5">
-        <h1 className="text-3xl font-bold uppercase">Projects</h1>
+      <div className="p-5 animate__animated animate__fadeIn animate__delay-1s">
+        <h1 className="text-3xl font-bold uppercase ">Projects</h1>
         <p>Welcome! Check out my projects below.</p>
       </div>
       <div className="flex flex-wrap justify-center gap-5 px-36">

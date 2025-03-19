@@ -14,10 +14,10 @@ function Hero() {
       <Header />
       <section
         id="hero"
-        className="relative flex flex-col md:flex-row items-center justify-center min-h-screen sm:gap-15 gap-5 text-center p-10 overflow-hidden"
+        className="relative flex flex-col md:flex-row items-center justify-center min-h-[80vh] sm:gap-15 gap-5 text-center p-10 overflow-hidden"
       >
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-50">
-          <div className="w-1 h-12 sm:h-18 bg-gray-700 "></div>
+          <div className="w-1 h-12 sm:h-18 bg-gray-600 "></div>
 
           <div className="sm:w-36 sm:h-20 w-24 h-12 bg-gray-700 rounded-t-full relative"></div>
         </div>

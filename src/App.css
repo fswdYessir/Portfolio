@@ -30,7 +30,7 @@
 }
 
 [data-theme='dark'] .flip-box-back {
-  @apply bg-yellow-400/80 before:bg-yellow-100;
+  @apply bg-gray-600/80 before:bg-gray-800/70;
 }
 
 body {
