@@ -3,7 +3,7 @@ import StuffNStuff from '../../public/thumbnail/StuffNStuff.png'
 import FourSeason from '../../public/thumbnail/FourSeason.png'
 import Hilton from '../../public/thumbnail/Hilton.png'
 import IMDB from '../../public/thumbnail/IMDB.png'
-// import ChezMari from '../../public/thumbnail/ChezMari.png'
+import ChezMari from '../../public/thumbnail/ChezMari.png'
 import ProjectCard from '../components/ProjectCard'
 
 function Projects() {
@@ -16,7 +16,7 @@ function Projects() {
         <h1 className="text-3xl font-bold uppercase ">Projects</h1>
         <p>Welcome! Check out my projects below.</p>
       </div>
-      <div className="flex flex-wrap justify-center gap-5 px-36">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-10 md:px-20 lg:px-40">
         <ProjectCard
           label="Group"
           src={StuffNStuff}
@@ -75,6 +75,17 @@ function Projects() {
 
         <ProjectCard
           label="Personal"
+          src={IMDB}
+          link="https://imdb-fkdvcbateeb8brcw.canadacentral-01.azurewebsites.net/"
+          h3="IMDb"
+          p="Mock IMDb"
+          description="A clean and modern design with movie genre filtering, search, and a community for events and news."
+          modalDescription="Built with ASP.NET MVC, the Fake IMDb project integrates OMDb, TMDb, and News APIs for real-time movie info. It features a simple interface with genre filtering, search, and a commenting system. Uses HttpClient for APIs and LINQ for data handling.<br /><br />"
+          image="IMDB.png"
+          skills={['C#', 'Bootstrap', 'ASP.NET', 'CSS', 'MySQL', 'Azure']}
+        />
+        <ProjectCard
+          label="Personal"
           src={Hilton}
           link="https://mdia-2025-project3.vercel.app/"
           h3="Hilton"
@@ -85,27 +96,18 @@ function Projects() {
           skills={['TypeScript', 'React', 'Vite', 'Vercel', 'Tailwind CSS']}
         />
         <ProjectCard
-          label="Personal"
-          src={IMDB}
-          link="https://imdb-fkdvcbateeb8brcw.canadacentral-01.azurewebsites.net/"
-          h3="IMDb"
-          p="Mock IMDb"
-          description="A clean and modern design with movie genre filtering, search, and a community for events and news."
-          modalDescription="Built with ASP.NET MVC, the Fake IMDb project integrates OMDb, TMDb, and News APIs for real-time movie info. It features a simple interface with genre filtering, search, and a commenting system. Uses HttpClient for APIs and LINQ for data handling.<br /><br />"
-          image="IMDB.png"
-          skills={['C#', 'Bootstrap', 'ASP.NET', 'CSS', 'MySQL', 'Azure']}
-        />
-        {/* <ProjectCard
           label="Client"
           src={ChezMari}
-          link=""
+          link="http://chezmari.com/"
           h3="Chez Mari Salon"
-          p="Client project"
-          description="Website redesign for Chez Mari Salon"
-          modalDescription="Real client project : Redesigned the website and booking system using CMS Wordpress and plugins.<br /><br />"
+          p="redesign with CMS"
+          description="Real client project. Redesigned the website and booking system using CMS Wordpress and plugins."
+          modalDescription="Developed and customized the site using WordPress themes and plugins to enhance functionality and user experience.  
+          Ensured responsive design using Tailwind CSS and additional styling through custom CSS.  
+          Integrated an improved booking system to streamline client appointments.<br/><br />"
           image="ChezMari.png"
-          skills={['WordPress', 'Tailwind CSS', 'CSS',]}
-        /> */}
+          skills={['WordPress', 'Tailwind CSS', 'CSS']}
+        />
       </div>
     </section>
   )

@@ -21,7 +21,7 @@ function ProjectCard({
   src,
   h3,
   p,
-  description,
+  // description,
   modalDescription,
   skills,
   link,
@@ -33,27 +33,27 @@ function ProjectCard({
   const handleMouseEnter = () => setHoveredSkills(skills)
   const handleMouseLeave = () => setHoveredSkills([])
 
-  const labelColor: { [key: string]: string } = {
-    Personal: 'bg-purple-800',
-    Group: 'bg-pink-800',
-    Client: 'bg-green-800',
-  }
+  // const labelColor: { [key: string]: string } = {
+  //   Personal: 'bg-purple-800',
+  //   Group: 'bg-pink-800',
+  //   Client: 'bg-green-800',
+  // }
 
   return (
     <>
       <div
-        className="flip-box m-5 cursor-pointer"
+        className="flip-box m-5 cursor-pointer hover:scale-105 active:translate-y-1"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         onClick={() => setIsModalOpen(true)}
       >
-        <div className="flip-box-inner">
-          <div className="flip-box-front">
-            <img className="w-full h-48 object-contain" src={src} alt={h3} />
-            <h3 className="text-xl font-bold">{h3}</h3>
-            <p className="max-w-[40ch]">{p}</p>
-          </div>
-          <div
+        {/* <div className="flip-box-inner"> */}
+        <div className="flip-box-front">
+          <img className="w-full h-48 object-contain" src={src} alt={h3} />
+          <h3 className="text-xl font-bold">{h3}</h3>
+          <p className="max-w-[40ch]">{p}</p>
+        </div>
+        {/* <div
             className="flip-box-back inset-0 absolute w-full h-full flex flex-col items-center justify-center rotate-y-180 backface-hidden mt-5 bg-yellow-300/70 shadow-2xl transform rotate-2 before:absolute before:bottom-0 before:right-0 before:w-18 before:h-7.5 before:bg-yellow-500/80 before:opacity-80"
             style={{
               clipPath: 'polygon(100% 0, 100% 85%, 76% 100%, 0 100%, 0 0)',
@@ -72,13 +72,14 @@ function ProjectCard({
               <p>{description}</p>
               <div className="flex items-center mt-2"></div>
             </div>
-          </div>
-        </div>
+          </div> */}
       </div>
+      {/* </div> */}
 
       {isModalOpen && (
         <ProjectModal
           title={h3}
+          label={label}
           description={modalDescription}
           techStack={skills}
           image={image}

@@ -30,6 +30,7 @@ import {
 
 interface ProjectModalProps {
   title: string
+  label: string
   description: string
   image: string
   link?: string
@@ -39,6 +40,7 @@ interface ProjectModalProps {
 
 const ProjectModal = ({
   title,
+  label,
   description,
   techStack,
   image,
@@ -104,6 +106,12 @@ const ProjectModal = ({
     )
   }
 
+  const labelColor: { [key: string]: string } = {
+    Personal: 'bg-purple-800',
+    Group: 'bg-pink-800',
+    Client: 'bg-green-800',
+  }
+
   return (
     <div
       className="fixed inset-0 flex justify-center items-center backdrop-blur-md z-50"
@@ -125,6 +133,14 @@ const ProjectModal = ({
             className="w-full max-w-[90%] mb-10 rounded-xl object-cover"
           />
           <div className="project-info flex flex-col items-center p-5 mb-5">
+            <span
+              className={`self-start ml-5 sm:ml-10 lg:ml-25 mb-2 px-3 py-1 rounded-full text-sm font-bold text-white ${
+                labelColor[label] || 'bg-gray-800'
+              }`}
+            >
+              {label} Project
+            </span>
+
             <h3
               className={`text-4xl font-extrabold text-left w-[80%] ${
                 theme === 'light' ? 'text-black' : 'text-white'
