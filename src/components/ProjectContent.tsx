@@ -203,8 +203,8 @@ const ProjectContent = ({
           className="rounded-xl w-full max-w-[90vw] object-cover"
         />
       </div>
-      <div className="flex flex-col lg:flex-row items-start gap-10 mb-12">
-        <div className="flex-1 mb-5">
+      <div className="flex flex-col lg:flex-row gap-10 mb-12">
+        <div className="flex-1 mb-5 items-start">
           <h2 className="text-2xl font-bold mb-2">Project Overview</h2>
           <p
             className="text-lg leading-relaxed"
@@ -213,14 +213,14 @@ const ProjectContent = ({
         </div>
 
         {contribution && contribution.length > 0 && (
-          <div className="flex-1 max-w-md flex flex-col items-center justify-center space-y-6">
+          <div className="flex-1 max-w-full lg:max-w-md w-full flex flex-col items-center space-y-6">
             {renderBarChart(contribution)}
 
             {images && (
               <img
                 src={images}
                 alt="Project Visual"
-                className="m-5 max-w-[15vw] w-full"
+                className="m-5 max-w-xs w-full hidden lg:block"
                 data-aos="zoom-in"
                 data-aos-delay="200"
               />

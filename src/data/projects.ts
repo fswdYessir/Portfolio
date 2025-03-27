@@ -19,14 +19,27 @@ const projects = [
     p: 'Marketplace web app',
     description: `
       Stuff N Stuff is a second-hand marketplace app inspired by Facebook Marketplace. It offers real-time listings, chat, and secure authentication for a seamless user experience.<br /><br />
+      <div class="mb-5">
+      <h3 class="text-xl font-semibold mb-2">Key Features</h3>
+      <ul class="list-disc list-inside space-y-1">
+        <li>User registration and secure login with email verification</li>
+        <li>Full posting functionality (create, read, update, delete)</li>
+        <li>Category-based filtering using AJAX for instant results</li>
+        <li>Real-time chat between buyers and sellers</li>
+        <li>Personalized recommendations based on user clicks and views</li>
+      </ul>
+    </div>
       
-      <strong>My Contributions:</strong>
+     <div>
+      <h3 class="text-xl font-semibold mb-2">My Contributions</h3>
       <ul class="list-disc list-inside space-y-1 mt-2">
         <li>Designed page layout and overall concept</li>
         <li>Developed a recommendation algorithm based on user clicks and views</li>
         <li>Implemented secure local authentication with email verification</li>
         <li>Built category filtering functionality using AJAX</li>
       </ul>
+    </div>
+  </div>
     `,
     image: StuffNStuffImg,
     link: 'https://idspstuffnstuff-production.up.railway.app/',
@@ -41,7 +54,7 @@ const projects = [
     ],
     contribution: [
       { tech: 'Azure', percent: 100 },
-      { tech: 'PostgreSQL', percent: 40 },
+      { tech: 'PostgreSQL', percent: 50 },
       { tech: 'EJS', percent: 50 },
       { tech: 'CSS', percent: 100 },
       { tech: 'TypeScript', percent: 50 },
@@ -54,25 +67,44 @@ const projects = [
     h3: 'Beep',
     p: 'Personal safety app',
     description: `
-      Beep is a personal safety app that uses AI and crime data to recommend safe routes and provide real-time security features.<br /><br />
-      
-      <strong>My Contributions:</strong>
+  <div class="space-y-6 leading-relaxed">
+    <div>
+      <p>
+        <strong>Beep</strong> is a personal safety app designed to help users get home safely by using AI and real-world crime data. It recommends secure routes, shows safe zones nearby, and includes real-time emergency features like SOS alerts and camera reporting.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="text-xl font-semibold mb-2">Key Features</h3>
+      <ul class="list-disc list-inside space-y-1">
+        <li>AI-generated safe routes based on crime data from the Vancouver police departure</li>
+        <li>Map-based guidance to nearby safe zones based on your current location</li>
+        <li>Emergency SOS system that triggers alerts and sends your live location via SMS</li>
+        <li>The snapshot feature allows users to report incidents by pinning photos to the map, helping fill the gap between weekly police data updates</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-xl font-semibold mb-2">My Contributions</h3>
       <ul class="list-disc list-inside space-y-1 mt-2">
         <li>Created the app's technical blog and maintained developer documentation</li>
         <li>Managed and maintained the team Git repository</li>
         <li>Developed the SOS emergency page, implementing alert sounds using React Sound</li>
-        <li>Implemented snapshot feature using React Camera and saved user photos as pins on the map</li>
-        <li>Handled all data management using Firebase (NoSQL)</li>
+        <li>Implemented the snapshot feature using React Camera and pinned photos on the map</li>
+        <li>Handled all data management using Firebase (NoSQL) </li>
         <li>Built the SMS notification page for emergency contacts</li>
         <li>Designed and developed the app onboarding and sign-up pages</li>
       </ul>
-    `,
+    </div>
+  </div>
+`,
     image: BeepImg,
+    images: '/beep/BeepLogo.png',
     link: 'https://www.beep-safety.com/',
     skills: ['TypeScript', 'React Native', 'Expo', 'Firebase'],
     contribution: [
       { tech: 'TypeScript', percent: 25 },
-      { tech: 'React Native', percent: 70 },
+      { tech: 'React Native', percent: 50 },
       { tech: 'Expo', percent: 50 },
       { tech: 'Firebase', percent: 100 },
     ],
@@ -160,9 +192,15 @@ const projects = [
     h3: 'IMDb',
     p: 'Mock IMDb',
     description: `
-      This project is a mock IMDb website built using ASP.NET MVC with a focus on clean structure and OOP design.<br /><br />
-  
-      <strong>Main Features Implemented:</strong>
+  <div class="space-y-6 leading-relaxed">
+    <div>
+      <p>
+        This project is a mock IMDb website built using ASP.NET MVC with a focus on clean architecture, modular design, and object-oriented principles. It simulates a movie browsing platform with real-time data and authentication features.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="text-xl font-semibold mb-2">Main Features Implemented</h3>
       <ul class="list-disc list-inside space-y-1 mt-2">
         <li>Developed using MVC pattern in ASP.NET for modular and scalable architecture</li>
         <li>Implemented responsive UI using Bootstrap 5</li>
@@ -171,7 +209,33 @@ const projects = [
         <li>Implemented genre filtering and search functionality for movies</li>
         <li>Used NewsAPI to fetch current movie-related news</li>
       </ul>
-    `,
+    </div>
+    <img 
+  src="/imdb/filtering.png" 
+  alt="Booking calendar view"
+  class="rounded-md mx-auto my-4 max-w-3xl w-full"
+  data-aos="zoom-in" data-aos-delay="100"
+  />
+     <img 
+  src="/imdb/searching.png" 
+  alt="Booking calendar view"
+  class="rounded-md mx-auto my-4 max-w-3xl w-full"
+  data-aos="zoom-in" data-aos-delay="100"
+/>
+
+    <div>
+      <h3 class="text-xl font-semibold mb-2">Tech Choices & Rationale</h3>
+      <ul class="list-disc list-inside space-y-1 mt-2">
+        <li><strong>ASP.NET MVC</strong>: Chosen for its clear separation of concerns and alignment with OOP principles, enabling maintainable and testable code</li>
+        <li><strong>Bootstrap 5</strong>: Used to ensure responsive design without reinventing layout or component styling</li>
+        <li><strong>.NET Identity</strong>: Provided a secure and well-integrated solution for user authentication and role management</li>
+        <li><strong>OMDb & TMDb APIs</strong>: Provided up-to-date and rich movie metadata, allowing for realistic browsing experience</li>
+        <li><strong>NewsAPI</strong>: Integrated to enrich the site with current movie-related news and enhance real-world feel</li>
+      </ul>
+    </div>
+  </div>
+`,
+
     image: IMDBImg,
     link: 'https://imdb-fkdvcbateeb8brcw.canadacentral-01.azurewebsites.net/',
     skills: ['C#', 'Bootstrap', 'ASP.NET', 'CSS', 'MySQL', 'Azure'],
