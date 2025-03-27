@@ -19,8 +19,9 @@ const ProjectDetail = () => {
       <ProjectContent
         title={project.h3}
         label={project.label}
-        description={project.modalDescription}
+        description={project.description}
         image={project.image}
+        images={project.images}
         link={project.link}
         techStack={project.skills}
         contribution={project.contribution || []}

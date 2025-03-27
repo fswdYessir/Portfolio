@@ -44,6 +44,7 @@ interface ProjectContentProps {
   label: string
   description: string
   image: string
+  images?: string
   link?: string
   techStack: string[]
   contribution?: { tech: string; percent: number }[]
@@ -54,6 +55,7 @@ const ProjectContent = ({
   label,
   description,
   image,
+  images,
   link,
   techStack,
   contribution,
@@ -67,29 +69,29 @@ const ProjectContent = ({
   }
 
   const techIcons = {
-    EJS: <SiEjs size={30} />,
-    Express: <SiExpress size={30} />,
-    TypeScript: <SiTypescript size={30} />,
-    JavaScript: <SiJavascript size={30} />,
-    PostgreSQL: <SiPostgresql size={30} />,
-    MySQL: <SiMysql size={30} />,
-    HTML: <FaHtml5 size={30} />,
-    CSS: <FaCss3Alt size={30} />,
-    AWS: <FaAws size={30} />,
-    Expo: <SiExpo size={30} />,
-    'React Native': <SiReact size={30} />,
-    Firebase: <SiFirebase size={30} />,
-    Supabase: <SiSupabase size={30} />,
-    'Next.js': <SiNextdotjs size={30} />,
-    Strapi: <SiStrapi size={30} />,
-    'Tailwind CSS': <SiTailwindcss size={30} />,
-    React: <SiReact size={30} />,
-    Vite: <SiVite size={30} />,
-    'C#': <TbBrandCSharp size={30} />,
-    'ASP.NET': <SiDotnet size={30} />,
-    Bootstrap: <FaBootstrap size={30} />,
-    WordPress: <SiWordpress size={30} />,
-    Azure: <VscAzure size={30} />,
+    EJS: <SiEjs size={26} />,
+    Express: <SiExpress size={26} />,
+    TypeScript: <SiTypescript size={26} />,
+    JavaScript: <SiJavascript size={26} />,
+    PostgreSQL: <SiPostgresql size={26} />,
+    MySQL: <SiMysql size={26} />,
+    HTML: <FaHtml5 size={26} />,
+    CSS: <FaCss3Alt size={26} />,
+    AWS: <FaAws size={26} />,
+    Expo: <SiExpo size={26} />,
+    'React Native': <SiReact size={26} />,
+    Firebase: <SiFirebase size={26} />,
+    Supabase: <SiSupabase size={26} />,
+    'Next.js': <SiNextdotjs size={26} />,
+    Strapi: <SiStrapi size={26} />,
+    'Tailwind CSS': <SiTailwindcss size={26} />,
+    React: <SiReact size={26} />,
+    Vite: <SiVite size={26} />,
+    'C#': <TbBrandCSharp size={26} />,
+    'ASP.NET': <SiDotnet size={26} />,
+    Bootstrap: <FaBootstrap size={26} />,
+    WordPress: <SiWordpress size={26} />,
+    Azure: <VscAzure size={26} />,
   }
   const navigate = useNavigate()
   const renderBarChart = (
@@ -162,22 +164,16 @@ const ProjectContent = ({
       className={`px-6 py-10 max-w-6xl mx-auto ${
         theme === 'light' ? 'text-black' : 'text-white'
       }`}
+      data-aos="fade-up"
+      data-aos-delay="100"
     >
-      <div className="mb-6">
+      <div className="mb-10">
         <button
           onClick={() => navigate(-1)}
-          className="text-Lg font-bold px-4 py-2 hover:scale-110 hover:transition-all"
+          className="text-Lg font-bold py-2 hover:scale-110 hover:transition-all"
         >
-          Back to Projects
+          ◀ Back to Projects
         </button>
-      </div>
-
-      <div className="flex justify-center mb-10">
-        <img
-          src={image}
-          alt={title}
-          className="rounded-xl w-full max-w-[90vw] object-cover"
-        />
       </div>
 
       <div className="mb-3">
@@ -192,7 +188,7 @@ const ProjectContent = ({
 
       <h1 className="text-4xl font-extrabold">{title}</h1>
 
-      <div className="flex flex-wrap gap-3 mt-3 mb-10">
+      <div className="flex flex-wrap gap-3 mt-5 mb-10">
         {techStack.map((tech, i) => (
           <div key={i}>
             {techIcons[tech as keyof typeof techIcons] || <span>{tech}</span>}
@@ -200,6 +196,13 @@ const ProjectContent = ({
         ))}
       </div>
 
+      <div className="flex justify-center mb-10">
+        <img
+          src={image}
+          alt={title}
+          className="rounded-xl w-full max-w-[90vw] object-cover"
+        />
+      </div>
       <div className="flex flex-col lg:flex-row items-start gap-10 mb-12">
         <div className="flex-1 mb-5">
           <h2 className="text-2xl font-bold mb-2">Project Overview</h2>
@@ -210,7 +213,19 @@ const ProjectContent = ({
         </div>
 
         {contribution && contribution.length > 0 && (
-          <div className="flex-1 max-w-md">{renderBarChart(contribution)}</div>
+          <div className="flex-1 max-w-md flex flex-col items-center justify-center space-y-6">
+            {renderBarChart(contribution)}
+
+            {images && (
+              <img
+                src={images}
+                alt="Project Visual"
+                className="m-5 max-w-[15vw] w-full"
+                data-aos="zoom-in"
+                data-aos-delay="200"
+              />
+            )}
+          </div>
         )}
       </div>
 
