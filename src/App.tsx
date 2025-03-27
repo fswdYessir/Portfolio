@@ -7,25 +7,35 @@ import Projects from './sections/Projects'
 import Skills from './sections/Skills'
 import Loading from './sections/Loading'
 import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import ProjectDetail from './sections/ProjectDetail'
 
 function App() {
   const [loading, setLoading] = useState(true)
   return (
-    <>
+    <Router>
       {loading ? (
         <Loading onComplete={() => setLoading(false)} />
       ) : (
-        <>
-          <Hero />
-          <HoveredSkillsProvider>
-            <Projects />
-            <Skills />
-          </HoveredSkillsProvider>
-          <Contact />
-          <Footer />
-        </>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <HoveredSkillsProvider>
+                  <Projects />
+                  <Skills />
+                </HoveredSkillsProvider>
+                <Contact />
+                <Footer />
+              </>
+            }
+          />
+          <Route path="/project/:id" element={<ProjectDetail />} />
+        </Routes>
       )}
-    </>
+    </Router>
   )
 }
 
