@@ -241,7 +241,7 @@ const ProjectContent = ({
                 }`}
               ></div>
               <button
-                className={`Btn text-white px-6 py-2 font-semibold rounded-xl relative z-10 ${
+                className={`Btn text-white px-4 py-2 font-semibold rounded-xl relative z-10 ${
                   theme === 'light' ? 'bg-gray-800 ' : 'bg-yellow-400/50'
                 }`}
               >
