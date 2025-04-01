@@ -1,5 +1,5 @@
-import ProfileLight from '../assets/1.png'
-import ProfileDark from '../assets/2.png'
+import ProfileLight from '../assets/hero/1.png'
+import ProfileDark from '../assets/hero/2.png'
 import { GrGithub, GrLinkedin } from 'react-icons/gr'
 import { useTheme } from '../components/ThemeContext'
 import '../App.css'

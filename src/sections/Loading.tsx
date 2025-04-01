@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-// import egg from '../assets/crack-egg.gif'
 
 interface LoadingProps {
   onComplete: () => void
@@ -14,7 +13,7 @@ export default function Loading({ onComplete }: LoadingProps) {
       setProgress(prev => {
         if (prev >= 100) {
           clearInterval(interval)
-          setTimeout(() => setFadeOut(true), 1000)
+          setTimeout(() => setFadeOut(true), 800)
           setTimeout(onComplete, 1000)
           return 100
         }
