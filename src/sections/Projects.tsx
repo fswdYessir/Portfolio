@@ -1,13 +1,13 @@
 import ProjectCard from '../components/ProjectCard'
-import projects from '../data/projects'
+import projects from '../data/projects-data'
 
 function Projects() {
   return (
     <section
       id="projects"
-      className="flex flex-col items-center justify-center text-center pb-5 min-h-[25vh] animate__animated animate__fadeIn"
+      className="flex flex-col items-center justify-center text-center p-3 min-h-[30vh] animate__animated animate__fadeIn"
     >
-      <div className="p-5 animate__animated animate__fadeIn animate__delay-1s ">
+      <div className="p-5 animate__animated animate__fadeIn animate__delay-0.5s ">
         <h1 className="text-3xl font-bold uppercase ">Projects</h1>
         <p>Welcome! Check out my projects below.</p>
       </div>

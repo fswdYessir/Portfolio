@@ -4,19 +4,6 @@ import { FaAws, FaHtml5, FaCss3Alt, FaBootstrap } from 'react-icons/fa'
 import { VscAzure } from 'react-icons/vsc'
 import { TbBrandCSharp } from 'react-icons/tb'
 import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend,
-  ChartOptions,
-  TooltipItem,
-} from 'chart.js'
-import { Bar } from 'react-chartjs-2'
-
-import {
   SiTypescript,
   SiJavascript,
   SiPostgresql,
@@ -36,36 +23,45 @@ import {
 } from 'react-icons/si'
 import { useTheme } from './ThemeContext'
 import { useNavigate } from 'react-router-dom'
-
-ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
+import ProjectDescription from './ProjectDescription'
 
 interface ProjectContentProps {
+  banner: string
+  label: string[]
   title: string
-  label: string
-  description: string
-  image: string
-  images?: string
-  link?: string
   techStack: string[]
+  overview: string
+  keyFeatures: string[]
+  myContributions?: string[]
   contribution?: { tech: string; percent: number }[]
+  challenges: string
+  reflection: string
+  extraImages?: string[]
+  videoUrl?: string
+  link?: string
 }
 
 const ProjectContent = ({
-  title,
+  banner,
   label,
-  description,
-  image,
-  images,
-  link,
+  title,
   techStack,
+  overview,
+  keyFeatures,
+  myContributions,
   contribution,
+  challenges,
+  reflection,
+  extraImages,
+  videoUrl,
+  link,
 }: ProjectContentProps) => {
   const { theme } = useTheme()
 
   const labelColor: { [key: string]: string } = {
-    Personal: 'bg-purple-800',
-    Group: 'bg-pink-800',
-    Client: 'bg-green-800',
+    Personal: 'bg-indigo-500',
+    Group: 'bg-rose-500',
+    Client: 'bg-lime-600',
   }
 
   const techIcons = {
@@ -94,70 +90,6 @@ const ProjectContent = ({
     Azure: <VscAzure size={26} />,
   }
   const navigate = useNavigate()
-  const renderBarChart = (
-    contribution: { tech: string; percent: number }[]
-  ) => {
-    const data = {
-      labels: contribution.map(c => c.tech),
-      datasets: [
-        {
-          label: 'My Contribution',
-          data: contribution.map(c => c.percent),
-          backgroundColor: [
-            '#6b7280',
-            '#9ca3af',
-            '#d1d5db',
-            '#e5e7eb',
-            '#cbd5e1',
-            '#94a3b8',
-            '#64748b',
-          ],
-          barThickness: 26,
-        },
-      ],
-    }
-
-    const options: ChartOptions<'bar'> = {
-      indexAxis: 'y',
-      responsive: true,
-      plugins: {
-        legend: { display: false },
-        tooltip: {
-          callbacks: {
-            label: (context: TooltipItem<'bar'>) => `${context.parsed.x}%`,
-          },
-        },
-      },
-      scales: {
-        x: {
-          ticks: {
-            color: theme === 'light' ? '#1f2937' : '#f9fafb',
-            callback: (val: string | number) => `${val}%`,
-          },
-          grid: {
-            color: theme === 'light' ? '#e5e7eb' : '#374151',
-          },
-          max: 100,
-          beginAtZero: true,
-        },
-        y: {
-          ticks: {
-            color: theme === 'light' ? '#1f2937' : '#f9fafb',
-            font: { weight: 'bold' },
-          },
-          grid: {
-            color: theme === 'light' ? '#e5e7eb' : '#374151',
-          },
-        },
-      },
-    }
-
-    return (
-      <div className="w-full max-w-2xl mx-auto my-4">
-        <Bar data={data} options={options} />
-      </div>
-    )
-  }
 
   return (
     <div
@@ -176,14 +108,17 @@ const ProjectContent = ({
         </button>
       </div>
 
-      <div className="mb-3">
-        <span
-          className={`px-4 py-1 text-sm font-bold text-white rounded-full ${
-            labelColor[label] || 'bg-gray-800'
-          }`}
-        >
-          {label} Project
-        </span>
+      <div className="mb-3 flex flex-wrap gap-2">
+        {label.map((lbl, i) => (
+          <span
+            key={i}
+            className={`px-4 py-1 text-sm font-bold text-white rounded-full ${
+              labelColor[lbl] || 'bg-gray-800'
+            }`}
+          >
+            {lbl}
+          </span>
+        ))}
       </div>
 
       <h1 className="text-4xl font-extrabold">{title}</h1>
@@ -198,37 +133,23 @@ const ProjectContent = ({
 
       <div className="flex justify-center mb-10">
         <img
-          src={image}
+          src={banner}
           alt={title}
           className="rounded-xl w-full max-w-[90vw] object-cover"
         />
       </div>
-      <div className="flex flex-col lg:flex-row gap-10 mb-12">
-        <div className="flex-1 mb-5 items-start">
-          <h2 className="text-2xl font-bold mb-2">Project Overview</h2>
-          <p
-            className="text-lg leading-relaxed"
-            dangerouslySetInnerHTML={{ __html: description }}
-          />
-        </div>
-
-        {contribution && contribution.length > 0 && (
-          <div className="flex-1 max-w-full lg:max-w-md w-full flex flex-col items-center space-y-6">
-            {renderBarChart(contribution)}
-
-            {images && (
-              <img
-                src={images}
-                alt="Project Visual"
-                className="m-5 max-w-xs w-full hidden lg:block"
-                data-aos="zoom-in"
-                data-aos-delay="200"
-              />
-            )}
-          </div>
-        )}
+      <div className="flex mb-12">
+        <ProjectDescription
+          overview={overview}
+          keyFeatures={keyFeatures}
+          myContributions={myContributions}
+          contribution={contribution}
+          challenges={challenges}
+          reflection={reflection}
+          extraImages={extraImages}
+          videoUrl={videoUrl}
+        />
       </div>
-
       {link && (
         <div className="flex justify-center">
           <a href={link} target="_blank" rel="noopener noreferrer">

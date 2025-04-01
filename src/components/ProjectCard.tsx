@@ -5,22 +5,28 @@ import '../App.css'
 import { useNavigate } from 'react-router-dom'
 
 interface ProjectCardProps {
-  src: string
-  h3: string
-  p: string
-  description: string
-  skills: string[]
+  id: string
+  icon: string
+  title: string
+  subtitle: string
+  techStack: string[]
 }
 
-function ProjectCard({ src, h3, p, skills }: ProjectCardProps) {
+function ProjectCard({
+  id,
+  icon,
+  title,
+  subtitle,
+  techStack,
+}: ProjectCardProps) {
   const { setHoveredSkills } = useContext(HoveredSkills)
 
-  const handleMouseEnter = () => setHoveredSkills(skills)
+  const handleMouseEnter = () => setHoveredSkills(techStack)
   const handleMouseLeave = () => setHoveredSkills([])
   const navigate = useNavigate()
 
   const handleClick = () => {
-    navigate(`/project/${h3}`)
+    navigate(`/project/${id}`)
   }
 
   return (
@@ -32,9 +38,9 @@ function ProjectCard({ src, h3, p, skills }: ProjectCardProps) {
         onClick={handleClick}
       >
         <div className="flip-box-front">
-          <img className="w-full h-48 object-contain" src={src} alt={h3} />
-          <h3 className="text-xl font-bold">{h3}</h3>
-          <p className="max-w-[40ch]">{p}</p>
+          <img className="w-full h-48 object-contain" src={icon} alt={title} />
+          <h3 className="text-xl font-bold">{title}</h3>
+          <p className="max-w-[40ch]">{subtitle}</p>
         </div>
       </div>
     </>

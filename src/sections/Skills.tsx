@@ -4,14 +4,12 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="flex flex-col items-center justify-center text-center  min-h-[20vh] animate__animated animate__fadeIn"
+      className="flex flex-col items-center justify-center text-center  min-h-[30vh] animate__animated animate__fadeIn"
     >
       <div>
-        <div className="mb-10">
-          <h1 className="text-3xl font-bold uppercase">Skills</h1>
-        </div>
+        <h1 className="text-3xl font-bold uppercase">Skills</h1>
 
-        <div className="grid m-10 md:grid-cols-7 gap-5">
+        <div className="grid m-5 md:grid-cols-7 gap-5">
           <SkillList skill="JavaScript" />
           <SkillList skill="TypeScript" />
           <SkillList skill="C#" />

@@ -8,7 +8,7 @@ import Skills from './sections/Skills'
 import Loading from './sections/Loading'
 import { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import ProjectDetail from './sections/ProjectDetail'
+import ProjectDetail from './page/ProjectDetail'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -16,7 +16,7 @@ function App() {
   const [loading, setLoading] = useState(true)
   useEffect(() => {
     AOS.init({
-      duration: 800,
+      duration: 1000,
       once: false,
     })
   }, [])
