@@ -41,10 +41,14 @@ const ProjectDescription = ({
   videoUrl,
 }: ProjectDescriptionProps) => {
   const { theme } = useTheme()
+
   useEffect(() => {
-    AOS.init({ duration: 1000, once: false })
-    AOS.refresh()
-  }, [extraImages])
+    const timer = setTimeout(() => {
+      AOS.init({ duration: 1000, once: false })
+      AOS.refresh()
+    }, 100)
+    return () => clearTimeout(timer)
+  }, [])
 
   const colors = {
     text: theme === 'light' ? '#1f2937' : '#f9fafb',
@@ -150,7 +154,7 @@ const ProjectDescription = ({
                     src={img}
                     alt={`Screenshot ${i + 1}`}
                     className="w-full max-w-3xl rounded-sm m-2"
-                    data-aos="zoom-in"
+                    data-aos="fade-in"
                   />
                 ))}
               </div>
