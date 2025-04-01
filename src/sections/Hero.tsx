@@ -77,15 +77,15 @@ function Hero() {
           </span>
 
           <p className="max-w-[40ch]">
-            Problem-solving full-stack developer focused on collaboration and
-            building user-friendly web applications.
+            Problem solving full-stack developer focused on collaboration and
+            building user friendly web applications.
           </p>
           <div className="relative inline-flex group">
             <div
               className={`absolute transform hover:scale-105 active:translate-y-1 rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r ${
                 theme === 'light'
                   ? ' from-[#44BCFF] via-[#FF44EC] to-[#FF675E]'
-                  : ' from-[#f9d10b] via-[#f4b310] to-[#f9d10b]'
+                  : ' from-[#fbd621] via-[#f9b712] to-[#f69000]'
               }`}
             ></div>
             <button
