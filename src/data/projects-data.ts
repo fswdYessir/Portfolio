@@ -65,7 +65,7 @@ const projects = [
     subtitle: 'REACT NATIVE SAFETY APP',
     icon: Beep,
     banner: BeepImg,
-    techStack: ['TypeScript', 'React Native', 'Expo', 'Firebase'],
+    techStack: ['TypeScript', 'React Native', 'Firebase'],
     overview:
       'Beep is a personal safety app designed to help users get home safely by using AI and real-world crime data. It recommends secure routes, shows safe zones nearby, and includes real-time emergency features like SOS alerts and camera reporting.',
     keyFeatures: [
@@ -208,7 +208,7 @@ const projects = [
     subtitle: 'WEBSITE REBUILD USING WORDPRESS',
     icon: ChezMari,
     banner: ChezMariImg,
-    techStack: ['WordPress', 'Tailwind CSS', 'CSS'],
+    techStack: ['WordPress', 'Tailwind CSS', 'CSS', 'PHP'],
     overview:
       'Chez Mari was a group project for a real client—a hair salon owner looking to modernize her business website. Our team redesigned the site with CMS capabilities, giving the client full control over content and bookings while improving performance and usability.',
     keyFeatures: [
@@ -236,7 +236,7 @@ const projects = [
       { tech: 'WordPress / Hosting', percent: 100 },
       { tech: 'Booking System', percent: 100 },
       { tech: 'Tailwind CSS', percent: 30 },
-      { tech: 'CSS', percent: 40 },
+      { tech: 'CSS', percent: 25 },
     ],
   },
 ]

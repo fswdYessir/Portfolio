@@ -20,6 +20,7 @@ import {
   SiDotnet,
   SiWordpress,
   SiMysql,
+  SiPhp,
 } from 'react-icons/si'
 import { useTheme } from './ThemeContext'
 import { useNavigate } from 'react-router-dom'
@@ -69,6 +70,7 @@ const ProjectContent = ({
     Express: <SiExpress size={26} />,
     TypeScript: <SiTypescript size={26} />,
     JavaScript: <SiJavascript size={26} />,
+    PHP: <SiPhp size={26} />,
     PostgreSQL: <SiPostgresql size={26} />,
     MySQL: <SiMysql size={26} />,
     HTML: <FaHtml5 size={26} />,

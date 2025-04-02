@@ -13,6 +13,7 @@ function Skills() {
           <SkillList skill="JavaScript" />
           <SkillList skill="TypeScript" />
           <SkillList skill="C#" />
+          <SkillList skill="PHP" />
           <SkillList skill="ASP.NET" />
           <SkillList skill="Bootstrap" />
           <SkillList skill="HTML" />
@@ -20,7 +21,6 @@ function Skills() {
           <SkillList skill="React" />
           <SkillList skill="React Native" />
           <SkillList skill="Next.js" />
-          <SkillList skill="Expo" />
           <SkillList skill="Tailwind CSS" />
           <SkillList skill="Vite" />
           <SkillList skill="WordPress" />
