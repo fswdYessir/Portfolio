@@ -11,9 +11,7 @@ import {
   TooltipItem,
 } from 'chart.js'
 import { Bar } from 'react-chartjs-2'
-import 'aos/dist/aos.css'
-import AOS from 'aos'
-import { useEffect } from 'react'
+import ScrollAnimation from './ScrollAnimation'
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
@@ -41,14 +39,6 @@ const ProjectDescription = ({
   videoUrl,
 }: ProjectDescriptionProps) => {
   const { theme } = useTheme()
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      AOS.init({ duration: 1000, once: false })
-      AOS.refresh()
-    }, 100)
-    return () => clearTimeout(timer)
-  }, [])
 
   const colors = {
     text: theme === 'light' ? '#1f2937' : '#f9fafb',
@@ -115,102 +105,108 @@ const ProjectDescription = ({
 
   return (
     <div className="space-y-5">
-      <section className="flex flex-col gap-4">
-        <h2 className="text-2xl font-bold mb-2">Project Overview</h2>
-        <p className="text-lg leading-8">{overview}</p>
-      </section>
+      <ScrollAnimation delay={500}>
+        <section className="flex flex-col gap-4">
+          <h2 className="text-2xl font-bold mb-2">Project Overview</h2>
+          <p className="text-lg leading-8">{overview}</p>
+        </section>
+        {videoUrl?.includes('embed') && (
+          <>
+            <section className="flex justify-center my-6">
+              <div className="aspect-[9/16] w-full max-w-xs">
+                <iframe
+                  className="w-full h-full rounded-xl"
+                  src={videoUrl}
+                  title="Demo Video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </section>
+          </>
+        )}
+        <Divider />
+      </ScrollAnimation>
 
-      {videoUrl?.includes('embed') && (
-        <>
-          <section className="flex justify-center my-6">
-            <div className="aspect-[9/16] w-full max-w-xs">
-              <iframe
-                className="w-full h-full rounded-xl"
-                src={videoUrl}
-                title="Demo Video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
+      <ScrollAnimation delay={600}>
+        {keyFeatures.length > 0 && (
+          <>
+            <section className="flex flex-col gap-4">
+              <h2 className="text-2xl font-bold mb-2">Key Features</h2>
+              <ul className="list-disc list-inside text-lg leading-8 space-y-1">
+                {keyFeatures.map((feature, idx) => (
+                  <li key={idx}>{feature}</li>
+                ))}
+              </ul>
+              {extraImages && extraImages.length > 0 && (
+                <div className="flex flex-col md:flex-row flex-wrap items-center mt-5 justify-center gap-2">
+                  {extraImages.map((img, i) => (
+                    <img
+                      key={i}
+                      src={img}
+                      alt={`Screenshot ${i + 1}`}
+                      className="w-full max-w-3xl rounded-sm m-2"
+                    />
+                  ))}
+                </div>
+              )}
+            </section>
+            <Divider />
+          </>
+        )}
+      </ScrollAnimation>
+
+      <ScrollAnimation delay={700}>
+        {(myContributions?.length || contribution?.length) && (
+          <section className="flex flex-col gap-4">
+            <h2 className="text-2xl font-bold">Development Highlights</h2>
+
+            <div className="flex flex-col md:flex-row gap-3 items-start">
+              {myContributions && myContributions.length > 0 && (
+                <div className="flex-1">
+                  <ul className="list-disc list-inside text-lg leading-8 space-y-2">
+                    {myContributions.map((item, idx) => (
+                      <li key={idx}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {contribution && contribution.length > 0 && (
+                <div className="flex-1 self-start md:-mt-5">
+                  {renderBarChart(contribution)}
+                </div>
+              )}
             </div>
           </section>
-        </>
-      )}
-      <Divider />
-
-      {keyFeatures.length > 0 && (
-        <>
+        )}
+        <Divider />
+      </ScrollAnimation>
+      <ScrollAnimation delay={800}>
+        {challenges && (
+          <>
+            <section className="flex flex-col gap-4">
+              <h2 className="text-2xl font-bold">Challenges</h2>
+              <p
+                className="text-lg leading-8"
+                dangerouslySetInnerHTML={{ __html: challenges }}
+              />
+            </section>
+            <Divider />
+          </>
+        )}
+      </ScrollAnimation>
+      <ScrollAnimation delay={900}>
+        {reflection && (
           <section className="flex flex-col gap-4">
-            <h2 className="text-2xl font-bold mb-2">Key Features</h2>
-            <ul className="list-disc list-inside text-lg leading-8 space-y-1">
-              {keyFeatures.map((feature, idx) => (
-                <li key={idx}>{feature}</li>
-              ))}
-            </ul>
-            {extraImages && extraImages.length > 0 && (
-              <div className="flex flex-col md:flex-row flex-wrap items-center mt-5 justify-center gap-2">
-                {extraImages.map((img, i) => (
-                  <img
-                    key={i}
-                    src={img}
-                    alt={`Screenshot ${i + 1}`}
-                    className="w-full max-w-3xl rounded-sm m-2"
-                    data-aos="fade-in"
-                  />
-                ))}
-              </div>
-            )}
-          </section>
-          <Divider />
-        </>
-      )}
-
-      {(myContributions?.length || contribution?.length) && (
-        <section className="flex flex-col gap-4">
-          <h2 className="text-2xl font-bold">Development Highlights</h2>
-
-          <div className="flex flex-col md:flex-row gap-3 items-start">
-            {myContributions && myContributions.length > 0 && (
-              <div className="flex-1">
-                <ul className="list-disc list-inside text-lg leading-8 space-y-2">
-                  {myContributions.map((item, idx) => (
-                    <li key={idx}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            {contribution && contribution.length > 0 && (
-              <div className="flex-1 self-start md:-mt-5">
-                {renderBarChart(contribution)}
-              </div>
-            )}
-          </div>
-        </section>
-      )}
-      <Divider />
-
-      {challenges && (
-        <>
-          <section className="flex flex-col gap-4">
-            <h2 className="text-2xl font-bold">Challenges</h2>
+            <h2 className="text-2xl font-bold mb-2">Reflection</h2>
             <p
               className="text-lg leading-8"
-              dangerouslySetInnerHTML={{ __html: challenges }}
+              dangerouslySetInnerHTML={{ __html: reflection }}
             />
           </section>
-          <Divider />
-        </>
-      )}
-
-      {reflection && (
-        <section className="flex flex-col gap-4">
-          <h2 className="text-2xl font-bold mb-2">Reflection</h2>
-          <p
-            className="text-lg leading-8"
-            dangerouslySetInnerHTML={{ __html: reflection }}
-          />
-        </section>
-      )}
+        )}
+      </ScrollAnimation>
     </div>
   )
 }

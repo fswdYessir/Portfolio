@@ -25,6 +25,7 @@ import {
 import { useTheme } from './ThemeContext'
 import { useNavigate } from 'react-router-dom'
 import ProjectDescription from './ProjectDescription'
+import ScrollAnimation from './ScrollAnimation'
 
 interface ProjectContentProps {
   banner: string
@@ -98,48 +99,48 @@ const ProjectContent = ({
       className={`px-6 py-10 max-w-6xl mx-auto ${
         theme === 'light' ? 'text-black' : 'text-white'
       }`}
-      data-aos="fade-up"
-      data-aos-delay="100"
     >
-      <div className="mb-10">
-        <button
-          onClick={() => navigate(-1)}
-          className="text-Lg font-bold py-2 hover:scale-110 hover:transition-all"
-        >
-          ◀ Back to Projects
-        </button>
-      </div>
-
-      <div className="mb-3 flex flex-wrap gap-2">
-        {label.map((lbl, i) => (
-          <span
-            key={i}
-            className={`px-4 py-1 text-sm font-bold text-white rounded-full ${
-              labelColor[lbl] || 'bg-gray-800'
-            }`}
+      <ScrollAnimation>
+        <div className="mb-10">
+          <button
+            onClick={() => navigate(-1)}
+            className="inline-flex items-center gap-2 text-base font-medium hover:scale-110 hover:transition-all"
           >
-            {lbl}
-          </span>
-        ))}
-      </div>
+            <span className="text-xl -ml-1">‹</span> Back to Projects
+          </button>
+        </div>
+        <div className="mb-3 flex flex-wrap gap-2">
+          {label.map((lbl, i) => (
+            <span
+              key={i}
+              className={`px-4 py-1 text-sm font-bold text-white rounded-full ${
+                labelColor[lbl] || 'bg-gray-800'
+              }`}
+            >
+              {lbl}
+            </span>
+          ))}
+        </div>
+        <h1 className="text-4xl font-extrabold">{title}</h1>
 
-      <h1 className="text-4xl font-extrabold">{title}</h1>
+        <div className="flex flex-wrap gap-3 mt-5 mb-10">
+          {techStack.map((tech, i) => (
+            <div key={i}>
+              {techIcons[tech as keyof typeof techIcons] || <span>{tech}</span>}
+            </div>
+          ))}
+        </div>
+      </ScrollAnimation>
+      <ScrollAnimation delay={100}>
+        <div className="flex justify-center mb-10">
+          <img
+            src={banner}
+            alt={title}
+            className="rounded-xl w-full max-w-[90vw] object-cover"
+          />
+        </div>
+      </ScrollAnimation>
 
-      <div className="flex flex-wrap gap-3 mt-5 mb-10">
-        {techStack.map((tech, i) => (
-          <div key={i}>
-            {techIcons[tech as keyof typeof techIcons] || <span>{tech}</span>}
-          </div>
-        ))}
-      </div>
-
-      <div className="flex justify-center mb-10">
-        <img
-          src={banner}
-          alt={title}
-          className="rounded-xl w-full max-w-[90vw] object-cover"
-        />
-      </div>
       <div className="flex mb-12">
         <ProjectDescription
           overview={overview}
@@ -152,6 +153,7 @@ const ProjectContent = ({
           videoUrl={videoUrl}
         />
       </div>
+
       {link && (
         <div className="flex justify-center">
           <a href={link} target="_blank" rel="noopener noreferrer">

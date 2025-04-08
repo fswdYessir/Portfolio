@@ -1,8 +1,8 @@
 function Footer() {
   return (
-    <section id="footer" className="text-center font-medium text-gray-400">
+    <section id="footer" className="text-center font-medium">
       <p>
-        &copy; 2025 Sol Kim. <br />
+        &copy; {new Date().getFullYear()} Sol Kim. <br />
         All rights reserved.
       </p>
     </section>

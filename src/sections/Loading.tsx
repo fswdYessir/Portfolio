@@ -30,9 +30,6 @@ export default function Loading({ onComplete }: LoadingProps) {
         fadeOut ? 'opacity-0' : 'opacity-100'
       }`}
     >
-      {/* <div className=" flex justify-center items-center">
-        <img src={egg} alt="Loading animation" className="w-[60%] h-auto " />
-      </div> */}
       <h1 className="!text-white text-4xl font-bold mb-6 animate-pulse">
         loading...
       </h1>
