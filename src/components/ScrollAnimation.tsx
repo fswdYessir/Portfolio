@@ -1,5 +1,5 @@
 import AOS from 'aos'
-import { useRef, useEffect } from 'react'
+import { useRef, useState, useEffect } from 'react'
 
 interface ScrollAnimationProps {
   children: React.ReactNode
@@ -17,16 +17,21 @@ const ScrollAnimation = ({
   delay = 0,
   duration = 800,
   once = true,
-  offset = 350,
+  offset,
   className = '',
 }: ScrollAnimationProps) => {
   const ref = useRef<HTMLDivElement | null>(null)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 800)
+  }, [])
 
   useEffect(() => {
     if (ref.current) {
       AOS.refresh()
     }
-  }, [])
+  }, [isMobile])
 
   return (
     <div
@@ -36,7 +41,7 @@ const ScrollAnimation = ({
       data-aos-delay={delay}
       data-aos-duration={duration}
       data-aos-once={once}
-      data-aos-offset={offset}
+      data-aos-offset={offset ?? (isMobile ? 120 : 350)}
     >
       {children}
     </div>
