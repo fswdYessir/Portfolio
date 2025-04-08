@@ -1,11 +1,11 @@
 import { useParams } from 'react-router-dom'
-import projects from '../data/projects-data'
+import projectsDB from '../data/projects-data'
 import ProjectContent from '../components/ProjectContent'
 import { useEffect } from 'react'
 
 const ProjectDetail = () => {
   const { id } = useParams()
-  const project = projects.find(p => p.id === id)
+  const project = projectsDB.find(p => p.id === id)
 
   useEffect(() => {
     window.scrollTo(0, 0)

@@ -11,7 +11,7 @@ import IMDBImg from '../../src/assets/imdb/IMDB.png'
 import ChezMari from '../../src/assets/chezmari/ChezMariThumbnail.png'
 import ChezMariImg from '../assets/chezmari/ChezMari.png'
 
-const projects = [
+const projectsDB = [
   {
     id: 'stuffNStuff',
     label: ['Group'],
@@ -230,6 +230,7 @@ const projects = [
     reflection:
       'This project helped me better understand the structure of WordPress themes and plugins. I also learned how to set up hosting, point a domain, configure DNS, and deploy a CMS-driven site. Working closely with a real client also improved my communication and project leadership skills.',
     extraImages: ['/postImg/chezmari/demo.png'],
+    videoUrl: '',
     link: 'http://chezmari.com/',
     contribution: [
       { tech: 'Project Management', percent: 100 },
@@ -241,4 +242,4 @@ const projects = [
   },
 ]
 
-export default projects
+export default projectsDB

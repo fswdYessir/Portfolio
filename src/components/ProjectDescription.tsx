@@ -15,7 +15,7 @@ import ScrollAnimation from './ScrollAnimation'
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
-const Divider = () => <div className="h-[1px] w-full bg-gray-300 my-6"></div>
+const Divider = () => <div className="h-[1px] w-full my-10"></div>
 
 interface ProjectDescriptionProps {
   overview: string
@@ -107,7 +107,7 @@ const ProjectDescription = ({
     <div className="space-y-5">
       <ScrollAnimation delay={500}>
         <section className="flex flex-col gap-4">
-          <h2 className="text-2xl font-bold mb-2">Project Overview</h2>
+          <h2 className="text-2xl font-bold mb-2 italic">Project Overview</h2>
           <p className="text-lg leading-8">{overview}</p>
         </section>
         {videoUrl?.includes('embed') && (
@@ -128,43 +128,52 @@ const ProjectDescription = ({
         <Divider />
       </ScrollAnimation>
 
-      <ScrollAnimation delay={600}>
-        {keyFeatures.length > 0 && (
-          <>
-            <section className="flex flex-col gap-4">
-              <h2 className="text-2xl font-bold mb-2">Key Features</h2>
-              <ul className="list-disc list-inside text-lg leading-8 space-y-1">
+      {keyFeatures.length > 0 && (
+        <>
+          <section className="flex flex-col gap-4">
+            <ScrollAnimation delay={600}>
+              <h2 className="text-2xl font-bold mb-2 italic">Key Features</h2>
+              <ul className="list-disc list-inside text-lg leading-10">
                 {keyFeatures.map((feature, idx) => (
                   <li key={idx}>{feature}</li>
                 ))}
               </ul>
-              {extraImages && extraImages.length > 0 && (
-                <div className="flex flex-col md:flex-row flex-wrap items-center mt-5 justify-center gap-2">
-                  {extraImages.map((img, i) => (
+            </ScrollAnimation>
+            {extraImages && extraImages.length > 0 && (
+              <div className="flex flex-col md:flex-row flex-wrap items-center mt-5 justify-center gap-2">
+                {extraImages.map((img, i) => (
+                  <ScrollAnimation
+                    animation="fade-in"
+                    key={i}
+                    offset={500}
+                    delay={i * 700}
+                  >
                     <img
                       key={i}
                       src={img}
                       alt={`Screenshot ${i + 1}`}
-                      className="w-full max-w-3xl rounded-sm m-2"
+                      className="w-full max-w-3xl rounded-sm m-2 my-5"
                     />
-                  ))}
-                </div>
-              )}
-            </section>
-            <Divider />
-          </>
-        )}
-      </ScrollAnimation>
+                  </ScrollAnimation>
+                ))}
+              </div>
+            )}
+          </section>
+          <Divider />
+        </>
+      )}
 
       <ScrollAnimation delay={700}>
         {(myContributions?.length || contribution?.length) && (
           <section className="flex flex-col gap-4">
-            <h2 className="text-2xl font-bold">Development Highlights</h2>
+            <h2 className="text-2xl font-bold mb-2 italic">
+              Development Highlights
+            </h2>
 
             <div className="flex flex-col md:flex-row gap-3 items-start">
               {myContributions && myContributions.length > 0 && (
                 <div className="flex-1">
-                  <ul className="list-disc list-inside text-lg leading-8 space-y-2">
+                  <ul className="list-disc list-inside text-lg leading-10">
                     {myContributions.map((item, idx) => (
                       <li key={idx}>{item}</li>
                     ))}
@@ -186,7 +195,7 @@ const ProjectDescription = ({
         {challenges && (
           <>
             <section className="flex flex-col gap-4">
-              <h2 className="text-2xl font-bold">Challenges</h2>
+              <h2 className="text-2xl font-bold mb-2 italic">Challenges</h2>
               <p
                 className="text-lg leading-8"
                 dangerouslySetInnerHTML={{ __html: challenges }}
@@ -199,7 +208,7 @@ const ProjectDescription = ({
       <ScrollAnimation delay={900}>
         {reflection && (
           <section className="flex flex-col gap-4">
-            <h2 className="text-2xl font-bold mb-2">Reflection</h2>
+            <h2 className="text-2xl font-bold mb-2 italic">Reflection</h2>
             <p
               className="text-lg leading-8"
               dangerouslySetInnerHTML={{ __html: reflection }}
