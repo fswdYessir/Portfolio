@@ -87,7 +87,8 @@ const projectsDB = [
       'As the largest project in our 3-month term, team management proved to be a major challenge. Conflicts arose due to the number of team members and unclear responsibilities. To improve collaboration, we switched from a single project manager to a dual-PM system and clearly divided tasks among the team.</br></br> On the technical side, it was our first time developing a mobile app, and even setting up the environment with Expo and React Native was difficult at first. We relied heavily on documentation, YouTube tutorials, and self-directed learning to overcome technical gaps throughout development.',
     reflection:
       'This was my first time building a mobile app using Expo and React Native. I was hesitant at first to use an entirely new tech stack that none of us had experience with. However, I learned how to approach unfamiliar technologies with curiosity and persistence, and realized that building something functional is possible with the right teamwork and mindset. </br> I also improved my communication skills through team discussions and public presentations. <strong>Among 10 teams, we placed 3rd </strong> overall a result that reflected both our effort and collaboration. If given the chance, I would love to deploy the app in the future to expand its availability to other regions.',
-    videoUrl: 'https://www.youtube.com/embed/GoaUL_IReU8',
+    videoUrl: 'https://www.youtube.com/embed/GoaUL_IReU8?si=xGpe0jkKgQZdfnZ_',
+    aspect: '9/16',
     link: 'https://www.beep-safety.com/',
     contribution: [
       { tech: 'TypeScript', percent: 25 },
@@ -212,25 +213,27 @@ const projectsDB = [
     overview:
       'Chez Mari was a group project for a real client—a hair salon owner looking to modernize her business website. Our team redesigned the site with CMS capabilities, giving the client full control over content and bookings while improving performance and usability.',
     keyFeatures: [
-      'Modern responsive UI with client-friendly CMS',
-      'Gallery page with AJAX-based image loading',
-      'Online booking system using Bookly plugin',
-      'SMTP-based email confirmation setup',
-      'Performance optimization using caching and CDN',
+      'Redesigned and modernized the client’s existing website to improve UX and performance',
+      'Modern, responsive UI that aligns with the salon’s branding and concept',
+      'WordPress-based CMS built with PHP for easy client content updates',
+      'Integrated online booking system with full backend management tools',
     ],
+
     myContributions: [
       'Managing sprint planning, Jira boards, and Git flow',
       'Communicating with the client for design and feature approval',
       'Setting up hosting, domain, DNS, and SMTP mail server',
+      'Gallery page with AJAX-based image loading',
       'Customizing booking components with CSS',
       'Optimizing WordPress server performance',
     ],
     challenges:
       'One of the biggest challenges was understanding the structure and limitations of WordPress. Another challenge was communicating technical decisions to a client without a technical background, which required simplifying explanations and using visual references.',
     reflection:
-      'This project helped me better understand the structure of WordPress themes and plugins. I also learned how to set up hosting, point a domain, configure DNS, and deploy a CMS-driven site. Working closely with a real client also improved my communication and project leadership skills.',
+      'This project deepened my understanding of WordPress themes and plugins, as well as domain, DNS, and CMS deployment processes. It also improved my leadership and client communication skills. I’m especially proud that our project was awarded 1st place out of all teams in the class!',
     extraImages: ['/postImg/chezmari/demo.png'],
-    videoUrl: '',
+    videoUrl: 'https://www.youtube.com/embed/R0dx3OQ5uzM?si=JBO3DqlY4kZrg-ym',
+    aspect: '16/9',
     link: 'http://chezmari.com/',
     contribution: [
       { tech: 'Project Management', percent: 100 },

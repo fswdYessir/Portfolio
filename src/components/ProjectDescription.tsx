@@ -26,6 +26,7 @@ interface ProjectDescriptionProps {
   contribution?: { tech: string; percent: number }[]
   extraImages?: string[]
   videoUrl?: string
+  aspect?: string
 }
 
 const ProjectDescription = ({
@@ -37,6 +38,7 @@ const ProjectDescription = ({
   contribution,
   extraImages,
   videoUrl,
+  aspect,
 }: ProjectDescriptionProps) => {
   const { theme } = useTheme()
 
@@ -103,6 +105,34 @@ const ProjectDescription = ({
     )
   }
 
+  const VideoPlayer = ({
+    videoUrl,
+    aspect = '16/9',
+  }: {
+    videoUrl: string
+    aspect?: string
+  }) => {
+    return (
+      videoUrl?.includes('embed') && (
+        <section className="flex justify-center my-6">
+          <div
+            className={`aspect-[${aspect}] relative w-full  pb-[56%] md:pb-[50%] lg:pb-[36%] max-w-2xl ${
+              aspect === '16/9' ? 'max-w-2xl' : 'max-w-xs'
+            }`}
+          >
+            <iframe
+              className="absolute top-0 left-0 w-full h-full rounded-xs"
+              src={videoUrl + '&autoplay=1&mute=1'}
+              title="Demo Video"
+              allow="accelerometer; autoplay; encrypted-media;"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </section>
+      )
+    )
+  }
+
   return (
     <div className="space-y-5">
       <ScrollAnimation delay={500}>
@@ -112,17 +142,7 @@ const ProjectDescription = ({
         </section>
         {videoUrl?.includes('embed') && (
           <>
-            <section className="flex justify-center my-6">
-              <div className="aspect-[9/16] w-full max-w-xs">
-                <iframe
-                  className="w-full h-full rounded-xl"
-                  src={videoUrl}
-                  title="Demo Video"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            </section>
+            <VideoPlayer videoUrl={videoUrl} aspect={aspect} />
           </>
         )}
         <Divider />

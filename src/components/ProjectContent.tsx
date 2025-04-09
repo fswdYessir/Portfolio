@@ -40,6 +40,7 @@ interface ProjectContentProps {
   reflection: string
   extraImages?: string[]
   videoUrl?: string
+  aspect?: string
   link?: string
 }
 
@@ -56,6 +57,7 @@ const ProjectContent = ({
   reflection,
   extraImages,
   videoUrl,
+  aspect,
   link,
 }: ProjectContentProps) => {
   const { theme } = useTheme()
@@ -151,6 +153,7 @@ const ProjectContent = ({
           reflection={reflection}
           extraImages={extraImages}
           videoUrl={videoUrl}
+          aspect={aspect}
         />
       </div>
 
