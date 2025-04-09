@@ -3,7 +3,7 @@ import ScrollAnimation from '../components/ScrollAnimation'
 
 function Skills() {
   return (
-    <ScrollAnimation>
+    <ScrollAnimation offset={100}>
       <section
         id="skills"
         className="flex flex-col items-center justify-center text-center min-h-[30vh]"
