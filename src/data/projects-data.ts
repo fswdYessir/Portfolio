@@ -213,7 +213,7 @@ const projectsDB = [
     overview:
       'Chez Mari was a group project for a real client—a hair salon owner looking to modernize her business website. Our team redesigned the site with CMS capabilities, giving the client full control over content and bookings while improving performance and usability.',
     keyFeatures: [
-      'Redesigned and modernized the client’s existing website to improve UX and performance',
+      'Redesigned and modernized the client’s existing website to improve UX',
       'Modern, responsive UI that aligns with the salon’s branding and concept',
       'WordPress-based CMS built with PHP for easy client content updates',
       'Integrated online booking system with full backend management tools',
@@ -221,10 +221,9 @@ const projectsDB = [
 
     myContributions: [
       'Managing sprint planning, Jira boards, and Git flow',
-      'Communicating with the client for design and feature approval',
       'Setting up hosting, domain, DNS, and SMTP mail server',
-      'Gallery page with AJAX-based image loading',
-      'Customizing booking components with CSS',
+      'Create Gallery page with AJAX-based image loading',
+      'Customizing booking plugin components with CSS',
       'Optimizing WordPress server performance',
     ],
     challenges:

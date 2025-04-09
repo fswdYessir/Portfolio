@@ -116,12 +116,14 @@ const ProjectDescription = ({
       videoUrl?.includes('embed') && (
         <section className="flex justify-center my-6">
           <div
-            className={`aspect-[${aspect}] relative w-full  pb-[56%] md:pb-[50%] lg:pb-[36%] max-w-2xl ${
-              aspect === '16/9' ? 'max-w-2xl' : 'max-w-xs'
+            className={`aspect-[${aspect}] relative w-full  max-w-2xl ${
+              aspect === '16/9'
+                ? 'max-w-2xl pb-[56%] md:pb-[50%] lg:pb-[36%]'
+                : 'max-w-xs pb-[160%] md:pb-[85%] lg:pb-[60%] '
             }`}
           >
             <iframe
-              className="absolute top-0 left-0 w-full h-full rounded-xs"
+              className="absolute top-0 left-0 w-full h-full rounded-2xl"
               src={videoUrl + '&autoplay=1&mute=1'}
               title="Demo Video"
               allow="accelerometer; autoplay; encrypted-media;"
@@ -183,7 +185,7 @@ const ProjectDescription = ({
         </>
       )}
 
-      <ScrollAnimation delay={700}>
+      <ScrollAnimation delay={600}>
         {(myContributions?.length || contribution?.length) && (
           <section className="flex flex-col gap-4">
             <h2 className="text-2xl font-bold mb-2 italic">
@@ -211,7 +213,7 @@ const ProjectDescription = ({
         )}
         <Divider />
       </ScrollAnimation>
-      <ScrollAnimation delay={800}>
+      <ScrollAnimation delay={600}>
         {challenges && (
           <>
             <section className="flex flex-col gap-4">
@@ -225,7 +227,7 @@ const ProjectDescription = ({
           </>
         )}
       </ScrollAnimation>
-      <ScrollAnimation delay={900}>
+      <ScrollAnimation delay={600}>
         {reflection && (
           <section className="flex flex-col gap-4">
             <h2 className="text-2xl font-bold mb-2 italic">Reflection</h2>

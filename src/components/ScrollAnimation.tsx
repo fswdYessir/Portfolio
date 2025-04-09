@@ -41,7 +41,7 @@ const ScrollAnimation = ({
       data-aos-delay={delay}
       data-aos-duration={duration}
       data-aos-once={once}
-      data-aos-offset={offset ?? (isMobile ? 120 : 350)}
+      data-aos-offset={offset ?? (isMobile ? 120 : 300)}
     >
       {children}
     </div>
