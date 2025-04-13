@@ -125,10 +125,17 @@ const ProjectContent = ({
         </div>
         <h1 className="text-4xl font-extrabold">{title}</h1>
 
-        <div className="flex flex-wrap gap-3 mt-5 mb-10">
+        <div className="flex flex-wrap gap-3 mt-3 mb-10">
           {techStack.map((tech, i) => (
-            <div key={i}>
+            <div
+              key={i}
+              className="relative group hover:scale-110 transition-transform duration-300"
+            >
               {techIcons[tech as keyof typeof techIcons] || <span>{tech}</span>}
+
+              <span className="absolute text-xs opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10 whitespace-nowrap">
+                {tech}
+              </span>
             </div>
           ))}
         </div>
