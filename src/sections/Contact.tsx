@@ -115,14 +115,14 @@ const Contact: React.FC = () => {
                 className={`absolute transform hover:scale-105 active:translate-y-1 rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r ${
                   theme === 'light'
                     ? ' from-[#44BCFF] via-[#FF44EC] to-[#FF675E]'
-                    : ' from-[#f9d10b] via-[#f4b310] to-[#f9d10b]'
+                    : '  from-[#fbd621] via-[#f9b712] to-[#f69000]'
                 }`}
               ></div>
               <input
                 type="submit"
                 value="SUBMIT"
                 className={`Btn text-white px-4 py-2 font-semibold rounded-xl relative z-10 ${
-                  theme === 'light' ? 'bg-gray-800 ' : 'bg-yellow-400/50'
+                  theme === 'light' ? 'bg-gray-800 ' : 'bg-yellow-400/40'
                 }`}
               />
             </div>

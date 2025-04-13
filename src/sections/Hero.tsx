@@ -30,7 +30,7 @@ function Hero() {
           }`}
           style={{
             background:
-              'linear-gradient(to bottom, rgba(255,223,0,0.9), rgba(255,223,0,0.25), rgba(255,223,0,0))',
+              'linear-gradient(to bottom, rgba(255,223,0,0.9), rgba(255,223,0,0.2), rgba(255,223,0,0))',
             clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)',
             filter: 'blur(30px)',
           }}
@@ -91,7 +91,7 @@ function Hero() {
             <button
               onClick={() => window.open('resume.pdf', '_blank')}
               className={`Btn text-white ${
-                theme === 'light' ? 'bg-gray-800 ' : 'bg-yellow-400/50'
+                theme === 'light' ? 'bg-gray-800 ' : 'bg-yellow-400/40'
               }`}
             >
               RESUME

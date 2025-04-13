@@ -156,29 +156,31 @@ const ProjectContent = ({
           aspect={aspect}
         />
       </div>
-
-      {link && (
-        <div className="flex justify-center">
-          <a href={link} target="_blank" rel="noopener noreferrer">
-            <div className="relative inline-flex group mt-4">
-              <div
-                className={`absolute transform hover:scale-105 active:translate-y-1 rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r ${
-                  theme === 'light'
-                    ? ' from-[#44BCFF] via-[#FF44EC] to-[#FF675E]'
-                    : ' from-[#f9d10b] via-[#f4b310] to-[#f9d10b]'
-                }`}
-              ></div>
-              <button
-                className={`Btn text-white px-4 py-2 font-semibold rounded-xl relative z-10 ${
-                  theme === 'light' ? 'bg-gray-800 ' : 'bg-yellow-400/50'
-                }`}
-              >
-                View Project
-              </button>
-            </div>
-          </a>
-        </div>
-      )}
+      <ScrollAnimation delay={500}>
+        {link && (
+          <div className="flex justify-center">
+            <a href={link} target="_blank" rel="noopener noreferrer">
+              <div className="relative inline-flex group mt-4">
+                <div
+                  className={`absolute transform hover:scale-105 active:translate-y-1 rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r ${
+                    theme === 'light'
+                      ? ' from-[#44BCFF] via-[#FF44EC] to-[#FF675E]'
+                      : '  from-[#fbd621] via-[#f9b712] to-[#f69000]'
+                  }`}
+                ></div>
+                <button
+                  className={`Btn flex items-center text-white px-5 py-2 font-semibold rounded-xl relative z-10 ${
+                    theme === 'light' ? 'bg-gray-800 ' : 'bg-yellow-400/40'
+                  }`}
+                >
+                  <span className="text-red-500 text-xs p-1">●</span>
+                  Live Demo
+                </button>
+              </div>
+            </a>
+          </div>
+        )}
+      </ScrollAnimation>
     </div>
   )
 }
