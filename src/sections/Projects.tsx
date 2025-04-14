@@ -5,8 +5,8 @@ import ScrollAnimation from '../components/ScrollAnimation'
 
 function Projects() {
   return (
-    <section id="projects" className="text-center p-6">
-      <ScrollAnimation offset={100}>
+    <section id="projects" className="text-center p-6 min-h-[20vh]">
+      <ScrollAnimation offset={300} delay={100}>
         <h1 className="text-3xl font-bold uppercase">Projects</h1>
         <p className="mb-10">Welcome! Check out my projects below.</p>
       </ScrollAnimation>
