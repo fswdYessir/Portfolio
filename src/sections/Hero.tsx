@@ -63,7 +63,7 @@ function Hero() {
 
           <span className="flex gap-6">
             <a
-              href="https://github.com/devBySol"
+              href="https://github.com/fswdYessir"
               className="hover:scale-110 transition-transform"
             >
               <GrGithub size={24} className="gitIcon" />
