@@ -163,7 +163,7 @@ const ProjectContent = ({
           aspect={aspect}
         />
       </div>
-      <ScrollAnimation delay={500}>
+      <ScrollAnimation offset={100} delay={300}>
         {link && (
           <div className="flex justify-center">
             <a href={link} target="_blank" rel="noopener noreferrer">

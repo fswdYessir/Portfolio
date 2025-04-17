@@ -12,6 +12,7 @@ import {
 } from 'chart.js'
 import { Bar } from 'react-chartjs-2'
 import ScrollAnimation from './ScrollAnimation'
+import { FaCheck } from 'react-icons/fa'
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
@@ -85,6 +86,11 @@ const ProjectDescription = ({
         x: {
           ticks: {
             color: colors.text,
+            font: {
+              family: 'Roboto mono',
+              size: 10,
+              weight: 'normal',
+            },
             callback: (val: string | number) => `${val}%`,
           },
           grid: { color: colors.grid },
@@ -92,14 +98,21 @@ const ProjectDescription = ({
           beginAtZero: true,
         },
         y: {
-          ticks: { color: colors.text, font: { weight: 'bold' } },
+          ticks: {
+            color: colors.text,
+            font: {
+              family: 'Roboto mono',
+              size: 12,
+              weight: 'normal',
+            },
+          },
           grid: { color: colors.grid },
         },
       },
     }
 
     return (
-      <div className="w-full max-w-2xl mx-auto my-4">
+      <div className="w-full max-w-3xl h-[200px] lg:h-[250px] mx-auto">
         <Bar data={data} options={options} />
       </div>
     )
@@ -137,7 +150,7 @@ const ProjectDescription = ({
 
   return (
     <div className="space-y-5">
-      <ScrollAnimation delay={500}>
+      <ScrollAnimation delay={300}>
         <section className="flex flex-col gap-4">
           <h2 className="text-2xl font-bold mb-2 italic">Project Overview</h2>
           <p className="text-lg leading-8">{overview}</p>
@@ -153,11 +166,14 @@ const ProjectDescription = ({
       {keyFeatures.length > 0 && (
         <>
           <section className="flex flex-col gap-4">
-            <ScrollAnimation delay={600}>
+            <ScrollAnimation delay={300}>
               <h2 className="text-2xl font-bold mb-2 italic">Key Features</h2>
-              <ul className="list-disc list-inside text-lg leading-10">
+              <ul className="custom-list list-disc list-inside text-lg leading-10">
                 {keyFeatures.map((feature, idx) => (
-                  <li key={idx}>{feature}</li>
+                  <li key={idx} className="flex items-start gap-2">
+                    <FaCheck className="text-yellow-400 mt-3 shrink-0" />
+                    <span>{feature}</span>
+                  </li>
                 ))}
               </ul>
             </ScrollAnimation>
@@ -167,8 +183,8 @@ const ProjectDescription = ({
                   <ScrollAnimation
                     animation="fade-in"
                     key={i}
-                    offset={500}
-                    delay={i * 700}
+                    offset={300}
+                    delay={i * 300}
                   >
                     <img
                       key={i}
@@ -185,7 +201,7 @@ const ProjectDescription = ({
         </>
       )}
 
-      <ScrollAnimation delay={600}>
+      <ScrollAnimation delay={300}>
         {(myContributions?.length || contribution?.length) && (
           <section className="flex flex-col gap-4">
             <h2 className="text-2xl font-bold mb-2 italic">
@@ -195,9 +211,12 @@ const ProjectDescription = ({
             <div className="flex flex-col md:flex-row gap-3 items-start">
               {myContributions && myContributions.length > 0 && (
                 <div className="flex-1">
-                  <ul className="list-disc list-inside text-lg leading-10">
+                  <ul className="text-lg leading-10">
                     {myContributions.map((item, idx) => (
-                      <li key={idx}>{item}</li>
+                      <li key={idx} className="flex items-start gap-2">
+                        <FaCheck className="text-yellow-400 mt-3 shrink-0" />
+                        <span>{item}</span>
+                      </li>
                     ))}
                   </ul>
                 </div>
@@ -213,7 +232,7 @@ const ProjectDescription = ({
         )}
         <Divider />
       </ScrollAnimation>
-      <ScrollAnimation delay={600}>
+      <ScrollAnimation delay={300}>
         {challenges && (
           <>
             <section className="flex flex-col gap-4">
@@ -227,7 +246,7 @@ const ProjectDescription = ({
           </>
         )}
       </ScrollAnimation>
-      <ScrollAnimation delay={600}>
+      <ScrollAnimation delay={300}>
         {reflection && (
           <section className="flex flex-col gap-4">
             <h2 className="text-2xl font-bold mb-2 italic">Reflection</h2>
