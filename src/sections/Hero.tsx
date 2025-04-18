@@ -57,7 +57,7 @@ function Hero() {
             alt="Profile picture"
           />
         </div>
-        <div className="flex flex-col gap-4 lg:gap-5 items-center md:items-start text-center md:text-left z-10 pt-5 md:pt-30 lg:pt-40 animate__animated animate__fadeIn animate__delay-1s ml-5">
+        <div className="flex flex-col gap-3 lg:gap-5 items-center md:items-start text-center md:text-left z-10 pt-5 md:pt-30 lg:pt-35 animate__animated animate__fadeIn animate__delay-1s ml-5">
           <h1 className="font-bold">Sol Kim</h1>
           <h2>Full Stack Developer</h2>
 
