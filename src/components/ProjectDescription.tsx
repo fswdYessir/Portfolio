@@ -103,7 +103,7 @@ const ProjectDescription = ({
             color: colors.text,
             font: {
               family: 'Roboto mono',
-              size: 12,
+              size: 11,
               weight: 'normal',
               style: 'italic',
             },

@@ -57,7 +57,7 @@ function Hero() {
             alt="Profile picture"
           />
         </div>
-        <div className="flex flex-col gap-6 items-center md:items-start text-center md:text-left z-10 pt-30 animate__animated animate__fadeIn animate__delay-1s">
+        <div className="flex flex-col gap-4 lg:gap-5 items-center md:items-start text-center md:text-left z-10 pt-5 md:pt-30 lg:pt-40 animate__animated animate__fadeIn animate__delay-1s ml-5">
           <h1 className="font-bold">Sol Kim</h1>
           <h2>Full Stack Developer</h2>
 
@@ -76,9 +76,9 @@ function Hero() {
             </a>
           </span>
 
-          <p className="max-w-[40ch]">
-            Problem solving full-stack developer focused on collaboration and
-            building user friendly web applications.
+          <p className="max-w-[30ch]">
+            I'm a developer who loves solving problems and collaborating with
+            teams to build great user experiences.
           </p>
           <div className="relative inline-flex group">
             <div

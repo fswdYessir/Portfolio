@@ -46,10 +46,10 @@ const projectsDB = [
     link: 'http://chezmari.com/',
     contribution: [
       { tech: 'Project Management', percent: 100 },
-      { tech: 'WordPress / Hosting', percent: 100 },
+      { tech: 'Hosting', percent: 100 },
       { tech: 'Booking System', percent: 100 },
-      { tech: 'Tailwind CSS', percent: 30 },
-      { tech: 'CSS', percent: 25 },
+      { tech: 'Tailwind CSS', percent: 20 },
+      { tech: 'Custom CSS', percent: 30 },
     ],
   },
   {
@@ -236,11 +236,11 @@ const projectsDB = [
     link: 'https://idspstuffnstuff-production.up.railway.app/',
     extraImages: ['/postImg/stuffnstuff/demo.png'],
     contribution: [
-      { tech: 'Azure', percent: 100 },
-      { tech: 'PostgreSQL', percent: 50 },
+      { tech: 'TypeScript', percent: 50 },
       { tech: 'EJS', percent: 50 },
       { tech: 'CSS', percent: 100 },
-      { tech: 'TypeScript', percent: 50 },
+      { tech: 'PostgreSQL', percent: 50 },
+      { tech: 'Azure', percent: 100 },
     ],
   },
 ]
