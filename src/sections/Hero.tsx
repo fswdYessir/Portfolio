@@ -52,7 +52,7 @@ function Hero() {
             />
           </button>
           <img
-            className="rounded-t-full w-48 md:w-72 lg:w-86"
+            className="rounded-t-full w-60 md:w-72 lg:w-86"
             src={theme === 'light' ? ProfileLight : ProfileDark}
             alt="Profile picture"
           />
