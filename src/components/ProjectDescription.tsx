@@ -12,7 +12,7 @@ import {
 } from 'chart.js'
 import { Bar } from 'react-chartjs-2'
 import ScrollAnimation from './ScrollAnimation'
-import { FaCheck } from 'react-icons/fa'
+import { FaStar } from 'react-icons/fa'
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
@@ -173,7 +173,7 @@ const ProjectDescription = ({
               <ul className="custom-list list-disc list-inside text-lg leading-10">
                 {keyFeatures.map((feature, idx) => (
                   <li key={idx} className="flex items-start gap-2">
-                    <FaCheck className="text-yellow-400 mt-3 shrink-0" />
+                    <FaStar className="text-yellow-400 mt-3 shrink-0" />
                     <span>{feature}</span>
                   </li>
                 ))}
@@ -216,7 +216,7 @@ const ProjectDescription = ({
                   <ul className="text-lg leading-10">
                     {myContributions.map((item, idx) => (
                       <li key={idx} className="flex items-start gap-2">
-                        <FaCheck className="text-yellow-400 mt-3 shrink-0" />
+                        <FaStar className="text-yellow-400 mt-3 shrink-0" />
                         <span>{item}</span>
                       </li>
                     ))}
