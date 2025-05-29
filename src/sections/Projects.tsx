@@ -12,7 +12,7 @@ function Projects() {
       </ScrollAnimation>
 
       <ScrollAnimation offset={100} delay={100}>
-        <div className="flex flex-wrap justify-center lg:gap-8 gap-5 px-2 max-w-screen 2xl:max-w-[80vw]">
+        <div className="flex flex-wrap justify-center gap-2 lg:gap-0 xl:gap-5 px-2 max-w-screen 2xl:max-w-[80vw]">
           {projects.map((project, idx) => (
             <ProjectCard key={idx} {...project} />
           ))}
