@@ -1,7 +1,7 @@
 import Beep from '../../src/assets/beep/BeepThumbnail.png'
 import BeepImg from '../../src/assets/beep/Beep.png'
-// import StuffNStuff from '../../src/assets/stuffnstuff/StuffNStuffThumbnail.png'
-// import StuffNStuffImg from '../../src/assets/stuffnstuff/StuffNStuff.png'
+import StuffNStuff from '../../src/assets/stuffnstuff/StuffNStuffThumbnail.png'
+import StuffNStuffImg from '../../src/assets/stuffnstuff/StuffNStuff.png'
 import FourSeason from '../../src/assets/fourseason/FourSeasonThumbnail.png'
 import FourSeasonImg from '../../src/assets/fourseason/FourSeason.png'
 import Hilton from '../../src/assets/hilton/HiltonThumbnail.png'
@@ -198,51 +198,51 @@ const projectsDB = [
     link: 'https://mdia-2025-project3.vercel.app/',
   },
 
-  // {
-  //   id: 'stuffNStuff',
-  //   label: ['Group'],
-  //   title: 'Stuff N Stuff',
-  //   subtitle: 'MARKETPLACE WEB APP',
-  //   icon: StuffNStuff,
-  //   banner: StuffNStuffImg,
-  //   techStack: [
-  //     'TypeScript',
-  //     'Express',
-  //     'PostgreSQL',
-  //     'HTML',
-  //     'CSS',
-  //     'EJS',
-  //     'Azure',
-  //   ],
-  //   overview:
-  //     'Stuff N Stuff is a group project to build second-hand marketplace app that replicates key features of platforms like Facebook Marketplace. It provides real-time item listings, secure user authentication, and integrated chat between users.',
-  //   keyFeatures: [
-  //     'User registration and secure login with email verification',
-  //     'Full item posting functionality (create, read, update, delete)',
-  //     'Category-based filtering using AJAX for instant results',
-  //     'Real-time chat between buyers and sellers',
-  //     'Personalized item recommendations based on user behavior',
-  //   ],
-  //   myContributions: [
-  //     'Planned and designed the overall layout and UX flow',
-  //     'Developed a recommendation system based on user clicks and views',
-  //     'Implemented secure local authentication with email verification',
-  //     'Built the category filtering feature using AJAX for dynamic updates',
-  //   ],
-  //   challenges:
-  //     'Initially, the filtering system caused the entire page to reload with every interaction, which disrupted the user experience. To fix this, I refactored the system to use AJAX, allowing for seamless category-based filtering without a full reload.<br /><br />Another challenge was handling image uploads—without cloud storage, images posted during development couldn’t be accessed on the live server. To solve this, I integrated cloud-based storage to ensure consistent access across both environments.',
-  //   reflection:
-  //     'This was the first full project I completed from start to finish, handling both backend and frontend responsibilities. It helped me gain confidence in building real-world applications and taught me the value of clean structure, team coordination, and thinking ahead for scalability.',
-  //   link: 'https://idspstuffnstuff-production.up.railway.app/',
-  //   extraImages: ['/postImg/stuffnstuff/demo.png'],
-  //   contribution: [
-  //     { tech: 'TypeScript', percent: 50 },
-  //     { tech: 'EJS', percent: 50 },
-  //     { tech: 'CSS', percent: 100 },
-  //     { tech: 'PostgreSQL', percent: 50 },
-  //     { tech: 'Azure', percent: 100 },
-  //   ],
-  // },
+  {
+    id: 'stuffNStuff',
+    label: ['Group'],
+    title: 'Stuff N Stuff',
+    subtitle: 'MARKETPLACE WEB APP',
+    icon: StuffNStuff,
+    banner: StuffNStuffImg,
+    techStack: [
+      'TypeScript',
+      'Express',
+      'PostgreSQL',
+      'HTML',
+      'CSS',
+      'EJS',
+      'Azure',
+    ],
+    overview:
+      'Stuff N Stuff is a group project to build second-hand marketplace app that replicates key features of platforms like Facebook Marketplace. It provides real-time item listings, secure user authentication, and integrated chat between users.',
+    keyFeatures: [
+      'User registration and secure login with email verification',
+      'Full item posting functionality (create, read, update, delete)',
+      'Category-based filtering using AJAX for instant results',
+      'Real-time chat between buyers and sellers',
+      'Personalized item recommendations based on user behavior',
+    ],
+    myContributions: [
+      'Planned and designed the overall layout and UX flow',
+      'Developed a recommendation system based on user clicks and views',
+      'Implemented secure local authentication with email verification',
+      'Built the category filtering feature using AJAX for dynamic updates',
+    ],
+    challenges:
+      'Initially, the filtering system caused the entire page to reload with every interaction, which disrupted the user experience. To fix this, I refactored the system to use AJAX, allowing for seamless category-based filtering without a full reload.<br /><br />Another challenge was handling image uploads—without cloud storage, images posted during development couldn’t be accessed on the live server. To solve this, I integrated cloud-based storage to ensure consistent access across both environments.',
+    reflection:
+      'This was the first full project I completed from start to finish, handling both backend and frontend responsibilities. It helped me gain confidence in building real-world applications and taught me the value of clean structure, team coordination, and thinking ahead for scalability.',
+    // link: 'https://idspstuffnstuff-production.up.railway.app/',
+    extraImages: ['/postImg/stuffnstuff/demo.png'],
+    contribution: [
+      { tech: 'TypeScript', percent: 50 },
+      { tech: 'EJS', percent: 50 },
+      { tech: 'CSS', percent: 100 },
+      { tech: 'PostgreSQL', percent: 50 },
+      { tech: 'Azure', percent: 100 },
+    ],
+  },
 ]
 
 export default projectsDB
