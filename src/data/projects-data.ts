@@ -1,7 +1,7 @@
 import Beep from '../../src/assets/beep/BeepThumbnail.png'
 import BeepImg from '../../src/assets/beep/Beep.png'
-import StuffNStuff from '../../src/assets/stuffnstuff/StuffNStuffThumbnail.png'
-import StuffNStuffImg from '../../src/assets/stuffnstuff/StuffNStuff.png'
+// import StuffNStuff from '../../src/assets/stuffnstuff/StuffNStuffThumbnail.png'
+// import StuffNStuffImg from '../../src/assets/stuffnstuff/StuffNStuff.png'
 import FourSeason from '../../src/assets/fourseason/FourSeasonThumbnail.png'
 import FourSeasonImg from '../../src/assets/fourseason/FourSeason.png'
 import Hilton from '../../src/assets/hilton/HiltonThumbnail.png'
@@ -10,8 +10,49 @@ import IMDB from '../../src/assets/imdb/IMDBThumbnail.png'
 import IMDBImg from '../../src/assets/imdb/IMDB.png'
 import ChezMari from '../../src/assets/chezmari/ChezMariThumbnail.png'
 import ChezMariImg from '../assets/chezmari/ChezMari.png'
+import Journalist from '../assets/journalist/JournalistThumbnail.png'
+import JournalistImg from '../assets/journalist/Journalist.png'
 
 const projectsDB = [
+  {
+    id: 'independent-Journalist',
+    label: ['Client', 'Personal'],
+    title: 'Independent Journalist',
+    subtitle: 'REBUILD CUSTOM WORDPRESS',
+    icon: Journalist,
+    banner: JournalistImg,
+    techStack: ['WordPress', 'HTML', 'CSS', 'JavaScript'],
+    overview:
+      'A freelance volunteer project built on WordPress to showcase independent YouTube journalists across multiple countries. Each page groups channels by topic—Science and Geopolitics—and includes QR code donation options alongside direct YouTube links. The entire site was built using custom HTML blocks within the Gutenberg editor, with a focus on clarity, accessibility, and responsive design.',
+    keyFeatures: [
+      'Clean, intuitive card-based UI optimized for mobile and desktop screens',
+      'Color scheme and layout tailored to match the project’s message and purpose',
+      'Each channel card includes YouTube link, donation button, and scannable QR code',
+      'Client-side search and filtering by country and category (Science / Geopolitics)',
+      'All revisions implemented based on direct client feedback throughout the project',
+    ],
+    myContributions: [
+      'Developed the full site structure using Gutenberg editor with custom HTML and CSS blocks',
+      'Created a dynamic client-side search using vanilla JavaScript and URL query parameters',
+      'Integrated QR code generator via external API and embedded it in each channel card',
+      'Built and styled 9 fully responsive pages manually without relying on plugins',
+      'Collaborated closely with the client to gather feedback and iteratively refine UX and layout',
+    ],
+    challenges:
+      'The biggest challenge was the lack of clear assets and direction from the client at the start of the project. Without defined visual materials or specific requirements, I had to proactively design and share multiple layout drafts to help identify the right concept. After receiving approval on the chosen style, I continued to develop each page and incorporated feedback iteratively, ensuring the result aligned with the client’s evolving expectations.',
+    reflection:
+      'This project sharpened my front-end design skills and deepened my understanding of how to use WordPress as a flexible CMS with minimal reliance on plugins. I also learned how to structure and scale multi-page static content effectively—entirely using HTML, CSS, and JavaScript inside WordPress.Beyond the technical growth, it was personally rewarding to support independent journalism through volunteer work. Managing client feedback cycles and simplifying backend tasks for non-technical users helped me grow as both a developer and communicator.',
+    extraImages: ['/postImg/journalist/demo.png'],
+    videoUrl: '',
+    aspect: '16/9',
+    link: 'https://supportindependantjournalist.com/',
+    contribution: [
+      { tech: 'Frontend (HTML/CSS/JS)', percent: 100 },
+      { tech: 'WordPress Custom Blocks', percent: 100 },
+      { tech: 'Design', percent: 100 },
+      { tech: 'Client Communication', percent: 100 },
+    ],
+  },
   {
     id: 'chezmari',
     label: ['Client', 'Group'],
@@ -198,51 +239,51 @@ const projectsDB = [
     link: 'https://mdia-2025-project3.vercel.app/',
   },
 
-  {
-    id: 'stuffNStuff',
-    label: ['Group'],
-    title: 'Stuff N Stuff',
-    subtitle: 'MARKETPLACE WEB APP',
-    icon: StuffNStuff,
-    banner: StuffNStuffImg,
-    techStack: [
-      'TypeScript',
-      'Express',
-      'PostgreSQL',
-      'HTML',
-      'CSS',
-      'EJS',
-      'Azure',
-    ],
-    overview:
-      'Stuff N Stuff is a group project to build second-hand marketplace app that replicates key features of platforms like Facebook Marketplace. It provides real-time item listings, secure user authentication, and integrated chat between users.',
-    keyFeatures: [
-      'User registration and secure login with email verification',
-      'Full item posting functionality (create, read, update, delete)',
-      'Category-based filtering using AJAX for instant results',
-      'Real-time chat between buyers and sellers',
-      'Personalized item recommendations based on user behavior',
-    ],
-    myContributions: [
-      'Planned and designed the overall layout and UX flow',
-      'Developed a recommendation system based on user clicks and views',
-      'Implemented secure local authentication with email verification',
-      'Built the category filtering feature using AJAX for dynamic updates',
-    ],
-    challenges:
-      'Initially, the filtering system caused the entire page to reload with every interaction, which disrupted the user experience. To fix this, I refactored the system to use AJAX, allowing for seamless category-based filtering without a full reload.<br /><br />Another challenge was handling image uploads—without cloud storage, images posted during development couldn’t be accessed on the live server. To solve this, I integrated cloud-based storage to ensure consistent access across both environments.',
-    reflection:
-      'This was the first full project I completed from start to finish, handling both backend and frontend responsibilities. It helped me gain confidence in building real-world applications and taught me the value of clean structure, team coordination, and thinking ahead for scalability.',
-    // link: 'https://idspstuffnstuff-production.up.railway.app/',
-    extraImages: ['/postImg/stuffnstuff/demo.png'],
-    contribution: [
-      { tech: 'TypeScript', percent: 50 },
-      { tech: 'EJS', percent: 50 },
-      { tech: 'CSS', percent: 100 },
-      { tech: 'PostgreSQL', percent: 50 },
-      { tech: 'Azure', percent: 100 },
-    ],
-  },
+  // {
+  //   id: 'stuffNStuff',
+  //   label: ['Group'],
+  //   title: 'Stuff N Stuff',
+  //   subtitle: 'MARKETPLACE WEB APP',
+  //   icon: StuffNStuff,
+  //   banner: StuffNStuffImg,
+  //   techStack: [
+  //     'TypeScript',
+  //     'Express',
+  //     'PostgreSQL',
+  //     'HTML',
+  //     'CSS',
+  //     'EJS',
+  //     'Azure',
+  //   ],
+  //   overview:
+  //     'Stuff N Stuff is a group project to build second-hand marketplace app that replicates key features of platforms like Facebook Marketplace. It provides real-time item listings, secure user authentication, and integrated chat between users.',
+  //   keyFeatures: [
+  //     'User registration and secure login with email verification',
+  //     'Full item posting functionality (create, read, update, delete)',
+  //     'Category-based filtering using AJAX for instant results',
+  //     'Real-time chat between buyers and sellers',
+  //     'Personalized item recommendations based on user behavior',
+  //   ],
+  //   myContributions: [
+  //     'Planned and designed the overall layout and UX flow',
+  //     'Developed a recommendation system based on user clicks and views',
+  //     'Implemented secure local authentication with email verification',
+  //     'Built the category filtering feature using AJAX for dynamic updates',
+  //   ],
+  //   challenges:
+  //     'Initially, the filtering system caused the entire page to reload with every interaction, which disrupted the user experience. To fix this, I refactored the system to use AJAX, allowing for seamless category-based filtering without a full reload.<br /><br />Another challenge was handling image uploads—without cloud storage, images posted during development couldn’t be accessed on the live server. To solve this, I integrated cloud-based storage to ensure consistent access across both environments.',
+  //   reflection:
+  //     'This was the first full project I completed from start to finish, handling both backend and frontend responsibilities. It helped me gain confidence in building real-world applications and taught me the value of clean structure, team coordination, and thinking ahead for scalability.',
+  //   // link: 'https://idspstuffnstuff-production.up.railway.app/',
+  //   extraImages: ['/postImg/stuffnstuff/demo.png'],
+  //   contribution: [
+  //     { tech: 'TypeScript', percent: 50 },
+  //     { tech: 'EJS', percent: 50 },
+  //     { tech: 'CSS', percent: 100 },
+  //     { tech: 'PostgreSQL', percent: 50 },
+  //     { tech: 'Azure', percent: 100 },
+  //   ],
+  // },
 ]
 
 export default projectsDB
