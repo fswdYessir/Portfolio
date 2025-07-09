@@ -46,12 +46,6 @@ const projectsDB = [
     videoUrl: '',
     aspect: '16/9',
     link: 'https://supportindependantjournalist.com/',
-    contribution: [
-      { tech: 'Frontend (HTML/CSS/JS)', percent: 100 },
-      { tech: 'WordPress Custom Blocks', percent: 100 },
-      { tech: 'Design', percent: 100 },
-      { tech: 'Client Communication', percent: 100 },
-    ],
   },
   {
     id: 'chezmari',
