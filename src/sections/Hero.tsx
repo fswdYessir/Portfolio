@@ -77,8 +77,7 @@ function Hero() {
           </span>
 
           <p className="max-w-[30ch]">
-            I'm a developer who loves solving problems and collaborating with
-            teams to build great user experiences.
+            I design, build, and ship full-stack web apps from idea to launch.
           </p>
           <div className="relative inline-flex group">
             <div
