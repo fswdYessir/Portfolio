@@ -45,7 +45,7 @@ const projectsDB = [
     extraImages: ['/postImg/journalist/demo.png'],
     videoUrl: '',
     aspect: '16/9',
-    link: 'https://supportindependantjournalist.com/',
+    // link: 'https://supportindependantjournalist.com/',
   },
   {
     id: 'chezmari',
