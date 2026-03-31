@@ -6,14 +6,66 @@ import FourSeason from '../../src/assets/fourseason/FourSeasonThumbnail.png'
 import FourSeasonImg from '../../src/assets/fourseason/FourSeason.png'
 import Hilton from '../../src/assets/hilton/HiltonThumbnail.png'
 import HiltonImg from '../../src/assets/hilton/Hilton.png'
-import IMDB from '../../src/assets/imdb/IMDBThumbnail.png'
-import IMDBImg from '../../src/assets/imdb/IMDB.png'
+// import IMDB from '../../src/assets/imdb/IMDBThumbnail.png'
+// import IMDBImg from '../../src/assets/imdb/IMDB.png'
 import ChezMari from '../../src/assets/chezmari/ChezMariThumbnail.png'
 import ChezMariImg from '../assets/chezmari/ChezMari.png'
 import Journalist from '../assets/journalist/JournalistThumbnail.png'
 import JournalistImg from '../assets/journalist/Journalist.png'
+import Haimdall from '../assets/haimdall/HaimdallThumbnail.png'
+import HaimdallImg from '../assets/haimdall/HaimdallImg.png'
 
 const projectsDB = [
+  {
+    id: 'haimdall-v3',
+    label: ['Company', 'Professional'],
+    title: 'Haimdall v3',
+    subtitle: 'CARBON CREDIT MANAGEMENT',
+    icon: Haimdall,
+    banner: HaimdallImg,
+    techStack: [
+      'Next.js',
+      'React',
+      'TypeScript',
+      'Tailwind CSS',
+      'Firebase',
+      // 'Deck.gl',
+      // 'Google Maps API',
+      // 'Mapbox GL',
+      // 'next-intl',
+      // 'react-webcam',
+      // 'FullCalendar',
+    ],
+    overview:
+      'Haimdall v3 is a full-scale carbon credit management platform for sustainable agriculture. It visualizes more than 20,000+ farmland polygons in real-time, supports multilingual interfaces across five languages, and provides farmers and administrators with an end-to-end workflow for carbon reduction tracking, farmland monitoring, and booking management. I was solely responsible for building the entire front-end application from scratch, ensuring scalability, usability, and alignment with the product vision.',
+    keyFeatures: [
+      'Interactive farmland map with deck.gl vector tiles rendering 20,000+ polygons',
+      'Real-time dashboard with geospatial visualization, status updates, and charts',
+      'Full CRUD flows for farmland data, bookings, and profile management',
+      'Built-in camera module with EXIF metadata capture and S3 presigned uploads',
+      'Internationalization with next-intl supporting English, Korean, Vietnamese, Khmer, and Bangla',
+      'Custom admin panel for managing users, farmland states, and booking approvals',
+      'Mobile-first, responsive UI built with Tailwind v4 tokens and reusable components',
+    ],
+    myContributions: [
+      'Led the entire front-end architecture and development as the sole front-end engineer',
+      'Designed reusable components and custom hooks to scale complex workflows',
+      'Implemented MVT tiling with deck.gl and caching strategies to cut initial load times by ~40%',
+      'Integrated Firebase Auth for secure authentication and role-based access',
+      'Developed farmland CRUD flows, booking dashboards, and farmer profile modules',
+      'Collaborated with backend engineers on API design and error handling standardization',
+      'Aligned development with Figma design systems and ensured multilingual UI consistency',
+    ],
+    challenges:
+      'The biggest challenge was rendering and managing 20,000+ farmland polygons efficiently. Initial attempts caused slow load times and lag when zooming or panning the map. To solve this, I implemented MVT (Mapbox Vector Tiles) with deck.gl and introduced local caching strategies, which improved load performance by approximately 40%. Another major challenge was ensuring seamless multilingual support across five languages with varying character sets (Latin, Khmer, Bangla), which required careful font integration and layout adjustments.',
+    reflection:
+      'This project solidified my ability to architect and deliver a production-grade platform as a solo front-end developer. I deepened my expertise in geospatial visualization, large-scale data rendering, and performance optimization. Beyond technical skills, I also improved in cross-team collaboration—working closely with designers, backend engineers, and product stakeholders to deliver a cohesive user experience. Building Haimdall v3 from the ground up gave me the confidence to own complex projects end-to-end, balancing technical excellence with real-world usability.',
+    extraImages: ['/postImg/haimdall/demo.png'],
+    videoUrl: '',
+    aspect: '16/9',
+    link: 'https://haimdall3sol.vercel.app/',
+  },
+
   {
     id: 'independent-Journalist',
     label: ['Client', 'Personal'],
@@ -126,39 +178,39 @@ const projectsDB = [
       { tech: 'Firebase', percent: 100 },
     ],
   },
-  {
-    id: 'imdb',
-    label: ['Personal'],
-    title: 'IMDb',
-    subtitle: 'ASP.NET MVC WEB APP',
-    icon: IMDB,
-    banner: IMDBImg,
-    techStack: ['C#', 'Bootstrap', 'ASP.NET', 'CSS', 'MySQL', 'Azure'],
-    overview:
-      'This project is a mock IMDb website built using ASP.NET MVC with a focus on clean architecture, modular design, and object-oriented principles. It simulates a movie browsing platform with real-time data and authentication features.',
-    keyFeatures: [
-      'Developed using MVC pattern in ASP.NET for modular and scalable architecture',
-      'Implemented responsive UI using Bootstrap 5',
-      'Used .NET Identity to implement authentication system',
-      'Integrated OMDb and TMDb APIs to fetch real-time movie data',
-      'Implemented genre filtering and search functionality for movies',
-      'Used NewsAPI to fetch current movie-related news',
-    ],
-    myContributions: [
-      'Planned and developed the entire project independently',
-      'Set up the overall MVC structure and project architecture',
-      'Integrated multiple external APIs (OMDb, TMDb, NewsAPI)',
-      'Implemented genre filter, search, and movie details view',
-      'Designed UI using Bootstrap 5 with responsiveness in mind',
-      'Configured and deployed the app to Azure',
-    ],
-    challenges:
-      'A challenge I faced was during deployment to Azure. While the application worked perfectly with the local SQL Server, I encountered migration errors when publishing to the cloud. These issues were related to version mismatches and connection string configurations. After deployment, I reset the server environment and carefully reviewed all functionalities to ensure stability. This process taught me the importance of verifying database migrations and thoroughly testing in a production environment.',
-    reflection:
-      'This project helped me solidify my understanding of the MVC architecture and API integration in ASP.NET. I gained hands-on experience with implementing authentication, integrating external APIs, and designing modular, maintainable components. Additionally, deploying the application along with a SQL database to Azure gave me insight into real-world infrastructure challenges, including migration and configuration issues.',
-    extraImages: ['/postImg/imdb/filtering.png', '/postImg/imdb/searching.png'],
-    link: 'https://imdb-fkdvcbateeb8brcw.canadacentral-01.azurewebsites.net/',
-  },
+  // {
+  //   id: 'imdb',
+  //   label: ['Personal'],
+  //   title: 'IMDb',
+  //   subtitle: 'ASP.NET MVC WEB APP',
+  //   icon: IMDB,
+  //   banner: IMDBImg,
+  //   techStack: ['C#', 'Bootstrap', 'ASP.NET', 'CSS', 'MySQL', 'Azure'],
+  //   overview:
+  //     'This project is a mock IMDb website built using ASP.NET MVC with a focus on clean architecture, modular design, and object-oriented principles. It simulates a movie browsing platform with real-time data and authentication features.',
+  //   keyFeatures: [
+  //     'Developed using MVC pattern in ASP.NET for modular and scalable architecture',
+  //     'Implemented responsive UI using Bootstrap 5',
+  //     'Used .NET Identity to implement authentication system',
+  //     'Integrated OMDb and TMDb APIs to fetch real-time movie data',
+  //     'Implemented genre filtering and search functionality for movies',
+  //     'Used NewsAPI to fetch current movie-related news',
+  //   ],
+  //   myContributions: [
+  //     'Planned and developed the entire project independently',
+  //     'Set up the overall MVC structure and project architecture',
+  //     'Integrated multiple external APIs (OMDb, TMDb, NewsAPI)',
+  //     'Implemented genre filter, search, and movie details view',
+  //     'Designed UI using Bootstrap 5 with responsiveness in mind',
+  //     'Configured and deployed the app to Azure',
+  //   ],
+  //   challenges:
+  //     'A challenge I faced was during deployment to Azure. While the application worked perfectly with the local SQL Server, I encountered migration errors when publishing to the cloud. These issues were related to version mismatches and connection string configurations. After deployment, I reset the server environment and carefully reviewed all functionalities to ensure stability. This process taught me the importance of verifying database migrations and thoroughly testing in a production environment.',
+  //   reflection:
+  //     'This project helped me solidify my understanding of the MVC architecture and API integration in ASP.NET. I gained hands-on experience with implementing authentication, integrating external APIs, and designing modular, maintainable components. Additionally, deploying the application along with a SQL database to Azure gave me insight into real-world infrastructure challenges, including migration and configuration issues.',
+  //   extraImages: ['/postImg/imdb/filtering.png', '/postImg/imdb/searching.png'],
+  //   link: 'https://imdb-fkdvcbateeb8brcw.canadacentral-01.azurewebsites.net/',
+  // },
   {
     id: 'fourSeason',
     label: ['Client', 'Personal'],
