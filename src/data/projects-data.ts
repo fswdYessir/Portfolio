@@ -16,168 +16,166 @@ import Haimdall from '../assets/haimdall/HaimdallThumbnail.png'
 import HaimdallImg from '../assets/haimdall/HaimdallImg.png'
 
 const projectsDB = [
-  {
-    id: 'haimdall-v3',
-    label: ['Company', 'Professional'],
-    title: 'Haimdall v3',
-    subtitle: 'CARBON CREDIT MANAGEMENT',
-    icon: Haimdall,
-    banner: HaimdallImg,
-    techStack: [
-      'Next.js',
-      'React',
-      'TypeScript',
-      'Tailwind CSS',
-      'Firebase',
-      // 'Deck.gl',
-      // 'Google Maps API',
-      // 'Mapbox GL',
-      // 'next-intl',
-      // 'react-webcam',
-      // 'FullCalendar',
-    ],
-    overview:
-      'Haimdall v3 is a full-scale carbon credit management platform for sustainable agriculture. It visualizes more than 20,000+ farmland polygons in real-time, supports multilingual interfaces across five languages, and provides farmers and administrators with an end-to-end workflow for carbon reduction tracking, farmland monitoring, and booking management. I was solely responsible for building the entire front-end application from scratch, ensuring scalability, usability, and alignment with the product vision.',
-    keyFeatures: [
-      'Interactive farmland map with deck.gl vector tiles rendering 20,000+ polygons',
-      'Real-time dashboard with geospatial visualization, status updates, and charts',
-      'Full CRUD flows for farmland data, bookings, and profile management',
-      'Built-in camera module with EXIF metadata capture and S3 presigned uploads',
-      'Internationalization with next-intl supporting English, Korean, Vietnamese, Khmer, and Bangla',
-      'Custom admin panel for managing users, farmland states, and booking approvals',
-      'Mobile-first, responsive UI built with Tailwind v4 tokens and reusable components',
-    ],
-    myContributions: [
-      'Led the entire front-end architecture and development as the sole front-end engineer',
-      'Designed reusable components and custom hooks to scale complex workflows',
-      'Implemented MVT tiling with deck.gl and caching strategies to cut initial load times by ~40%',
-      'Integrated Firebase Auth for secure authentication and role-based access',
-      'Developed farmland CRUD flows, booking dashboards, and farmer profile modules',
-      'Collaborated with backend engineers on API design and error handling standardization',
-      'Aligned development with Figma design systems and ensured multilingual UI consistency',
-    ],
-    challenges:
-      'The biggest challenge was rendering and managing 20,000+ farmland polygons efficiently. Initial attempts caused slow load times and lag when zooming or panning the map. To solve this, I implemented MVT (Mapbox Vector Tiles) with deck.gl and introduced local caching strategies, which improved load performance by approximately 40%. Another major challenge was ensuring seamless multilingual support across five languages with varying character sets (Latin, Khmer, Bangla), which required careful font integration and layout adjustments.',
-    reflection:
-      'This project solidified my ability to architect and deliver a production-grade platform as a solo front-end developer. I deepened my expertise in geospatial visualization, large-scale data rendering, and performance optimization. Beyond technical skills, I also improved in cross-team collaboration—working closely with designers, backend engineers, and product stakeholders to deliver a cohesive user experience. Building Haimdall v3 from the ground up gave me the confidence to own complex projects end-to-end, balancing technical excellence with real-world usability.',
-    extraImages: ['/postImg/haimdall/demo.png'],
-    videoUrl: '',
-    aspect: '16/9',
-    link: 'https://haimdall3sol.vercel.app/',
-  },
+subtitle: 'CARBON CREDIT MANAGEMENT PLATFORM',
 
-  {
-    id: 'independent-Journalist',
-    label: ['Client', 'Personal'],
-    title: 'Independent Journalist',
-    subtitle: 'REBUILD CUSTOM WORDPRESS',
-    icon: Journalist,
-    banner: JournalistImg,
-    techStack: ['WordPress', 'HTML', 'CSS', 'JavaScript'],
-    overview:
-      'A freelance volunteer project built on WordPress to showcase independent YouTube journalists across multiple countries. Each page groups channels by topic—Science and Geopolitics—and includes QR code donation options alongside direct YouTube links. The entire site was built using custom HTML blocks within the Gutenberg editor, with a focus on clarity, accessibility, and responsive design.',
-    keyFeatures: [
-      'Clean, intuitive card-based UI optimized for mobile and desktop screens',
-      'Color scheme and layout tailored to match the project’s message and purpose',
-      'Each channel card includes YouTube link, donation button, and scannable QR code',
-      'Client-side search and filtering by country and category (Science / Geopolitics)',
-      'All revisions implemented based on direct client feedback throughout the project',
-    ],
-    myContributions: [
-      'Developed the full site structure using Gutenberg editor with custom HTML and CSS blocks',
-      'Created a dynamic client-side search using vanilla JavaScript and URL query parameters',
-      'Integrated QR code generator via external API and embedded it in each channel card',
-      'Built and styled 9 fully responsive pages manually without relying on plugins',
-      'Collaborated closely with the client to gather feedback and iteratively refine UX and layout',
-    ],
-    challenges:
-      'The biggest challenge was the lack of clear assets and direction from the client at the start of the project. Without defined visual materials or specific requirements, I had to proactively design and share multiple layout drafts to help identify the right concept. After receiving approval on the chosen style, I continued to develop each page and incorporated feedback iteratively, ensuring the result aligned with the client’s evolving expectations.',
-    reflection:
-      'This project sharpened my front-end design skills and deepened my understanding of how to use WordPress as a flexible CMS with minimal reliance on plugins. I also learned how to structure and scale multi-page static content effectively—entirely using HTML, CSS, and JavaScript inside WordPress.Beyond the technical growth, it was personally rewarding to support independent journalism through volunteer work. Managing client feedback cycles and simplifying backend tasks for non-technical users helped me grow as both a developer and communicator.',
-    extraImages: ['/postImg/journalist/demo.png'],
-    videoUrl: '',
-    aspect: '16/9',
-    // link: 'https://supportindependantjournalist.com/',
-  },
-  {
-    id: 'chezmari',
-    label: ['Client', 'Group'],
-    title: 'Chez Mari Salon',
-    subtitle: 'WEBSITE REBUILD USING WORDPRESS',
-    icon: ChezMari,
-    banner: ChezMariImg,
-    techStack: ['WordPress', 'Tailwind CSS', 'CSS', 'PHP'],
-    overview:
-      'Chez Mari was a group project for a real client—a hair salon owner looking to modernize her business website. Our team redesigned the site with CMS capabilities, giving the client full control over content and bookings while improving performance and usability.',
-    keyFeatures: [
-      'Redesigned and modernized the client’s existing website to improve UX',
-      'Modern, responsive UI that aligns with the salon’s branding and concept',
-      'WordPress-based CMS built with PHP for easy client content updates',
-      'Integrated online booking system with full backend management tools',
-    ],
+overview:
+  'Haimdall v3 is a carbon credit management platform for sustainable agriculture. It visualizes 20,000+ farmland polygons in real time, supports five languages, and provides workflows for farmland monitoring, carbon tracking, and booking management. As the sole frontend developer, I built the platform from scratch with a focus on scalability and performance.',
 
-    myContributions: [
-      'Managing sprint planning, Jira boards, and Git flow',
-      'Setting up hosting, domain, DNS, and SMTP mail server',
-      'Create Gallery page with AJAX-based image loading',
-      'Customizing booking plugin components with CSS',
-      'Optimizing WordPress server performance',
-    ],
-    challenges:
-      'One of the biggest challenges was understanding the structure and limitations of WordPress. Another challenge was communicating technical decisions to a client without a technical background, which required simplifying explanations and using visual references.',
-    reflection:
-      'This project deepened my understanding of WordPress themes and plugins, as well as domain, DNS, and CMS deployment processes. It also improved my leadership and client communication skills. I’m especially proud that our project was awarded 1st place out of all teams in the class!',
-    extraImages: ['/postImg/chezmari/demo.png'],
-    videoUrl: 'https://www.youtube.com/embed/R0dx3OQ5uzM?si=JBO3DqlY4kZrg-ym',
-    aspect: '16/9',
-    link: 'http://chezmari.com/',
-    contribution: [
-      { tech: 'Project Management', percent: 100 },
-      { tech: 'Hosting', percent: 100 },
-      { tech: 'Booking System', percent: 100 },
-      { tech: 'Tailwind CSS', percent: 20 },
-      { tech: 'Custom CSS', percent: 30 },
-    ],
-  },
-  {
-    id: 'Beep',
-    label: ['Group'],
-    title: 'Beep',
-    subtitle: 'REACT NATIVE SAFETY APP',
-    icon: Beep,
-    banner: BeepImg,
-    techStack: ['TypeScript', 'React Native', 'Firebase'],
-    overview:
-      'Beep is a personal safety app designed to help users get home safely by using AI and real-world crime data. It recommends secure routes, shows safe zones nearby, and includes real-time emergency features like SOS alerts and camera reporting.',
-    keyFeatures: [
-      'AI-generated safe routes based on crime data from the Vancouver police department (weekly update)',
-      'Map-based guidance to nearby safe zones based on your current location',
-      'Emergency SOS system that triggers alerts and sends your live location via SMS',
-      'Snapshot feature to report incidents by pinning photos to the map (bridging police data gaps)',
-    ],
-    myContributions: [
-      "Created and maintained the app's technical blog and developer documentation",
-      'Managed and maintained the team Git repository for collaborative development',
-      'Developed the SOS emergency page with integrated alert sounds',
-      'Implemented the snapshot feature and pinned incident images to the map',
-      'Handled all data management and synchronization using Firebase (NoSQL)',
-      'Built the SMS alert system that shares the user’s live location with emergency contacts',
-      'Designed and developed the onboarding and sign-up flow for new users',
-    ],
-    challenges:
-      'As the largest project in our 3-month term, team management proved to be a major challenge. Conflicts arose due to the number of team members and unclear responsibilities. To improve collaboration, we switched from a single project manager to a dual-PM system and clearly divided tasks among the team.</br></br> On the technical side, it was our first time developing a mobile app, and even setting up the environment with Expo and React Native was difficult at first. We relied heavily on documentation, YouTube tutorials, and self-directed learning to overcome technical gaps throughout development.',
-    reflection:
-      'This was my first time building a mobile app using Expo and React Native. I was hesitant at first to use an entirely new tech stack that none of us had experience with. However, I learned how to approach unfamiliar technologies with curiosity and persistence, and realized that building something functional is possible with the right teamwork and mindset. </br> I also improved my communication skills through team discussions and public presentations. <strong>Among 10 teams, we placed 3rd </strong> overall a result that reflected both our effort and collaboration. If given the chance, I would love to deploy the app in the future to expand its availability to other regions.',
-    videoUrl: 'https://www.youtube.com/embed/GoaUL_IReU8?si=xGpe0jkKgQZdfnZ_',
-    aspect: '9/16',
-    link: 'https://www.beep-safety.com/',
-    contribution: [
-      { tech: 'TypeScript', percent: 25 },
-      { tech: 'React Native', percent: 50 },
-      { tech: 'Expo', percent: 50 },
-      { tech: 'Firebase', percent: 100 },
-    ],
-  },
+keyFeatures: [
+  'Interactive farmland map rendering 20,000+ polygons with deck.gl vector tiles',
+  'Real-time dashboard with geospatial data visualization and analytics',
+  'Farmland, booking, and profile management workflows',
+  'Built-in camera module with EXIF metadata and S3 presigned uploads',
+  'Multi-language support with next-intl (EN, KR, VI, KM, BN)',
+  'Admin dashboard for user, farmland, and booking management',
+  'Responsive mobile-first UI built with reusable React components',
+],
+
+myContributions: [
+  'Built and maintained the entire frontend architecture as the sole frontend engineer',
+  'Built reusable components and custom hooks for complex workflows',
+  'Implemented MVT tiling and caching strategies to reduce initial load times by ~40%',
+  'Integrated Firebase Auth with role-based access control',
+  'Developed farmland management, booking dashboards, and farmer profile features',
+  'Worked with backend engineers on API integration and error handling',
+  'Implemented responsive multilingual UI based on Figma designs',
+],
+
+challenges:
+  'Rendering 20,000+ farmland polygons efficiently was the biggest challenge. Early implementations caused lag during zooming and panning, so I introduced MVT (Mapbox Vector Tiles) with deck.gl and local caching strategies, reducing initial load times by about 40%. Supporting five languages with different character sets also required careful font handling and layout adjustments.',
+
+reflection:
+  'This project strengthened my ability to build scalable production applications independently. I gained hands-on experience with geospatial visualization, large-scale data rendering, and frontend performance optimization. It also improved my collaboration skills while working with designers and backend engineers on a production platform.',
+
+{
+  id: 'independent-Journalist',
+  label: ['Client', 'Personal'],
+  title: 'Independent Journalist',
+  subtitle: 'CUSTOM WORDPRESS WEBSITE',
+  icon: Journalist,
+  banner: JournalistImg,
+  techStack: ['WordPress', 'HTML', 'CSS', 'JavaScript'],
+
+  overview:
+    'A volunteer WordPress project built to showcase independent YouTube journalists across multiple countries. The site organizes channels by topic and includes direct YouTube links, donation QR codes, and responsive layouts focused on accessibility and usability.',
+
+  keyFeatures: [
+    'Responsive card-based UI optimized for desktop and mobile',
+    'Channel organization by category and country',
+    'Integrated YouTube links, donation buttons, and QR codes',
+    'Client-side search and filtering with vanilla JavaScript',
+    'Custom layouts built with Gutenberg HTML blocks',
+  ],
+
+  myContributions: [
+    'Built the full site structure using Gutenberg with custom HTML and CSS',
+    'Implemented client-side search and filtering using vanilla JavaScript',
+    'Integrated external QR code APIs into reusable channel cards',
+    'Designed and developed 9 responsive pages without relying on plugins',
+    'Worked closely with the client to refine layouts and UX through feedback',
+  ],
+
+  challenges:
+    'The main challenge was working with limited assets and unclear design direction early in the project. To solve this, I created multiple layout drafts and iterated closely with the client until the overall structure and visual direction were finalized.',
+
+  reflection:
+    'This project improved my frontend design skills and strengthened my understanding of WordPress as a flexible CMS. I also gained experience building scalable static content systems with minimal plugin usage while collaborating directly with a non-technical client.',
+
+  extraImages: ['/postImg/journalist/demo.png'],
+  videoUrl: '',
+  aspect: '16/9',
+  // link: 'https://supportindependantjournalist.com/',
+},
+{
+  id: 'chezmari',
+  label: ['Client', 'Group'],
+  title: 'Chez Mari Salon',
+  subtitle: 'WORDPRESS WEBSITE REDESIGN',
+  icon: ChezMari,
+  banner: ChezMariImg,
+  techStack: ['WordPress', 'Tailwind CSS', 'CSS', 'PHP'],
+
+  overview:
+    'A group project for a real salon client looking to modernize their business website. The team redesigned the site with a responsive UI, CMS support, and an integrated booking system to improve usability and content management.',
+
+  keyFeatures: [
+    'Responsive UI redesign aligned with the salon’s branding',
+    'WordPress CMS for easy content management',
+    'Integrated booking system with backend management tools',
+    'Improved usability and mobile responsiveness',
+  ],
+
+  myContributions: [
+    'Managed sprint planning, Jira workflows, and Git collaboration',
+    'Configured hosting, domain, DNS, and SMTP mail services',
+    'Built a gallery page with AJAX-based image loading',
+    'Customized booking plugin components with CSS',
+    'Optimized WordPress server performance and deployment settings',
+  ],
+
+  challenges:
+    'One of the main challenges was understanding the structure and limitations of WordPress plugins and themes. Another challenge was communicating technical decisions clearly to a non-technical client throughout the redesign process.',
+
+  reflection:
+    'This project strengthened my understanding of WordPress development, CMS workflows, hosting, and deployment. It also improved my teamwork, project coordination, and client communication skills. Our project was awarded 1st place among all teams in the class.',
+
+  extraImages: ['/postImg/chezmari/demo.png'],
+  videoUrl: 'https://www.youtube.com/embed/R0dx3OQ5uzM?si=JBO3DqlY4kZrg-ym',
+  aspect: '16/9',
+
+  contribution: [
+    { tech: 'Project Management', percent: 100 },
+    { tech: 'Hosting', percent: 100 },
+    { tech: 'Booking System', percent: 100 },
+    { tech: 'Tailwind CSS', percent: 20 },
+    { tech: 'Custom CSS', percent: 30 },
+  ],
+},
+ {
+  id: 'Beep',
+  label: ['Group'],
+  title: 'Beep',
+  subtitle: 'REACT NATIVE SAFETY APP',
+  icon: Beep,
+  banner: BeepImg,
+  techStack: ['TypeScript', 'React Native', 'Firebase'],
+
+  overview:
+    'Beep is a mobile safety app designed to help users travel more safely using location-based guidance and crime data. The app provides safe route recommendations, nearby safe zones, SOS alerts, and incident reporting features.',
+
+  keyFeatures: [
+    'Safe route recommendations based on public crime data',
+    'Location-based guidance to nearby safe zones',
+    'Emergency SOS system with live location sharing via SMS',
+    'Incident reporting system with map-based photo pinning',
+  ],
+
+  myContributions: [
+    'Managed the team Git repository and technical documentation',
+    'Developed the SOS emergency page with alert sound integration',
+    'Built the incident snapshot feature with map-based image pinning',
+    'Handled Firebase data management and synchronization',
+    'Implemented SMS alerts for sharing live location with emergency contacts',
+    'Designed and developed the onboarding and sign-up flow',
+  ],
+
+  challenges:
+    'As one of the largest projects in our program, team coordination was a major challenge. To improve collaboration, we restructured responsibilities and introduced a dual project management system. On the technical side, it was our first experience building a mobile app with React Native and Expo, so we spent significant time learning the ecosystem and solving setup and integration issues during development.',
+
+  reflection:
+    'This project gave me hands-on experience building a mobile application with React Native, Expo, and Firebase. I became more comfortable learning unfamiliar technologies, collaborating within a large team, and presenting technical ideas clearly. Among 10 teams, our project placed 3rd overall.',
+
+  videoUrl: 'https://www.youtube.com/embed/GoaUL_IReU8?si=xGpe0jkKgQZdfnZ_',
+  aspect: '9/16',
+  link: 'https://www.beep-safety.com/',
+
+  contribution: [
+    { tech: 'TypeScript', percent: 25 },
+    { tech: 'React Native', percent: 50 },
+    { tech: 'Expo', percent: 50 },
+    { tech: 'Firebase', percent: 100 },
+  ],
+},
   // {
   //   id: 'imdb',
   //   label: ['Personal'],
@@ -211,80 +209,92 @@ const projectsDB = [
   //   extraImages: ['/postImg/imdb/filtering.png', '/postImg/imdb/searching.png'],
   //   link: 'https://imdb-fkdvcbateeb8brcw.canadacentral-01.azurewebsites.net/',
   // },
+ {
+  id: 'fourSeason',
+  label: ['Client', 'Personal'],
+  title: 'Four Season',
+  subtitle: 'FULL-STACK BOOKING PLATFORM',
+  icon: FourSeason,
+  banner: FourSeasonImg,
+
+  techStack: [
+    'TypeScript',
+    'Next.js',
+    'React',
+    'Strapi',
+    'PostgreSQL',
+    'Tailwind CSS',
+  ],
+
+  overview:
+    'A full-stack booking platform built for a local tour rental business in Vancouver. The client previously managed reservations manually through Instagram DMs, so I developed a real-time booking system with CMS support to streamline bookings and content management.',
+
+  keyFeatures: [
+    'Real-time seat availability and booking management',
+    'Automated email confirmations with Resend',
+    'Strapi CMS for client-managed content updates',
+    'Responsive UI built with React and Tailwind CSS',
+  ],
+
+  myContributions: [
+    'Built and launched the entire project independently within one week',
+    'Designed the UI and booking flow',
+    'Developed the frontend and backend using Next.js and Strapi',
+    'Configured and managed PostgreSQL with Neon',
+    'Deployed the frontend on Vercel and backend on Render',
+  ],
+
+  challenges:
+    'One challenge was integrating the Resend API for automated email confirmations, as it was my first time working with the service. I also had to carefully configure relational permissions in Strapi to ensure stable content management and database access across related collections.',
+
+  reflection:
+    'This project strengthened my full-stack development skills and gave me hands-on experience building a production-ready booking platform independently. I also improved my ability to gather client requirements, design user-focused workflows, and manage deployment across multiple services.',
+
+  extraImages: [
+    '/postImg/fourseason/booking.png',
+    '/postImg/fourseason/email.png',
+  ],
+
+  link: 'https://4season.vercel.app',
+},
   {
-    id: 'fourSeason',
-    label: ['Client', 'Personal'],
-    title: 'Four Season',
-    subtitle: 'FULL STACK CMS WEB APP',
-    icon: FourSeason,
-    banner: FourSeasonImg,
-    techStack: [
-      'TypeScript',
-      'CSS',
-      'Next.js',
-      'React',
-      'Strapi',
-      'PostgreSQL',
-      'Tailwind CSS',
-    ],
-    overview:
-      'This full-stack web application was developed for a local business owner in Vancouver who runs a day-tour rental service—providing equipment, lift passes, and transportation all in one package for tourists and students. The client previously managed bookings manually via Instagram DMs, which became inefficient as the business grew. This project solves that by providing a real-time booking system and a content-manageable website.',
-    keyFeatures: [
-      'Real-time seat availability and booking system',
-      'Automated email confirmations with Resend',
-      'Strapi CMS for self-managed content updates',
-      'Responsive design with React & Tailwind',
-    ],
-    myContributions: [
-      'Planned and executed the entire project solo within one week',
-      'Designed the UI and user experience',
-      'Developed both frontend and backend using Next.js and Strapi',
-      'Set up and managed the PostgreSQL database (via Neon)',
-      'Deployed frontend on Vercel and backend on Render',
-    ],
-    challenges:
-      'One of the key goals was to improve the overall user experience, and email confirmation was identified as the most familiar and effective method. I chose to implement this using the Resend API, but since it was my first time using the tool, I encountered several setup issues during the initial configuration. These errors led to a longer debugging process than expected. However, now that I’m more familiar with the tool, I expect future implementations to be much faster and more efficient.</br></br>Another challenge was ensuring that relational schemas worked properly with Strapi and Neon PostgreSQL. Although the database relationships were correctly set up, I discovered that Strapi also requires explicit permission settings between related tables. Without carefully configuring these settings, the client could encounter errors when managing content. To prevent this, I double-checked all role and permission configurations to ensure a smooth CMS experience.',
-    reflection:
-      'Through a solo full-stack project, I learned how to manage development based on client needs. I practiced clear communication to gather requirements and propose useful features. While the project initially included email notifications, I also recognized the future potential of adding SMS reminders to improve user engagement.',
+  id: 'hilton',
+  label: ['Personal'],
+  title: 'Hilton',
+  subtitle: 'HOTEL BOOKING APP REDESIGN',
+  icon: Hilton,
+  banner: HiltonImg,
 
-    extraImages: [
-      '/postImg/fourseason/booking.png',
-      '/postImg/fourseason/email.png',
-    ],
-    link: 'https://4season.vercel.app',
-  },
+  techStack: ['TypeScript', 'React', 'Vite', 'Tailwind CSS'],
 
-  {
-    id: 'hilton',
-    label: ['Personal'],
-    title: 'Hilton',
-    subtitle: 'UI/UX APP REDESIGN WITH REACT',
-    icon: Hilton,
-    banner: HiltonImg,
-    techStack: ['TypeScript', 'React', 'Vite', 'Tailwind CSS'],
-    overview:
-      'The Hilton Honors app redesign was a solo UI/UX-focused project aimed at improving the overall booking experience through intuitive layouts, streamlined user flow, and modern design practices.',
-    keyFeatures: [
-      "Redesigned the app's structure with a cleaner, more intuitive layout",
-      'Focused on improving user flow for room browsing and booking',
-      'Created a simplified digital key experience to support 24/7 check-in/out',
-      'Applied modern design principles using Tailwind CSS and component-based development in React',
-      'Used Vite for faster development and lightweight bundling',
-      'Fully responsive design to support mobile and desktop users',
-    ],
-    myContributions: [
-      'Analyzed the existing Hilton website and Hilton Honors mobile app to identify UX pain points and design inconsistencies',
-      'Redesigned the interface with a clean and modern aesthetic aligned with current design trends',
-      'Developed the frontend using React with component-based architecture for better reusability and scalability',
-    ],
-    challenges:
-      'One challenge was striking a balance between a modernized interface and preserving familiar elements of the existing app. I also had to ensure that the redesigned structure remained accessible and intuitive across devices.',
-    reflection:
-      'This project deepened my understanding of UI/UX design principles and responsive layout techniques. It also helped me explore how user-centric thinking translates into practical React components and design decisions.',
-    extraImages: ['/postImg/hilton/original.png', '/postImg/hilton/new.png'],
-    link: 'https://mdia-2025-project3.vercel.app/',
-  },
+  overview:
+    'A solo UI/UX redesign project focused on improving the Hilton Honors booking experience. The project reimagined the app with cleaner layouts, simplified booking flows, and a more modern mobile-first interface.',
 
+  keyFeatures: [
+    'Redesigned booking and room browsing flows',
+    'Simplified digital key and check-in experience',
+    'Responsive UI optimized for mobile and desktop',
+    'Component-based frontend built with React and Tailwind CSS',
+    'Fast development environment powered by Vite',
+  ],
+
+  myContributions: [
+    'Analyzed UX issues in the existing Hilton website and mobile app',
+    'Redesigned the interface with a cleaner and more consistent user experience',
+    'Built the frontend using reusable React components',
+    'Improved responsive layouts and mobile usability',
+  ],
+
+  challenges:
+    'One challenge was modernizing the interface while keeping familiar user flows from the original app. I also focused on maintaining accessibility and usability across different screen sizes.',
+
+  reflection:
+    'This project strengthened my understanding of UI/UX design, responsive layouts, and component-based frontend development. It also helped me translate design decisions into practical React implementations.',
+
+  extraImages: ['/postImg/hilton/original.png', '/postImg/hilton/new.png'],
+
+  link: 'https://mdia-2025-project3.vercel.app/',
+},
   // {
   //   id: 'stuffNStuff',
   //   label: ['Group'],
