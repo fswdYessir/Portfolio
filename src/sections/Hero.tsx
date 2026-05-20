@@ -77,7 +77,7 @@ function Hero() {
           </span>
 
           <p className="max-w-[30ch]">
-            I design, build, and ship full-stack web apps from idea to launch.
+            From idea to deployment, I build full-stack web applications.
           </p>
           <div className="relative inline-flex group">
             <div
