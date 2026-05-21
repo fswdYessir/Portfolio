@@ -1,8 +1,8 @@
-import '../App.css'
-import 'animate.css'
-import { FaAws, FaHtml5, FaCss3Alt, FaBootstrap } from 'react-icons/fa'
-import { VscAzure } from 'react-icons/vsc'
-import { TbBrandCSharp } from 'react-icons/tb'
+import "../App.css";
+import "animate.css";
+import { FaAws, FaHtml5, FaCss3Alt, FaBootstrap } from "react-icons/fa";
+import { VscAzure } from "react-icons/vsc";
+import { TbBrandCSharp } from "react-icons/tb";
 import {
   SiTypescript,
   SiJavascript,
@@ -21,27 +21,27 @@ import {
   SiWordpress,
   SiMysql,
   SiPhp,
-} from 'react-icons/si'
-import { useTheme } from './ThemeContext'
-import { useNavigate } from 'react-router-dom'
-import ProjectDescription from './ProjectDescription'
-import ScrollAnimation from './ScrollAnimation'
+} from "react-icons/si";
+import { useTheme } from "./ThemeContext";
+import { useNavigate } from "react-router-dom";
+import ProjectDescription from "./ProjectDescription";
+import ScrollAnimation from "./ScrollAnimation";
 
 interface ProjectContentProps {
-  banner: string
-  label: string[]
-  title: string
-  techStack: string[]
-  overview: string
-  keyFeatures: string[]
-  myContributions?: string[]
-  contribution?: { tech: string; percent: number }[]
-  challenges: string
-  reflection: string
-  extraImages?: string[]
-  videoUrl?: string
-  aspect?: string
-  link?: string
+  banner: string;
+  label: string[];
+  title: string;
+  techStack: string[];
+  overview: string;
+  keyFeatures: string[];
+  myContributions?: string[];
+  contribution?: { tech: string; percent: number }[];
+  challenges: string;
+  reflection: string;
+  extraImages?: string[];
+  videoUrl?: string;
+  aspect?: string;
+  link?: string;
 }
 
 const ProjectContent = ({
@@ -60,13 +60,15 @@ const ProjectContent = ({
   aspect,
   link,
 }: ProjectContentProps) => {
-  const { theme } = useTheme()
+  const { theme } = useTheme();
 
   const labelColor: { [key: string]: string } = {
-    Personal: 'bg-indigo-500',
-    Group: 'bg-rose-500',
-    Client: 'bg-lime-600',
-  }
+    Personal: "bg-indigo-500",
+    Group: "bg-rose-500",
+    Client: "bg-lime-600",
+    Company: "bg-sky-600",
+    Professional: "bg-amber-500",
+  };
 
   const techIcons = {
     EJS: <SiEjs size={26} />,
@@ -80,26 +82,26 @@ const ProjectContent = ({
     CSS: <FaCss3Alt size={26} />,
     AWS: <FaAws size={26} />,
     Expo: <SiExpo size={26} />,
-    'React Native': <SiReact size={26} />,
+    "React Native": <SiReact size={26} />,
     Firebase: <SiFirebase size={26} />,
     Supabase: <SiSupabase size={26} />,
-    'Next.js': <SiNextdotjs size={26} />,
+    "Next.js": <SiNextdotjs size={26} />,
     Strapi: <SiStrapi size={26} />,
-    'Tailwind CSS': <SiTailwindcss size={26} />,
+    "Tailwind CSS": <SiTailwindcss size={26} />,
     React: <SiReact size={26} />,
     Vite: <SiVite size={26} />,
-    'C#': <TbBrandCSharp size={26} />,
-    'ASP.NET': <SiDotnet size={26} />,
+    "C#": <TbBrandCSharp size={26} />,
+    "ASP.NET": <SiDotnet size={26} />,
     Bootstrap: <FaBootstrap size={26} />,
     WordPress: <SiWordpress size={26} />,
     Azure: <VscAzure size={26} />,
-  }
-  const navigate = useNavigate()
+  };
+  const navigate = useNavigate();
 
   return (
     <div
       className={`px-6 py-10 max-w-6xl mx-auto ${
-        theme === 'light' ? 'text-black' : 'text-white'
+        theme === "light" ? "text-black" : "text-white"
       }`}
     >
       <ScrollAnimation>
@@ -116,7 +118,7 @@ const ProjectContent = ({
             <span
               key={i}
               className={`px-4 py-1 text-sm font-bold text-white rounded-full ${
-                labelColor[lbl] || 'bg-gray-800'
+                labelColor[lbl] || "bg-gray-800"
               }`}
             >
               {lbl}
@@ -170,14 +172,14 @@ const ProjectContent = ({
               <div className="relative inline-flex group mt-4">
                 <div
                   className={`absolute transform hover:scale-105 active:translate-y-1 rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r ${
-                    theme === 'light'
-                      ? ' from-[#44BCFF] via-[#FF44EC] to-[#FF675E]'
-                      : '  from-[#fbd621] via-[#f9b712] to-[#f69000]'
+                    theme === "light"
+                      ? " from-[#44BCFF] via-[#FF44EC] to-[#FF675E]"
+                      : "  from-[#fbd621] via-[#f9b712] to-[#f69000]"
                   }`}
                 ></div>
                 <button
                   className={`Btn flex items-center text-white px-5 py-2 font-semibold rounded-xl relative z-10 ${
-                    theme === 'light' ? 'bg-gray-800 ' : 'bg-yellow-400/40'
+                    theme === "light" ? "bg-gray-800 " : "bg-yellow-400/40"
                   }`}
                 >
                   <span className="text-red-500 text-xs p-1">●</span>
@@ -189,7 +191,7 @@ const ProjectContent = ({
         )}
       </ScrollAnimation>
     </div>
-  )
-}
+  );
+};
 
-export default ProjectContent
+export default ProjectContent;
