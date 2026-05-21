@@ -1,4 +1,4 @@
-import { useTheme } from "./ThemeContext";
+// import { useTheme } from "./ThemeContext";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -7,10 +7,8 @@ import {
   Title,
   Tooltip,
   Legend,
-  ChartOptions,
-  TooltipItem,
 } from "chart.js";
-import { Bar } from "react-chartjs-2";
+
 import ScrollAnimation from "./ScrollAnimation";
 import {
   FaCheck,
@@ -55,69 +53,12 @@ const ProjectDescription = ({
   videoUrl,
   aspect,
 }: ProjectDescriptionProps) => {
-  const { theme } = useTheme();
+  // const { theme } = useTheme();
 
-  const colors = {
-    text: theme === "light" ? "#1f2937" : "#f9fafb",
-    grid: theme === "light" ? "#e5e7eb" : "#374151",
-  };
-
-  const renderBarChart = (
-    contribution: { tech: string; percent: number }[],
-  ) => {
-    const data = {
-      labels: contribution.map((c) => c.tech),
-      datasets: [
-        {
-          label: "Contribution",
-          data: contribution.map((c) => c.percent),
-          backgroundColor: "#3B82F6",
-          borderRadius: 999,
-          barThickness: 14,
-        },
-      ],
-    };
-
-    const options: ChartOptions<"bar"> = {
-      indexAxis: "y",
-      responsive: true,
-      plugins: {
-        legend: { display: false },
-        tooltip: {
-          callbacks: {
-            label: (context: TooltipItem<"bar">) => `${context.parsed.x}%`,
-          },
-        },
-      },
-      scales: {
-        x: {
-          ticks: {
-            color: colors.text,
-            callback: (val: string | number) => `${val}%`,
-          },
-          grid: {
-            color: colors.grid,
-          },
-          max: 100,
-          beginAtZero: true,
-        },
-        y: {
-          ticks: {
-            color: colors.text,
-          },
-          grid: {
-            display: false,
-          },
-        },
-      },
-    };
-
-    return (
-      <div className="w-full">
-        <Bar data={data} options={options} />
-      </div>
-    );
-  };
+  // const colors = {
+  //   text: theme === "light" ? "#1f2937" : "#f9fafb",
+  //   grid: theme === "light" ? "#e5e7eb" : "#374151",
+  // };
 
   const VideoPlayer = ({
     videoUrl,
@@ -277,7 +218,7 @@ const ProjectDescription = ({
                                 cx="48"
                                 cy="48"
                                 r="40"
-                                stroke="#3B82F6"
+                                stroke="#f6da3b"
                                 strokeWidth="8"
                                 fill="none"
                                 strokeLinecap="round"
