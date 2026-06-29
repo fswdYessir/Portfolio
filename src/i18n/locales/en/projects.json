@@ -1,0 +1,148 @@
+{
+  "the-ke-hrms": {
+    "title": "THE KE HRMS",
+    "subtitle": "WORKFORCE MANAGEMENT",
+    "overview": "THE KE HRMS is an internal web application that unifies outsourced workforce, project participation, evaluations, and tech stacks in one place. I owned the project from planning through implementation and internal production deployment — delivering 3 role tiers, 10+ protected routes, and a 7-step PostgreSQL migration pipeline.",
+    "keyFeatures": [
+      "JWT + HttpOnly Cookie authentication with role-based access control (admin, sales support, sales rep)",
+      "Dashboard with RPC-based stats, grade filters, and worker card listings",
+      "Integrated worker, project, evaluation, and tech stack management with Excel bulk import and audit logs",
+      "Document and profile photo storage with SecureDeleteModal password re-authentication"
+    ],
+    "myContributions": [
+      "Planned requirements and designed the full HRMS architecture (workers, projects, evaluations, accounts)",
+      "Built the Next.js 16 App Router app with proxy access control across 10+ protected routes and API permission checks",
+      "Implemented JWT + HttpOnly Cookie auth, 7-step PostgreSQL migrations, RPC functions, and audit logging",
+      "Provisioned internal production on Windows Server 2022, PostgreSQL, Gitea Actions, and PM2 with automated CI/CD"
+    ],
+    "challenges": "The biggest challenge was building and deploying on the company's internal server. Hardening Windows Server 2022 and configuring firewall rules were new to me, and wiring Gitea Actions so PM2 restarts automatically on main merges required more Windows-specific deployment scripting and debugging than expected.",
+    "reflection": "This was my first project owning the full lifecycle — planning, full-stack implementation, and internal production deployment. I gained hands-on experience applying JWT·HttpOnly Cookie auth, PostgreSQL RLS, Gitea Actions CI/CD, and server security on a tool used daily by the company."
+  },
+  "haimdall-v3": {
+    "title": "Haimdall v3",
+    "subtitle": "CARBON CREDIT MANAGEMENT",
+    "overview": "Haimdall v3 is a carbon credit management platform for sustainable agriculture. It visualizes 20,000+ farmland polygons in real time, supports five languages, and provides tools for farmland monitoring, carbon tracking, and booking management. As the sole frontend developer, I built the entire application from scratch with a focus on scalability and performance.",
+    "keyFeatures": [
+      "Interactive map rendering 20,000+ farmland polygons with deck.gl",
+      "Real-time geospatial dashboard and analytics",
+      "Multi-language support with next-intl (EN, KR, VI, KM, BN)",
+      "Farmland monitoring, carbon tracking, and booking management"
+    ],
+    "myContributions": [
+      "Built and maintained the entire frontend as the sole engineer",
+      "Implemented MVT tiling and caching to cut initial load time by ~40%",
+      "Integrated Firebase Auth with role-based access control",
+      "Delivered farmland, booking, and profile features from Figma designs"
+    ],
+    "challenges": "Rendering 20,000+ farmland polygons efficiently was the biggest challenge — early versions lagged during zoom and pan. I introduced MVT (Mapbox Vector Tiles) with deck.gl and local caching, improving initial load performance by about 40%. Supporting 5 languages (EN, KR, VI, KM, BN) with different character sets also required careful font handling and layout adjustments across the UI.",
+    "reflection": "As the sole frontend engineer, I strengthened my ability to build and maintain a scalable production app independently. I gained hands-on experience with geospatial visualization at scale, large polygon rendering, and frontend performance optimization while collaborating with designers, backend engineers, and product stakeholders on a real-world platform."
+  },
+  "independent-Journalist": {
+    "title": "Independent Journalist",
+    "subtitle": "CUSTOM WORDPRESS WEBSITE",
+    "overview": "A volunteer WordPress project built to showcase independent YouTube journalists across multiple countries. The site organizes channels by topic and includes direct YouTube links, donation QR codes, and responsive layouts focused on accessibility and usability.",
+    "keyFeatures": [
+      "Responsive card-based UI for desktop and mobile",
+      "Client-side search and filtering with vanilla JavaScript",
+      "YouTube links, donation buttons, and QR codes integrated",
+      "9 responsive pages built without relying on plugins"
+    ],
+    "myContributions": [
+      "Built the full site structure with Gutenberg and custom HTML/CSS",
+      "Implemented client-side search and filtering in vanilla JavaScript",
+      "Integrated QR code APIs into reusable channel cards",
+      "Iterated layouts with the client through multiple design drafts"
+    ],
+    "challenges": "The main challenge was working with limited assets and an unclear design direction at the start of the project. I created multiple layout drafts and iterated closely with the client until the structure and visual direction for all 9 pages were finalized — all without relying on third-party plugins.",
+    "reflection": "This project improved my frontend design skills and deepened my understanding of WordPress as a flexible CMS. I gained experience building a 9-page responsive site with minimal plugin usage while collaborating directly with a non-technical client on a volunteer project spanning multiple countries."
+  },
+  "chezmari": {
+    "title": "Chez Mari Salon",
+    "subtitle": "WORDPRESS WEBSITE REDESIGN",
+    "overview": "A group project for a real salon client looking to modernize their business website. The team redesigned the site with a responsive UI, CMS support, and an integrated booking system to improve usability and content management.",
+    "keyFeatures": [
+      "Responsive UI redesign aligned with salon branding",
+      "WordPress CMS for easy content management",
+      "Integrated booking system with backend tools",
+      "AJAX-powered gallery for smooth image loading"
+    ],
+    "myContributions": [
+      "Managed sprint planning, Jira workflows, and Git collaboration",
+      "Configured hosting, domain, DNS, and SMTP mail services",
+      "Built gallery page with AJAX-based image loading",
+      "Customized booking plugin UI and optimized server deployment"
+    ],
+    "challenges": "One challenge was understanding the structure and limitations of WordPress plugins and themes — especially customizing the booking plugin UI without breaking core functionality. Another was communicating technical decisions clearly to a non-technical salon client throughout the redesign and deployment process.",
+    "reflection": "This project strengthened my WordPress development, CMS workflow, hosting, and deployment skills. It also improved my teamwork and client communication — our team was awarded 1st place among all teams in the class.",
+    "contribution": [
+      { "tech": "Project Management", "percent": 100 },
+      { "tech": "Hosting", "percent": 100 },
+      { "tech": "Booking System", "percent": 100 },
+      { "tech": "Tailwind CSS", "percent": 20 },
+      { "tech": "Custom CSS", "percent": 30 }
+    ]
+  },
+  "Beep": {
+    "title": "Beep",
+    "subtitle": "REACT NATIVE SAFETY APP",
+    "overview": "Beep is a mobile safety app designed to help users travel more safely using location-based guidance and crime data. The app provides safe route recommendations, nearby safe zones, SOS alerts, and incident reporting features.",
+    "keyFeatures": [
+      "Safe route recommendations based on public crime data",
+      "Emergency SOS with live location sharing via SMS",
+      "Incident reporting with map-based photo pinning",
+      "Onboarding and sign-up flow for new users"
+    ],
+    "myContributions": [
+      "Managed team Git repository and technical documentation",
+      "Developed SOS emergency page with alert sound integration",
+      "Built incident snapshot feature with map-based image pinning",
+      "Handled Firebase sync and SMS alerts for emergency contacts"
+    ],
+    "challenges": "As one of the largest projects in our program, team coordination was a major challenge early on — we restructured responsibilities and introduced a dual project management system to improve collaboration. Technically, it was our first mobile app with React Native and Expo, so we spent significant time on ecosystem setup, Firebase integration, and SMS-based live location sharing.",
+    "reflection": "This project gave me hands-on experience building a mobile app with React Native, Expo, and Firebase. I became more comfortable learning unfamiliar technologies, collaborating in a large team, and presenting technical ideas clearly. Among 10 teams, our project placed 3rd overall.",
+    "contribution": [
+      { "tech": "TypeScript", "percent": 25 },
+      { "tech": "React Native", "percent": 50 },
+      { "tech": "Expo", "percent": 50 },
+      { "tech": "Firebase", "percent": 100 }
+    ]
+  },
+  "fourSeason": {
+    "title": "Four Season",
+    "subtitle": "FULL-STACK BOOKING PLATFORM",
+    "overview": "A full-stack booking platform built for a local tour rental business in Vancouver. The client previously managed reservations manually through Instagram DMs, so I developed a real-time booking system with CMS support to streamline bookings and content management.",
+    "keyFeatures": [
+      "Real-time seat availability and booking management",
+      "Automated email confirmations with Resend",
+      "Strapi CMS for client-managed content updates",
+      "Deployed frontend on Vercel and backend on Render"
+    ],
+    "myContributions": [
+      "Built and launched the entire project independently within one week",
+      "Designed UI and booking flow end to end",
+      "Developed frontend and backend with Next.js and Strapi",
+      "Configured PostgreSQL on Neon and deployed across Vercel and Render"
+    ],
+    "challenges": "One challenge was integrating the Resend API for automated booking confirmation emails — it was my first time working with the service. I also had to carefully configure relational permissions in Strapi to ensure stable content management and PostgreSQL access across related collections on Neon.",
+    "reflection": "I built and launched the entire full-stack booking platform independently within one week, replacing the client's manual Instagram DM workflow with a real-time system. This strengthened my ability to gather client requirements, design user-focused flows, and manage deployment across Vercel (frontend), Render (backend), and Neon (PostgreSQL)."
+  },
+  "hilton": {
+    "title": "Hilton",
+    "subtitle": "HOTEL BOOKING APP REDESIGN",
+    "overview": "A solo UI/UX redesign project focused on improving the Hilton Honors booking experience. The project reimagined the app with cleaner layouts, simplified booking flows, and a more modern mobile-first interface.",
+    "keyFeatures": [
+      "Redesigned booking and room browsing flows",
+      "Simplified digital key and check-in experience",
+      "Responsive UI with React and Tailwind CSS",
+      "Reusable component-based frontend architecture"
+    ],
+    "myContributions": [
+      "Analyzed UX issues in the existing Hilton web and mobile apps",
+      "Redesigned interface for a cleaner, more consistent experience",
+      "Built frontend with reusable React components",
+      "Improved responsive layouts and mobile usability"
+    ],
+    "challenges": "One challenge was modernizing the Hilton Honors interface while keeping familiar booking and check-in flows from the original app. I also focused on maintaining accessibility and usability across mobile, tablet, and desktop breakpoints throughout the React + Tailwind CSS implementation.",
+    "reflection": "This solo redesign strengthened my UI/UX design, responsive layout, and component-based frontend development skills. It helped me translate design decisions into a practical React implementation — from analyzing the existing Hilton web and mobile apps to building a cleaner, mobile-first booking experience."
+  }
+}

@@ -1,41 +1,47 @@
-@import 'tailwindcss';
-/* @import 'tailwindcss/preflight'; */
+@import "tailwindcss";
 @tailwind utilities;
 
 :root {
-  --background-color: #fff;
-  --text-color: #222;
-  --form-text-color: #555;
-  --footer-text-color: #888;
-}
-[data-theme='dark'] {
-  --background-color: #222;
-  --text-color: #fff;
-  --form-text-color: #fff;
-  --footer-text-color: #bbb;
-  --gitIcon-text-color: #fff;
-  --linkedinIcon-text-color: #fff;
+  --font-display: "Outfit", "Pretendard Variable", Pretendard, sans-serif;
+  --font-body:
+    "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+    system-ui, sans-serif;
+
+  --background: #ffffff;
+  --text: #1a1a1a;
+  --text-muted: #555555;
+  --accent: #ca8a04;
+  --icon: #1a1a1a;
+  --border: #9ca3af;
+  --input-bg: #ffffff;
+  --input-text: #333333;
+  --lamp-stem: #9ca3af;
+  --lamp-shade: #6b7280;
 }
 
-[data-theme='dark'] .gitIcon,
-.linkedinIcon,
-.techIcons {
-  color: var(--gitIcon-text-color);
-}
-
-.Btn {
-  @apply font-bold rounded-2xl w-40 h-12 text-lg shadow-md transition-transform transform hover:scale-105 cursor-pointer active:translate-y-1 mx-auto;
-}
-
-[data-theme='dark'] .flip-box-back {
-  @apply bg-gray-600/80 before:bg-gray-800/70;
+[data-theme="dark"] {
+  --background: #1a1a1a;
+  --text: #f5f5f5;
+  --text-muted: #d1d5db;
+  --accent: #facc15;
+  --icon: #f5f5f5;
+  --border: #6b7280;
+  --input-bg: #2a2a2a;
+  --input-text: #f5f5f5;
+  --lamp-stem: #4b5563;
+  --lamp-shade: #374151;
 }
 
 body {
-  background-color: var(--background-color);
+  font-family: var(--font-body);
+  background-color: var(--background);
+  color: var(--text);
   display: flex;
   justify-content: center;
   margin: 0 auto 60px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 #root {
@@ -44,40 +50,102 @@ body {
   gap: 60px;
 }
 
-h1,
-h2,
-h3,
-p,
-li {
-  color: var(--text-color);
-  margin: 0;
-  padding: 0;
+.font-display {
+  font-family: var(--font-display);
 }
 
-h2,
-h3,
-p,
-li {
-  font-family: 'Roboto Mono', monospace;
+.gitIcon,
+.linkedinIcon {
+  color: var(--icon);
+  transition: color 0.3s ease;
 }
 
-h1,
-h2 {
-  text-transform: uppercase;
+.lamp-stem {
+  background-color: var(--lamp-stem);
 }
 
-h2,
-h3 {
-  font-size: 20px;
+.lamp-shade {
+  background-color: var(--lamp-shade);
 }
 
-h1 {
-  font-size: 32px;
-  font-family: 'Rubik', 'sans-serif';
+.Btn {
+  @apply font-bold rounded-2xl w-40 h-12 text-lg shadow-md transition-transform transform hover:scale-105 cursor-pointer active:translate-y-1 mx-auto;
 }
 
-p,
-li {
-  font-size: 16px;
-  font-weight: 300;
+.gradient-btn-wrap {
+  @apply relative inline-flex;
+}
+
+.gradient-btn-glow {
+  @apply absolute rounded-xl blur-lg opacity-70 -inset-px bg-gradient-to-r transition-all duration-1000;
+}
+
+.gradient-btn-wrap:hover .gradient-btn-glow {
+  @apply opacity-100 -inset-1;
+}
+
+[data-theme="light"] .gradient-btn-glow {
+  @apply from-[#44BCFF] via-[#FF44EC] to-[#FF675E];
+}
+
+[data-theme="dark"] .gradient-btn-glow {
+  @apply from-[#fbd621] via-[#f9b712] to-[#f69000];
+}
+
+.gradient-btn {
+  @apply font-bold rounded-2xl w-40 h-12 text-lg shadow-md transition-transform transform hover:scale-105 cursor-pointer active:translate-y-1 mx-auto text-white relative z-10;
+}
+
+[data-theme="light"] .gradient-btn {
+  @apply bg-gray-800;
+}
+
+[data-theme="dark"] .gradient-btn {
+  @apply bg-yellow-400/40;
+}
+
+.header-link {
+  color: var(--text);
+  transition: color 0.2s ease;
+}
+
+.header-link:hover {
+  color: var(--accent);
+}
+
+.header-muted {
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+.header-muted:hover {
+  color: var(--text);
+}
+
+.header-accent {
+  color: var(--accent);
+}
+
+.skill-dimmed {
+  opacity: 0.35;
+  filter: blur(1px);
+}
+
+.skill-highlight {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.input-field {
+  color: var(--input-text);
+  background-color: var(--input-bg);
+  border: 1px solid var(--border);
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.footer-text {
+  color: var(--text-muted);
 }

@@ -1,136 +1,97 @@
-import React, { useState } from 'react'
-import emailjs from '@emailjs/browser'
-import { useTheme } from '../components/ThemeContext'
-import ScrollAnimation from '../components/ScrollAnimation'
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import { useTranslation } from "react-i18next";
 
-const Contact: React.FC = () => {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
-  const [status, setStatus] = useState<string | null>(null)
-  const { theme } = useTheme()
+export default function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState<"success" | "error" | null>(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-
-    const serviceId = 'service_ruuhgs8'
-    const templateId = 'template_wzwbury'
-    const publicKey = 'FWj8pDMCGGNjuGGu2'
-
-    const templateParams = {
-      from_name: name,
-      from_email: email,
-      to_name: 'Sol',
-      message: message,
-    }
+    e.preventDefault();
 
     try {
-      const response = await emailjs.send(
-        serviceId,
-        templateId,
-        templateParams,
-        publicKey
-      )
-      console.log('SUCCESS!', response.status, response.text)
-      setStatus('Email sent successfully')
-      setName('')
-      setEmail('')
-      setMessage('')
-    } catch (error) {
-      console.error('FAILED...', error)
-      setStatus('Error sending email')
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID ?? "service_ruuhgs8",
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID ?? "template_wzwbury",
+        { from_name: name, from_email: email, to_name: "Sol", message },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY ?? "FWj8pDMCGGNjuGGu2",
+      );
+      setStatus("success");
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch {
+      setStatus("error");
     }
-  }
+  };
 
   return (
-    <ScrollAnimation>
-      <section
-        id="contact"
-        className="flex flex-col items-center text-center py-15 px-20 min-h-[80vh]"
+    <section
+      id="contact"
+      className="flex flex-col items-center text-center py-15 px-20 min-h-[80vh]"
+      data-aos="fade-up"
+    >
+      <h1 className="font-display text-3xl font-bold uppercase text-[var(--text)] transition-colors">
+        {t("contact.title")}
+      </h1>
+      <p className="text-base font-normal text-[var(--text-muted)] transition-colors">
+        {t("contact.subtitle")}
+      </p>
+
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col mt-10 gap-6 w-full max-w-[250px] md:max-w-[500px] lg:max-w-[600px]"
       >
-        <div className="p-4">
-          <h1 className="text-3xl font-bold ">Contact</h1>
-          <p>Feel free to reach out.</p>
+        <input
+          id="name"
+          type="text"
+          value={name}
+          placeholder={t("contact.name")}
+          onChange={(e) => setName(e.target.value)}
+          required
+          aria-label={t("contact.name")}
+          className="input-field h-10 px-4 w-full rounded-2xl"
+        />
+        <input
+          id="email"
+          type="email"
+          value={email}
+          placeholder={t("contact.email")}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          aria-label={t("contact.email")}
+          className="input-field h-10 px-4 w-full rounded-2xl"
+        />
+        <textarea
+          id="message"
+          placeholder={t("contact.message")}
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          required
+          aria-label={t("contact.message")}
+          className="input-field h-[250px] px-4 py-3 w-full rounded-2xl"
+        />
+        {status && (
+          <p
+            className={`text-base font-normal italic rounded transition-colors ${
+              status === "success" ? "bg-green-500/30" : "bg-red-500/30"
+            }`}
+          >
+            {t(`contact.${status}`)}
+          </p>
+        )}
+        <div className="flex justify-center mt-4">
+          <div className="gradient-btn-wrap">
+            <div className="gradient-btn-glow" />
+            <button type="submit" className="gradient-btn">
+              {t("contact.submit")}
+            </button>
+          </div>
         </div>
-
-        <form
-          onSubmit={handleSubmit}
-          className="flex flex-col mt-10 gap-6 w-full max-w-[250px] md:max-w-[500px] lg:max-w-[600px]"
-        >
-          <div className="flex flex-col">
-            <label htmlFor="name" className="sr-only">
-              Name
-            </label>
-            <input
-              type="text"
-              value={name}
-              placeholder="Your Name"
-              onChange={e => setName(e.target.value)}
-              required
-              className="h-[40px] px-4 w-full rounded-2xl border border-gray-400 text-[var(--form-text-color)] transition-all"
-            />
-          </div>
-
-          <div className="flex flex-col">
-            <label htmlFor="email" className="sr-only">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              value={email}
-              placeholder="Your Email"
-              onChange={e => setEmail(e.target.value)}
-              required
-              className="h-[40px] px-4 w-full rounded-2xl border border-gray-400 text-[var(--form-text-color)] transition-all"
-            />
-          </div>
-          <div className="flex flex-col">
-            <label htmlFor="message" className="sr-only">
-              Message
-            </label>
-            <textarea
-              id="message"
-              placeholder="Message"
-              value={message}
-              onChange={e => setMessage(e.target.value)}
-              required
-              className="h-[250px] px-4 py-3 w-full rounded-2xl border border-gray-400  text-[var(--form-text-color)] transition-all"
-            ></textarea>
-          </div>
-          {status && (
-            <p
-              className={`italic font-semibold! rounded transition-all duration-300 ${
-                status.includes('success')
-                  ? ' bg-green-500/30'
-                  : ' bg-red-500/30'
-              }`}
-            >
-              "{status}"
-            </p>
-          )}
-          <div className="flex justify-center">
-            <div className="relative inline-flex group mt-4">
-              <div
-                className={`absolute transform hover:scale-105 active:translate-y-1 rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r ${
-                  theme === 'light'
-                    ? ' from-[#44BCFF] via-[#FF44EC] to-[#FF675E]'
-                    : '  from-[#fbd621] via-[#f9b712] to-[#f69000]'
-                }`}
-              ></div>
-              <input
-                type="submit"
-                value="SUBMIT"
-                className={`Btn text-white px-4 py-2 font-semibold rounded-xl relative z-10 ${
-                  theme === 'light' ? 'bg-gray-800 ' : 'bg-yellow-400/40'
-                }`}
-              />
-            </div>
-          </div>
-        </form>
-      </section>
-    </ScrollAnimation>
-  )
+      </form>
+    </section>
+  );
 }
-
-export default Contact

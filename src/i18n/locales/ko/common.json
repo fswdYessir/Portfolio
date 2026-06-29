@@ -1,0 +1,52 @@
+{
+  "nav": {
+    "home": "홈",
+    "projects": "프로젝트",
+    "contact": "연락처"
+  },
+  "hero": {
+    "role": "풀스택 개발자",
+    "tagline": "아이디어부터 배포까지, 풀스택 웹 애플리케이션을 만듭니다.",
+    "resume": "이력서"
+  },
+  "projects": {
+    "title": "프로젝트",
+    "subtitle": "환영합니다! 아래에서 제 프로젝트를 확인해 보세요."
+  },
+  "skills": {
+    "title": "기술 스택"
+  },
+  "contact": {
+    "title": "연락처",
+    "subtitle": "편하게 연락 주세요.",
+    "name": "이름",
+    "email": "이메일",
+    "message": "메시지",
+    "submit": "보내기",
+    "success": "이메일이 성공적으로 전송되었습니다",
+    "error": "이메일 전송 중 오류가 발생했습니다"
+  },
+  "footer": {
+    "rights": "모든 권리 보유."
+  },
+  "loading": "로딩 중...",
+  "projectDetail": {
+    "back": "프로젝트로 돌아가기",
+    "liveDemo": "라이브 데모",
+    "notFound": "프로젝트를 찾을 수 없습니다",
+    "overview": "프로젝트 개요",
+    "keyFeatures": "주요 기능",
+    "highlights": "개발 하이라이트",
+    "myContribution": "나의 기여도",
+    "challenges": "도전 과제",
+    "reflection": "회고",
+    "screenshots": "스크린샷"
+  },
+  "labels": {
+    "personal": "개인",
+    "group": "팀",
+    "client": "클라이언트",
+    "company": "회사",
+    "professional": "프로페셔널"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "role": "Full Stack Developer",
+    "tagline": "From idea to deployment, I build full-stack web applications.",
+    "resume": "RESUME"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Welcome! Check out my projects below."
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Feel free to reach out.",
+    "name": "Your Name",
+    "email": "Your Email",
+    "message": "Message",
+    "submit": "SUBMIT",
+    "success": "Email sent successfully",
+    "error": "Error sending email"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "loading": "loading...",
+  "projectDetail": {
+    "back": "Back to Projects",
+    "liveDemo": "Live Demo",
+    "notFound": "PROJECT 404",
+    "overview": "Project Overview",
+    "keyFeatures": "Key Features",
+    "highlights": "Development Highlights",
+    "myContribution": "My Contribution",
+    "challenges": "Challenges",
+    "reflection": "Reflection",
+    "screenshots": "Screenshots"
+  },
+  "labels": {
+    "personal": "Personal",
+    "group": "Group",
+    "client": "Client",
+    "company": "Company",
+    "professional": "Professional"
+  }
+}

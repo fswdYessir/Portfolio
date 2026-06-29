@@ -1,50 +1,42 @@
-import { useContext } from 'react'
-import '../styles/Projects.css'
-import { HoveredSkills } from './HoverSkills'
-import '../App.css'
-import { useNavigate } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 interface ProjectCardProps {
-  id: string
-  icon: string
-  title: string
-  subtitle: string
-  techStack: string[]
+  id: string;
+  icon: string;
+  title: string;
+  subtitle: string;
+  techStack: string[];
+  onHover: (skills: string[]) => void;
 }
 
-function ProjectCard({
+export default function ProjectCard({
   id,
   icon,
   title,
   subtitle,
   techStack,
+  onHover,
 }: ProjectCardProps) {
-  const { setHoveredSkills } = useContext(HoveredSkills)
-
-  const handleMouseEnter = () => setHoveredSkills(techStack)
-  const handleMouseLeave = () => setHoveredSkills([])
-  const navigate = useNavigate()
-
-  const handleClick = () => {
-    navigate(`/project/${id}`)
-  }
-
   return (
-    <>
-      <div
-        className="flip-box m-5 cursor-pointer hover:scale-105 active:translate-y-1"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        onClick={handleClick}
-      >
-        <div className="flip-box-front">
-          <img className="w-full h-48 object-contain" src={icon} alt={title} />
-          <h3 className="text-xl font-bold">{title}</h3>
-          <p className="max-w-[40ch]">{subtitle}</p>
-        </div>
+    <Link
+      to={`/project/${id}`}
+      className="group block w-full text-center cursor-pointer"
+      onMouseEnter={() => onHover(techStack)}
+      onMouseLeave={() => onHover([])}
+    >
+      <div className="transition-transform duration-200 ease-out group-hover:scale-105 origin-center will-change-transform">
+        <img
+          className="w-full h-24 sm:h-28 object-contain mx-auto"
+          src={icon}
+          alt={title}
+        />
+        <p className="text-lg font-bold text-[var(--text)] mt-1.5 whitespace-nowrap overflow-hidden text-ellipsis transition-colors">
+          {title}
+        </p>
+        <p className="text-sm text-[var(--text-muted)] mt-0.5 whitespace-nowrap overflow-hidden text-ellipsis">
+          {subtitle}
+        </p>
       </div>
-    </>
-  )
+    </Link>
+  );
 }
-
-export default ProjectCard

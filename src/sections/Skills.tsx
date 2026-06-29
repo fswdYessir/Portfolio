@@ -1,43 +1,45 @@
-import SkillList from '../components/SkillList'
-import ScrollAnimation from '../components/ScrollAnimation'
+import { SKILLS } from "../data/skills";
+import { useTranslation } from "react-i18next";
 
-function Skills() {
+type Props = { hoveredSkills: string[] };
+
+export default function Skills({ hoveredSkills }: Props) {
+  const { t } = useTranslation();
+  const hasHover = hoveredSkills.length > 0;
+
   return (
-    <ScrollAnimation offset={100}>
-      <section
-        id="skills"
-        className="flex flex-col items-center justify-center text-center min-h-[30vh]"
-      >
-        <div>
-          <h1 className="text-3xl font-bold uppercase">Skills</h1>
+    <section
+      id="skills"
+      className="flex flex-col items-center justify-center text-center min-h-[30vh]"
+      data-aos="fade-up"
+      data-aos-offset="100"
+    >
+      <h1 className="font-display text-3xl font-bold uppercase text-[var(--text)] transition-colors">
+        {t("skills.title")}
+      </h1>
+      <div className="grid m-5 md:grid-cols-7 gap-x-1 gap-y-2 justify-items-center auto-rows-[2.5rem]">
+        {SKILLS.map((skill) => {
+          const isHighlighted = hoveredSkills.includes(skill);
+          const stateClass = isHighlighted
+            ? "skill-highlight"
+            : hasHover
+              ? "skill-dimmed"
+              : "";
 
-          <div className="grid m-5 md:grid-cols-7 gap-5">
-            <SkillList skill="JavaScript" />
-            <SkillList skill="TypeScript" />
-            <SkillList skill="C#" />
-            <SkillList skill="PHP" />
-            <SkillList skill="ASP.NET" />
-            <SkillList skill="Bootstrap" />
-            <SkillList skill="HTML" />
-            <SkillList skill="CSS" />
-            <SkillList skill="React" />
-            <SkillList skill="React Native" />
-            <SkillList skill="Next.js" />
-            <SkillList skill="Tailwind CSS" />
-            <SkillList skill="Vite" />
-            <SkillList skill="WordPress" />
-            <SkillList skill="Express" />
-            <SkillList skill="EJS" />
-            <SkillList skill="Strapi" />
-            <SkillList skill="Firebase" />
-            <SkillList skill="MySQL" />
-            <SkillList skill="PostgreSQL" />
-            <SkillList skill="Azure" />
-          </div>
-        </div>
-      </section>
-    </ScrollAnimation>
-  )
+          return (
+            <span
+              key={skill}
+              className="inline-flex w-[7.25rem] h-10 items-center justify-center shrink-0 [contain:layout]"
+            >
+              <p
+                className={`text-sm font-normal text-[var(--text)] leading-tight text-center w-full px-0.5 transition-[opacity,color] duration-200 ${stateClass}`}
+              >
+                {skill}
+              </p>
+            </span>
+          );
+        })}
+      </div>
+    </section>
+  );
 }
-
-export default Skills
