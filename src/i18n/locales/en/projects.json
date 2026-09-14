@@ -110,28 +110,23 @@
   "fourSeason": {
     "title": "Four Season",
     "subtitle": "FULL-STACK BOOKING PLATFORM",
-    "overview": "A full-stack booking system built for a Vancouver tour rental operator who was previously handling bookings manually via Instagram DMs. I built a web platform with live slot availability, automated confirmations, and a lightweight admin dashboard.",
+    "overview": "A full-stack booking system built for a Vancouver tour operator who previously handled all bookings manually via Instagram DMs. It automates real-time slot lookups, reservations, and confirmation emails, backed by a headless CMS so the non-technical owner can manage schedules independently.",
     "keyFeatures": [
-      "Real-time tour slot calendar and booking engine",
-      "Automated customer confirmation emails via Resend API",
-      "Strapi CMS backend for straightforward non-technical schedule edits",
-      "Split architecture deployed on Vercel (frontend) and Render (backend)"
+      "Real-time tour slot availability and booking engine",
+      "Automated booking confirmation emails via Resend API",
+      "Strapi admin dashboard enabling the owner to open, close, and update slots without code changes",
+      "Split production architecture across Vercel (frontend), Render (backend), and Neon PostgreSQL"
     ],
     "myContributions": [
-      "Shipped the entire application independently in 7 days",
-      "Designed the user flow and responsive UI from wireframe to code",
-      "Built the full-stack architecture using Next.js, Strapi, and PostgreSQL (Neon)",
-      "Set up transactional email triggers and configured production deployment pipelines"
+      "Handled end-to-end delivery: requirements, booking UI flow, full-stack implementation, and deployment",
+      "Designed a clean, single-page booking funnel to minimize checkout drop-offs",
+      "Modeled Strapi content schemas and access permissions so the client can operate the platform self-sufficiently",
+      "Connected Next.js with Strapi and Neon PostgreSQL, integrating Resend for transactional emails"
     ],
-    "challenges": "I hadn't integrated the Resend API before, so I had to work through the webhook and error handling docs quickly against a tight 7-day delivery window. Structuring Strapi’s permission policies with Neon PostgreSQL also required rigorous testing to prevent double-booking race conditions.",
-    "reflection": "Taking a manual social media workflow and replacing it with a fully automated, deployed product in a single week proved I could ship a solid MVP fast without cutting corners on core UX.",
-    "contribution": [
-      { "tech": "Next.js", "percent": 100 },
-      { "tech": "Strapi", "percent": 100 },
-      { "tech": "PostgreSQL", "percent": 100 },
-      { "tech": "Deployment", "percent": 100 }
-    ]
+    "challenges": "The main focus was client self-sufficiency. I had to design Strapi's schema and permission model to be completely intuitive for a non-technical owner, without complicating relational queries on the frontend. I also handled reservation state flag validations to prevent duplicate bookings on identical slots and configured error retries for the Resend transactional email flow.",
+    "reflection": "This project reinforced that building for clients isn't just about shipping code—it's about making sure they can easily maintain and operate the platform after handoff. Balancing system simplicity with client usability was the biggest takeaway."
   },
+
   "hilton": {
     "title": "Hilton",
     "subtitle": "HOTEL BOOKING APP REDESIGN",
