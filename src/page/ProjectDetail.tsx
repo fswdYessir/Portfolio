@@ -23,8 +23,8 @@ import {
   SiMysql,
   SiPhp,
 } from 'react-icons/si'
-import { useProject } from '../data/projects-data'
-import type { LabelKey } from '../data/projects-data'
+import { useProject } from '../data/projectsData'
+import type { LabelKey } from '../data/projectsData'
 
 const labelColor: Record<LabelKey, string> = {
   personal: 'bg-indigo-500',
@@ -149,7 +149,9 @@ export default function ProjectDetail() {
                 title={tech}
               >
                 {techIcons[tech] ?? (
-                  <span className="text-xs text-[var(--text-muted)]">{tech}</span>
+                  <span className="text-xs text-[var(--text-muted)]">
+                    {tech}
+                  </span>
                 )}
                 <span className="absolute left-1/2 -translate-x-1/2 top-full mt-1 text-xs text-[var(--text-muted)] opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
                   {tech}
@@ -168,7 +170,11 @@ export default function ProjectDetail() {
             />
           </div>
         ) : (
-          <img src={banner} alt={title} className="w-full rounded-lg object-cover mb-10" />
+          <img
+            src={banner}
+            alt={title}
+            className="w-full rounded-lg object-cover mb-10"
+          />
         )}
 
         <article>
@@ -179,7 +185,9 @@ export default function ProjectDetail() {
             {videoUrl?.includes('embed') && (
               <div
                 className={`relative overflow-hidden rounded-lg mt-6 bg-black ${
-                  aspect === '16/9' ? 'aspect-video' : 'aspect-[9/16] max-w-xs mx-auto'
+                  aspect === '16/9'
+                    ? 'aspect-video'
+                    : 'aspect-[9/16] max-w-xs mx-auto'
                 }`}
               >
                 <iframe

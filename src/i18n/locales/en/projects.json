@@ -2,78 +2,78 @@
   "the-ke-hrms": {
     "title": "THE KE HRMS",
     "subtitle": "WORKFORCE MANAGEMENT",
-    "overview": "THE KE HRMS is an internal web application that unifies outsourced workforce, project participation, evaluations, and tech stacks in one place. I owned the project from planning through implementation and internal production deployment — delivering 3 role tiers, 10+ protected routes, and a 7-step PostgreSQL migration pipeline.",
+    "overview": "An internal tool built to manage outsourced contractors, project staffing, performance evaluations, and tech stacks. I took the project from scratch to on-prem deployment, setting up a 3-tier permission model, 10+ protected routes, and a 7-step PostgreSQL migration pipeline.",
     "keyFeatures": [
-      "JWT + HttpOnly Cookie authentication with role-based access control (admin, sales support, sales rep)",
-      "Dashboard with RPC-based stats, grade filters, and worker card listings",
-      "Integrated worker, project, evaluation, and tech stack management with Excel bulk import and audit logs",
-      "Document and profile photo storage with SecureDeleteModal password re-authentication"
+      "Role-based access (admin, sales support, sales rep) handled via JWT and HttpOnly cookies",
+      "Dashboard with RPC-backed metrics, contractor cards, and grade filters",
+      "Spreadsheet bulk imports and audit trail tracking for changes",
+      "Document and profile file management backed by a re-authentication flow (SecureDeleteModal)"
     ],
     "myContributions": [
-      "Planned requirements and designed the full HRMS architecture (workers, projects, evaluations, accounts)",
-      "Built the Next.js 16 App Router app with proxy access control across 10+ protected routes and API permission checks",
-      "Implemented JWT + HttpOnly Cookie auth, 7-step PostgreSQL migrations, RPC functions, and audit logging",
-      "Provisioned internal production on Windows Server 2022, PostgreSQL, Gitea Actions, and PM2 with automated CI/CD"
+      "Designed the data schema and core system architecture for workers, assignments, and access roles",
+      "Built the frontend with Next.js 16 App Router, implementing route proxies and API-level permission checks",
+      "Wrote the auth flow (JWT + HttpOnly cookies), database migrations, RPC functions, and audit logging",
+      "Configured our internal Windows Server 2022 instance, setting up Gitea Actions and PM2 for automated rollouts"
     ],
-    "challenges": "The biggest challenge was building and deploying on the company's internal server. Hardening Windows Server 2022 and configuring firewall rules were new to me, and wiring Gitea Actions so PM2 restarts automatically on main merges required more Windows-specific deployment scripting and debugging than expected.",
-    "reflection": "This was my first project owning the full lifecycle — planning, full-stack implementation, and internal production deployment. I gained hands-on experience applying JWT·HttpOnly Cookie auth, PostgreSQL RLS, Gitea Actions CI/CD, and server security on a tool used daily by the company."
+    "challenges": "Deploying onto on-prem Windows Server 2022 was the steepest curve. I had little background with Windows firewall rules or OS-specific service management, and wiring Gitea Actions to trigger zero-downtime PM2 restarts took several rounds of PowerShell script debugging.",
+    "reflection": "This was my first project where I owned everything end-to-end, including on-prem infrastructure. Dealing with strict database row-level security and deployment quirks made me much more comfortable making foundational architecture decisions."
   },
   "haimdall-v3": {
     "title": "Haimdall v3",
     "subtitle": "CARBON CREDIT MANAGEMENT",
-    "overview": "Haimdall v3 is a carbon credit management platform for sustainable agriculture. It visualizes 20,000+ farmland polygons in real time, supports five languages, and provides tools for farmland monitoring, carbon tracking, and booking management. As the sole frontend developer, I built the entire application from scratch with a focus on scalability and performance.",
+    "overview": "A web platform built to track and manage carbon credits for sustainable agriculture. It renders and monitors 20,000+ farmland plots in real time alongside booking workflows and 5-language localization. I was the sole frontend engineer on the team.",
     "keyFeatures": [
-      "Interactive map rendering 20,000+ farmland polygons with deck.gl",
-      "Real-time geospatial dashboard and analytics",
-      "Multi-language support with next-intl (EN, KR, VI, KM, BN)",
-      "Farmland monitoring, carbon tracking, and booking management"
+      "Interactive map rendering 20,000+ farmland polygons via deck.gl",
+      "Geospatial data dashboard with live field status updates",
+      "Full localization into 5 languages using next-intl (EN, KR, VI, KM, BN)",
+      "Dedicated modules for farmland verification, carbon metrics, and booking"
     ],
     "myContributions": [
-      "Built and maintained the entire frontend as the sole engineer",
-      "Implemented MVT tiling and caching to cut initial load time by ~40%",
-      "Integrated Firebase Auth with role-based access control",
-      "Delivered farmland, booking, and profile features from Figma designs"
+      "Built the entire frontend from scratch and set up the client-side architecture",
+      "Cut map initial load times by ~40% by adopting Mapbox Vector Tiles (MVT) and client-side caching",
+      "Set up role-based access control on top of Firebase Auth",
+      "Turned Figma specs into modular UI components for land tracking and reservation workflows"
     ],
-    "challenges": "Rendering 20,000+ farmland polygons efficiently was the biggest challenge — early versions lagged during zoom and pan. I introduced MVT (Mapbox Vector Tiles) with deck.gl and local caching, improving initial load performance by about 40%. Supporting 5 languages (EN, KR, VI, KM, BN) with different character sets also required careful font handling and layout adjustments across the UI.",
-    "reflection": "As the sole frontend engineer, I strengthened my ability to build and maintain a scalable production app independently. I gained hands-on experience with geospatial visualization at scale, large polygon rendering, and frontend performance optimization while collaborating with designers, backend engineers, and product stakeholders on a real-world platform."
+    "challenges": "The map lagged severely whenever users panned across dense clusters of 20,000+ polygons. Transitioning from raw GeoJSON to Mapbox Vector Tiles (MVT) with deck.gl and setting up local caching resolved the bottleneck. Supporting non-Latin scripts like Khmer and Bengali also caused unexpected font flashes and layout breaks that required custom CSS fallbacks.",
+    "reflection": "Handling that much geospatial data forced me to profile rendering performance systematically instead of just guessing. It also sharpened how I negotiate technical tradeoffs directly with backend engineers and designers."
   },
   "independent-Journalist": {
     "title": "Independent Journalist",
     "subtitle": "CUSTOM WORDPRESS WEBSITE",
-    "overview": "A volunteer WordPress project built to showcase independent YouTube journalists across multiple countries. The site organizes channels by topic and includes direct YouTube links, donation QR codes, and responsive layouts focused on accessibility and usability.",
+    "overview": "A volunteer WordPress directory built to highlight independent YouTube reporters across the globe. It categorizes channels by region and topic, embedding direct links and donation QR codes while keeping page weight minimal without heavy plugins.",
     "keyFeatures": [
-      "Responsive card-based UI for desktop and mobile",
-      "Client-side search and filtering with vanilla JavaScript",
-      "YouTube links, donation buttons, and QR codes integrated",
-      "9 responsive pages built without relying on plugins"
+      "Lightweight responsive card grid built for fast mobile browsing",
+      "Instant client-side search and category filtering with vanilla JavaScript",
+      "Dynamic channel cards with integrated donation QR codes and external links",
+      "9 custom page templates built without bloated third-party page builders"
     ],
     "myContributions": [
-      "Built the full site structure with Gutenberg and custom HTML/CSS",
-      "Implemented client-side search and filtering in vanilla JavaScript",
-      "Integrated QR code APIs into reusable channel cards",
-      "Iterated layouts with the client through multiple design drafts"
+      "Coded responsive page templates using Gutenberg blocks, custom HTML, and CSS",
+      "Wrote the search and filter logic in plain JavaScript to avoid external script overhead",
+      "Integrated QR code generation directly into the dynamic channel cards",
+      "Ran design review sessions directly with the organizer to iterate on layout and branding"
     ],
-    "challenges": "The main challenge was working with limited assets and an unclear design direction at the start of the project. I created multiple layout drafts and iterated closely with the client until the structure and visual direction for all 9 pages were finalized — all without relying on third-party plugins.",
-    "reflection": "This project improved my frontend design skills and deepened my understanding of WordPress as a flexible CMS. I gained experience building a 9-page responsive site with minimal plugin usage while collaborating directly with a non-technical client on a volunteer project spanning multiple countries."
+    "challenges": "We kicked off the project without any brand guidelines or wireframes. I drafted low-fidelity wireframes myself to align expectations with the client, then built custom templates so the site would stay fast instead of piling on third-party plugins.",
+    "reflection": "Working with a non-technical client made me practice explaining technical constraints in plain terms. It also reinforced that vanilla code is often far more reliable and easier to maintain than a stack of WordPress plugins."
   },
   "chezmari": {
     "title": "Chez Mari Salon",
     "subtitle": "WORDPRESS WEBSITE REDESIGN",
-    "overview": "A group project for a real salon client looking to modernize their business website. The team redesigned the site with a responsive UI, CMS support, and an integrated booking system to improve usability and content management.",
+    "overview": "A client redesign project for a local hair salon looking to modernize its brand. We built a responsive site with custom media galleries and an integrated appointment booking system that the owner could manage without technical help.",
     "keyFeatures": [
-      "Responsive UI redesign aligned with salon branding",
-      "WordPress CMS for easy content management",
-      "Integrated booking system with backend tools",
-      "AJAX-powered gallery for smooth image loading"
+      "Clean UI refresh aligned with the salon's existing brand identity",
+      "Custom WordPress dashboard tailored for quick staff and service updates",
+      "Self-service online booking system for appointments",
+      "Asynchronous image gallery with AJAX loading"
     ],
     "myContributions": [
-      "Managed sprint planning, Jira workflows, and Git collaboration",
-      "Configured hosting, domain, DNS, and SMTP mail services",
-      "Built gallery page with AJAX-based image loading",
-      "Customized booking plugin UI and optimized server deployment"
+      "Managed sprint backlogs in Jira, coordinated Git branches, and led standups",
+      "Handled domain provisioning, DNS routing, SMTP setup, and production hosting",
+      "Implemented the media gallery page using AJAX to prevent page reloads",
+      "Customized the third-party booking plugin’s UI and deployed the final site"
     ],
-    "challenges": "One challenge was understanding the structure and limitations of WordPress plugins and themes — especially customizing the booking plugin UI without breaking core functionality. Another was communicating technical decisions clearly to a non-technical salon client throughout the redesign and deployment process.",
-    "reflection": "This project strengthened my WordPress development, CMS workflow, hosting, and deployment skills. It also improved my teamwork and client communication — our team was awarded 1st place among all teams in the class.",
+    "challenges": "The booking plugin’s markup was rigid and coupled tightly with its core logic. Restyling the booking flow without breaking internal date pickers and form submissions took careful DOM inspection. Translating why those technical limits existed to the salon owner was another challenge in itself.",
+    "reflection": "This project took me out of a pure code bubble into infrastructure setup, sprint management, and direct client communication. Our team took 1st place in the program evaluation.",
     "contribution": [
       { "tech": "Project Management", "percent": 100 },
       { "tech": "Hosting", "percent": 100 },
@@ -85,21 +85,21 @@
   "Beep": {
     "title": "Beep",
     "subtitle": "REACT NATIVE SAFETY APP",
-    "overview": "Beep is a mobile safety app designed to help users travel more safely using location-based guidance and crime data. The app provides safe route recommendations, nearby safe zones, SOS alerts, and incident reporting features.",
+    "overview": "A cross-platform mobile app that analyzes local crime data to assist with safer pedestrian navigation. It features route risk scoring, safe zone discovery, one-tap emergency SMS alerts, and community incident reports.",
     "keyFeatures": [
-      "Safe route recommendations based on public crime data",
-      "Emergency SOS with live location sharing via SMS",
-      "Incident reporting with map-based photo pinning",
-      "Onboarding and sign-up flow for new users"
+      "Route guidance evaluated against public safety and crime datasets",
+      "Emergency SOS button broadcasting live coordinates via SMS",
+      "Pin-drop incident reporting with on-site photo attachments",
+      "Streamlined onboarding and user authentication flow"
     ],
     "myContributions": [
-      "Managed team Git repository and technical documentation",
-      "Developed SOS emergency page with alert sound integration",
-      "Built incident snapshot feature with map-based image pinning",
-      "Handled Firebase sync and SMS alerts for emergency contacts"
+      "Maintained repo workflows, Git branch conventions, and internal tech notes",
+      "Built the SOS trigger screen and wired audio alerts",
+      "Built the community incident logging flow with map-based photo pinning",
+      "Connected Firebase Realtime Database and automated SMS dispatch"
     ],
-    "challenges": "As one of the largest projects in our program, team coordination was a major challenge early on — we restructured responsibilities and introduced a dual project management system to improve collaboration. Technically, it was our first mobile app with React Native and Expo, so we spent significant time on ecosystem setup, Firebase integration, and SMS-based live location sharing.",
-    "reflection": "This project gave me hands-on experience building a mobile app with React Native, Expo, and Firebase. I became more comfortable learning unfamiliar technologies, collaborating in a large team, and presenting technical ideas clearly. Among 10 teams, our project placed 3rd overall.",
+    "challenges": "Scope creep caused early confusion across the team, so we split project coordination into technical tasks and UI deliverables to realign responsibilities. On the code side, React Native and Expo were new to most of us, so getting background location tracking and SMS hooks to behave reliably took steady trial and error.",
+    "reflection": "We had to pick up React Native and Expo from scratch while keeping up with a compressed schedule. Placing 3rd out of 10 teams validated that we were able to adapt and ship under pressure.",
     "contribution": [
       { "tech": "TypeScript", "percent": 25 },
       { "tech": "React Native", "percent": 50 },
@@ -110,39 +110,45 @@
   "fourSeason": {
     "title": "Four Season",
     "subtitle": "FULL-STACK BOOKING PLATFORM",
-    "overview": "A full-stack booking platform built for a local tour rental business in Vancouver. The client previously managed reservations manually through Instagram DMs, so I developed a real-time booking system with CMS support to streamline bookings and content management.",
+    "overview": "A full-stack booking system built for a Vancouver tour rental operator who was previously handling bookings manually via Instagram DMs. I built a web platform with live slot availability, automated confirmations, and a lightweight admin dashboard.",
     "keyFeatures": [
-      "Real-time seat availability and booking management",
-      "Automated email confirmations with Resend",
-      "Strapi CMS for client-managed content updates",
-      "Deployed frontend on Vercel and backend on Render"
+      "Real-time tour slot calendar and booking engine",
+      "Automated customer confirmation emails via Resend API",
+      "Strapi CMS backend for straightforward non-technical schedule edits",
+      "Split architecture deployed on Vercel (frontend) and Render (backend)"
     ],
     "myContributions": [
-      "Built and launched the entire project independently within one week",
-      "Designed UI and booking flow end to end",
-      "Developed frontend and backend with Next.js and Strapi",
-      "Configured PostgreSQL on Neon and deployed across Vercel and Render"
+      "Shipped the entire application independently in 7 days",
+      "Designed the user flow and responsive UI from wireframe to code",
+      "Built the full-stack architecture using Next.js, Strapi, and PostgreSQL (Neon)",
+      "Set up transactional email triggers and configured production deployment pipelines"
     ],
-    "challenges": "One challenge was integrating the Resend API for automated booking confirmation emails — it was my first time working with the service. I also had to carefully configure relational permissions in Strapi to ensure stable content management and PostgreSQL access across related collections on Neon.",
-    "reflection": "I built and launched the entire full-stack booking platform independently within one week, replacing the client's manual Instagram DM workflow with a real-time system. This strengthened my ability to gather client requirements, design user-focused flows, and manage deployment across Vercel (frontend), Render (backend), and Neon (PostgreSQL)."
+    "challenges": "I hadn't integrated the Resend API before, so I had to work through the webhook and error handling docs quickly against a tight 7-day delivery window. Structuring Strapi’s permission policies with Neon PostgreSQL also required rigorous testing to prevent double-booking race conditions.",
+    "reflection": "Taking a manual social media workflow and replacing it with a fully automated, deployed product in a single week proved I could ship a solid MVP fast without cutting corners on core UX.",
+    "contribution": [
+      { "tech": "Next.js", "percent": 100 },
+      { "tech": "Strapi", "percent": 100 },
+      { "tech": "PostgreSQL", "percent": 100 },
+      { "tech": "Deployment", "percent": 100 }
+    ]
   },
   "hilton": {
     "title": "Hilton",
     "subtitle": "HOTEL BOOKING APP REDESIGN",
-    "overview": "A solo UI/UX redesign project focused on improving the Hilton Honors booking experience. The project reimagined the app with cleaner layouts, simplified booking flows, and a more modern mobile-first interface.",
+    "overview": "A solo UI/UX and frontend redesign targeting friction points in the Hilton Honors mobile flow. I restructured the room selection, checkout, and digital check-in views, then rebuilt the core screens with a modular React component hierarchy.",
     "keyFeatures": [
-      "Redesigned booking and room browsing flows",
-      "Simplified digital key and check-in experience",
-      "Responsive UI with React and Tailwind CSS",
-      "Reusable component-based frontend architecture"
+      "Streamlined room comparison and checkout funnel",
+      "Redesigned digital key and mobile check-in interface",
+      "Mobile-first responsive layouts styled with Tailwind CSS",
+      "Modular, reusable UI component library"
     ],
     "myContributions": [
-      "Analyzed UX issues in the existing Hilton web and mobile apps",
-      "Redesigned interface for a cleaner, more consistent experience",
-      "Built frontend with reusable React components",
-      "Improved responsive layouts and mobile usability"
+      "Mapped user drop-off points and layout clutter in the existing booking flow",
+      "Designed high-fidelity mockups focusing on mobile-first clarity",
+      "Built the interactive UI prototypes using clean, reusable React components",
+      "Fine-tuned responsive breakpoints to keep card views and modal sheets consistent across devices"
     ],
-    "challenges": "One challenge was modernizing the Hilton Honors interface while keeping familiar booking and check-in flows from the original app. I also focused on maintaining accessibility and usability across mobile, tablet, and desktop breakpoints throughout the React + Tailwind CSS implementation.",
-    "reflection": "This solo redesign strengthened my UI/UX design, responsive layout, and component-based frontend development skills. It helped me translate design decisions into a practical React implementation — from analyzing the existing Hilton web and mobile apps to building a cleaner, mobile-first booking experience."
+    "challenges": "The main friction was UX balance: simplifying the multi-step checkout without removing essential room metadata like cancellation policies or bed specs. Recreating flexible mobile drawer sheets and complex price breakdown cards in Tailwind without CSS bloat also took several refactors.",
+    "reflection": "This gave me a chance to handle both the UX critique and the actual frontend implementation myself. Seeing firsthand how small design choices impact component state and CSS architecture made me a cleaner front-end engineer."
   }
 }
